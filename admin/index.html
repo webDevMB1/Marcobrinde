@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="icon" href="../images/logo/icon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Marcobrinde website roupa brindes toldos reclamos design imagem grafica" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- css files -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/chromagallery.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/stylecross.css" rel="stylesheet" type="text/css" media="all" />
+
+	<!-- /css files -->
+	<!-- fonts -->
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- /fonts -->
+	<!-- js files -->
+	<script src="js/modernizr.custom.js"></script>
+	<!-- /js files -->
+
+	<title>ADMIN - MarcoBrinde</title>
+</head>
+<body> 
+
+	<h4>ADMINISTRAÇÃO - LOJA ONLINE</h4>
+
+	<a href="actualizaRecentes.php">Actualizar recentes</a>
+
+	<!--<h3><font color="white"> To return to home 
+	 <a href="NurseCall.php" >click here<$ <form action="changelogo.php" method="POST" enctype="multipart/form-data"> 
+	 <input type="file" name="image" size="50"> <br><br> 
+	 <input type="Submit" name="submitted" value="Upload"/> </form>
+	<?php
+		if(isset($_POST['submitted'])) {
+			$file=$_FILES['image']['name'];
+			
+			if ($file=$_FILES['image']['name'] !=""){
+				$file=$_FILES['image']['name'];
+				$file_tmp=$_FILES['image']['tmp_name'];
+				$path="/home/pi/image/".$file;
+				
+				chmod($path,0777);
+				
+				if(move_uploaded_file($file_tmp,$path)){
+					echo(" move file");
+				}else{
+					echo ("Could not move file");
+				}else{
+					echo("No file selected");
+				}
+			}
+		}
+	?>-->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</html>
