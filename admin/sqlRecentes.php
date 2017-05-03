@@ -172,12 +172,4 @@
 	$db->close();
 
 
-
-    $upload_image=$_FILES[" file "][ "name" ];
-
-	$folder="..//uploads/";
-
-	move_uploaded_file($_FILES[" file "][" tmp_name "], "$folder".$_FILES[" file "][" name "]);
-
-
 ?>

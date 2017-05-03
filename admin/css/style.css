@@ -62,8 +62,8 @@ footer{
 
 /* //Footer */
 
-/* Esconde alt das imagens*/
+/* Esconder alt das imagens */
 
-#blah1, #blah1t, #blah2, #blah2t, #blah3, #blah3t, #blah4, #blah4t{
+#blah1t, #blah1td, #blah1r, #blah2t, #blah2td, #blah2r, #blah3t, #blah3td, #blah3r, #blah4t, #blah4td, #blah4r{
 	display: none;
 }

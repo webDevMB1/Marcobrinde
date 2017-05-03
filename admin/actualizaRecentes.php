@@ -3,7 +3,6 @@
 <head>
 	<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
 	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 	
 	<link rel="icon" href="../images/logo/icon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,18 +88,30 @@
 			    </div>
 
 			    <!-- ================== Row Input Imagem ==================== -->
-		    	<div class="row marBot">
+		    	<!--<div class="row marBot">
 				    <div class="col-md-4">
-				    	<h4>Imagem do transfer</h4>
-					 	<input id="recentesImg1t" type='file' onchange="readURL1t(this);"/>
-				    	<img id="blah1t" src="#" alt="imagem" />
+				    	<center>
+					    	<h4>Imagem do transfer</h4>
+					    	<img id="blah1t" src="#" alt="imagem" />
+						 	<input id="recentesImg1t" type='file' onchange="readURL('1', 't', this);"/>
+						</center>
 				    </div>
 		    		<div class="col-md-4">
-				    	<h4>Imagem com a roupa</h4>
-					 	<input id="recentesImg1" type='file' onchange="readURL1(this);"/>
-				    	<img id="blah1" src="#" alt="imagem" />
+				    	<center>
+					    	<h4>Imagem do transfer Versão Dark</h4>
+					    	<p>O nome do ficheiro tem de ser exactamente igual à versão normal do transfer mas com "dark-" no inicio.</p>
+					    	<img id="blah1td" src="#" alt="imagem" />
+						 	<input id="recentesImg1td" type='file' onchange="readURL('1', 'td',this);"/>
+						</center>
 				    </div>
-			    </div>
+		    		<div class="col-md-4">
+		    			<center>
+					    	<h4>Imagem com a roupa</h4>
+					    	<img id="blah1r" src="#" alt="imagem" />
+						 	<input id="recentesImg1r" type='file' onchange="readURL('1', 'r', this);"/>
+					 	</center>
+				    </div>
+			    </div>-->
 
 			    <hr>
 
@@ -148,18 +159,30 @@
 			    </div>
 
 			    <!-- ================== Row Input Imagem ==================== -->
-		    	<div class="row marBot">
+		    	<!--<div class="row marBot">
 		    		<div class="col-md-4">
-				    	<h4>Imagem do Transfer</h4>
-					 	<input id="recentesImg2t" type='file' onchange="readURL2t(this);"/>
-				    	<img id="blah2t" src="#" alt="imagem" />
+		    			<center>
+					    	<h4>Imagem do Transfer</h4>
+					    	<img id="blah2t" src="#" alt="imagem" />
+						 	<input id="recentesImg2t" type='file' onchange="readURL('2', 't', this);"/>
+						</center>
 				    </div>
 				    <div class="col-md-4">
-				    	<h4>Imagem com a Roupa</h4>
-					 	<input id="recentesImg2" type='file' onchange="readURL2(this);"/>
-				    	<img id="blah2" src="#" alt="imagem" />
+				    	<center>
+					    	<h4>Imagem do transfer Versão Dark</h4>
+					    	<p>O nome do ficheiro tem de ser exactamente igual à versão normal do transfer mas com "dark-" no inicio.</p>
+					    	<img id="blah2td" src="#" alt="imagem" />
+						 	<input id="recentesImg2td" type='file' onchange="readURL('2', 'td', this);"/>
+						</center>
 				    </div>
-			    </div>
+				    <div class="col-md-4">
+				    	<center>
+					    	<h4>Imagem com a Roupa</h4>
+					    	<img id="blah2r" src="#" alt="imagem" />
+						 	<input id="recentesImg2r" type='file' onchange="readURL('2', 'r', this);"/>
+						</center>
+				    </div>
+			    </div>-->
 
 			    <hr>
 
@@ -208,18 +231,30 @@
 			    </div>
 
 			    <!-- ================== Row Input Imagem ==================== -->
-		    	<div class="row marBot">
+		    	<!--<div class="row marBot">
 		    		<div class="col-md-4">
-				    	<h4>Imagem do transfer</h4>
-					 	<input id="recentesImg3t" type='file' onchange="readURL3t(this);"/>
-				    	<img id="blah3t" src="#" alt="imagem" />
+		    			<center>
+					    	<h4>Imagem do transfer</h4>
+					    	<img id="blah3t" src="#" alt="imagem" />
+						 	<input id="recentesImg3t" type='file' onchange="readURL('3', 't', this);"/>
+						</center>
 				    </div>
 		    		<div class="col-md-4">
-				    	<h4>Imagem com a roupa</h4>
-					 	<input id="recentesImg3" type='file' onchange="readURL3(this);"/>
-				    	<img id="blah3" src="#" alt="imagem" />
+		    			<center>
+					    	<h4>Imagem do transfer Versão Dark</h4>
+					    	<p>O nome do ficheiro tem de ser exactamente igual à versão normal do transfer mas com "dark-" no inicio.</p>
+					    	<img id="blah3td" src="#" alt="imagem" />
+						 	<input id="recentesImg3td" type='file' onchange="readURL('3', 'td', this);"/>
+						</center>
 				    </div>
-			    </div>
+		    		<div class="col-md-4">
+		    			<center>
+					    	<h4>Imagem com a roupa</h4>
+					    	<img id="blah3r" src="#" alt="imagem" />
+						 	<input id="recentesImg3r" type='file' onchange="readURL('3', 'r', this);"/>
+						</center>
+				    </div>
+			    </div>-->
 
 			    <hr>
 
@@ -268,18 +303,30 @@
 			    </div>
 
 			    <!-- ================== Row Input Imagem ==================== -->
-		    	<div class="row marBot">
+		    	<!--<div class="row marBot">
 		    		<div class="col-md-4">
-				    	<h4>Imagem do transfer</h4>
-					 	<input id="recentesImg4t" type='file' onchange="readURL4t(this);"/>
-				    	<img id="blah4t" src="#" alt="imagem" />
+		    			<center>
+					    	<h4>Imagem do transfer</h4>
+					    	<img id="blah4t" src="#" alt="imagem" />
+						 	<input id="recentesImg4t" type='file' onchange="readURL('4', 't', this);"/>
+						</center>
 				    </div>
 		    		<div class="col-md-4">
-				    	<h4>Imagem com a roupa</h4>
-					 	<input id="recentesImg4" type='file' name="file" onchange="readURL4(this);"/>
-				    	<img id="blah4" src="#" alt="imagem" />
+		    			<center>
+					    	<h4>Imagem do transfer Versão Dark</h4>
+					    	<p>O nome do ficheiro tem de ser exactamente igual à versão normal do transfer mas com "dark-" no inicio.</p>
+					    	<img id="blah4td" src="#" alt="imagem" />
+						 	<input id="recentesImg4td" type='file' onchange="readURL('4', 'td', this);"/>
+						</center>
 				    </div>
-			    </div>
+		    		<div class="col-md-4">
+		    			<center>
+					    	<h4>Imagem com a roupa</h4>
+					    	<img id="blah4r" src="#" alt="imagem" />
+						 	<input id="recentesImg4r" type='file' onchange="readURL('4', 'r', this);"/>
+						</center>
+				    </div>
+			    </div>-->
 
 			    <hr>
 		</div> <!-- /row -->
@@ -304,133 +351,6 @@
 </body>
 
 <script type="text/javascript">
-	    
-	/* ------------ 1 ------------------ */
-    function readURL1(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah1')
-                    .attr('src', e.target.result)
-                    .width(300)
-                    .css('display','block');
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    function readURL1t(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah1t')
-                    .attr('src', e.target.result)
-                    .width(300)
-                    .css('display','block');
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    /* ------------ 2 ------------------ */
-
-    function readURL2(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah2')
-                    .attr('src', e.target.result)
-                    .width(300)
-                    .css('display','block');
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    function readURL2t(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah2t')
-                    .attr('src', e.target.result)
-                    .width(300)
-                    .css('display','block');
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    /* ------------ 3 ------------------ */
-
-    function readURL3(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah3')
-                    .attr('src', e.target.result)
-                    .width(300)
-                    .css('display','block');
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    function readURL3t(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah3t')
-                    .attr('src', e.target.result)
-                    .width(300)
-                    .css('display','block');
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    /* ------------ 4 ------------------ */
-
-    function readURL4(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah4')
-                    .attr('src', e.target.result)
-                    .width(300)
-                    .css('display','block');
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    function readURL4t(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah4t')
-                    .attr('src', e.target.result)
-                    .width(300)
-                    .css('display','block');
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
 
     $(window).load(function(){
 
@@ -506,12 +426,61 @@
 			        		linkDark4: mLinkDark4,
 			        		linkRoupa4: mLinkRoupa4}
 			    });
+
+			    
+			    /* Upload das imagens para o servidor 
+
+
+			    var file_data = $('#recentesImg1t').prop('files')[0];
+			    var form_data = new FormData();
+			    form_data.append('file', file_data);
+			    alert(form_data);
+
+
+			    $.ajax({
+			        url: 'uploadImgs.php',
+			       	dataType: 'text',
+			       	cache: false,
+	                contentType: false,
+	                processData: false,
+	                data: form_data,
+	                type: 'post',
+					success: function(){
+					 	alert("Upload da imagem com sucesso");
+					},
+					error: function(){
+					 	alert("Erro no upload da imagem");
+					}
+			    });*/
+
+
 			   
 			   alert('Informação alterada com sucesso!');
 
     	});
 
     });
+
+    /* ============================================== 
+		Função para mostrar as imagens seleccionadas
+       ============================================== 
+
+    function readURL(num, tipo, input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah'+ num + tipo +'')
+                    .attr('src', e.target.result)
+                    .width(300)
+                    .css('display','block');
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+            //$('#span'+ num + tipo'').text(tipo);
+        }
+    }*/
 
 </script>
 
