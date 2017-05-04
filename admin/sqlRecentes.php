@@ -2,7 +2,12 @@
 	
 	include('../connectBD.php');
 
-	/* Iniciação var 1 */
+    /* Inicilização var seccao */
+
+    $seccao = $_POST['seccao'];
+    
+
+	/* Inicilização var 1 */
 	$nome1 = $_POST['nome1'];
 	$referencia1 = $_POST['referencia1'];
 	$tipo1 = $_POST['tipo1'];
@@ -32,7 +37,7 @@
     /* ================================================================================================================================ */
 
 
-	/* Iniciação var 2 */
+	/* Inicilização var 2 */
 	$nome2 = $_POST['nome2'];
 	$referencia2 = $_POST['referencia2'];
 	$tipo2 = $_POST['tipo2'];
@@ -61,7 +66,7 @@
 
 	/* ================================================================================================================================ */
 	
-	/* Iniciação var 3 */
+	/* Inicilização var 3 */
 	$nome3 = $_POST['nome3'];
 	$referencia3 = $_POST['referencia3'];
 	$tipo3 = $_POST['tipo3'];
@@ -90,7 +95,7 @@
 
 	/* ================================================================================================================================ */
 
-	/* Iniciação var 4 */
+	/* Inicilização var 4 */
 	$nome4 = $_POST['nome4'];
 	$referencia4 = $_POST['referencia4'];
 	$tipo4 = $_POST['tipo4'];
@@ -120,7 +125,7 @@
     /* ================================================================================================================================ */
 
         if( !empty($update_values1) ){
-            $q1 = "UPDATE `on26868r_lojamarcobrinde`.`recentes_transfers` SET $update1_values_imploded WHERE `recentes_transfers`.`id` =4";
+            $q1 = "UPDATE `on26868r_lojamarcobrinde`.`". $seccao ."_transfers` SET $update1_values_imploded WHERE `". $seccao ."_transfers`.`id` =4";
             $r1 = $db->query($q1);
 
             if($r1)
@@ -131,7 +136,7 @@
         }
 
         if( !empty($update_values2) ){
-        	$q2 = "UPDATE `on26868r_lojamarcobrinde`.`recentes_transfers` SET $update2_values_imploded WHERE `recentes_transfers`.`id` =3";
+        	$q2 = "UPDATE `on26868r_lojamarcobrinde`.`". $seccao ."_transfers` SET $update2_values_imploded WHERE `". $seccao ."_transfers`.`id` =3";
         	$r2 = $db->query($q2);
 
             if($r2)
@@ -142,7 +147,7 @@
         }
 
         if( !empty($update_values3) ){
-        	$q3 = "UPDATE `on26868r_lojamarcobrinde`.`recentes_transfers` SET $update3_values_imploded WHERE `recentes_transfers`.`id` =2";
+        	$q3 = "UPDATE `on26868r_lojamarcobrinde`.`". $seccao ."_transfers` SET $update3_values_imploded WHERE `". $seccao ."_transfers`.`id` =2";
         	$r3 = $db->query($q3);
 
             if($r3)
@@ -153,7 +158,7 @@
         }
 
         if( !empty($update_values4) ){
-        	$q4 = "UPDATE `on26868r_lojamarcobrinde`.`recentes_transfers` SET $update4_values_imploded WHERE `recentes_transfers`.`id` =1";
+        	$q4 = "UPDATE `on26868r_lojamarcobrinde`.`". $seccao ."_transfers` SET $update4_values_imploded WHERE `". $seccao ."_transfers`.`id` =1";
         	$r4 = $db->query($q4);
 
             if($r4)
@@ -162,11 +167,6 @@
 
             }
         }
-
-
-
-        /* Adicionar imagens */
-
 
 
 	$db->close();
