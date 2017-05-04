@@ -24,28 +24,6 @@
 
 	<title>ADMIN - Actualizar página inicial</title>
 </head>
-<style type="text/css">
-	#labelRecentes, #labelDestaques{
-		height: 78px;
-		width: 100px;
-		padding-top: 27px;
-		border-radius: 10px;
-		padding-bottom: 50px;
-	}
-
-	#labelRecentes:hover, #labelDestaques:hover{
-		border: solid 2px #C5E77D !important;
-	}
-
-	.labelActive{
-		border: solid 2px #A0D431 !important;
-	}
-
-	.labelHover:hover{
-		cursor: pointer;
-	}
-
-</style>
 <body>
 
 
@@ -72,6 +50,14 @@
 			<label id="labelDestaques" class="labelHover"><input class="hidden" type="radio" name="seccao" onclick="changeSeccao('destaques')">Destaques</label>
 		</center>
 		<span id="spanSeccao" class="hidden">recentes</span>
+	</div>
+
+	<hr>
+
+	<div id="explicacao" class="row">
+		<center><h4><strong>ATENÇÃO</strong></h4></center>
+		<br>
+		<p>Esta área altera os dados na base de dados. Sempre que adicionar um transfer novo para além de adicionar a respectiva informação na base de dados (os campos pedidos a baixo), deverá também adicionar as imagens através de FTP à respectiva pasta. Por outras palavras, ao adicionar um transfer sobre música, deve-se ir por FTP à pasta images/transfers/musica e adicionar as versões do transfer nas devidas pastas (light e dark) e adicionar a fotomontagem do transfer numa peça de roupa na pasta DR. (se esta pasta não existir deverá ser criada)</p>
 	</div>
 
 	<hr>

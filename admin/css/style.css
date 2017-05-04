@@ -62,8 +62,35 @@ footer{
 
 /* //Footer */
 
-/* Esconder alt das imagens */
+/* Esconder alt das imagens 
 
 #blah1t, #blah1td, #blah1r, #blah2t, #blah2td, #blah2r, #blah3t, #blah3td, #blah3r, #blah4t, #blah4td, #blah4r{
 	display: none;
+}*/
+
+/*  =============================================================================================
+							Página Adicionar recentes / destaques
+	============================================================================================= */
+
+#labelRecentes, #labelDestaques{
+	height: 78px;
+	width: 100px;
+	padding-top: 27px;
+	border-radius: 10px;
+	padding-bottom: 50px;
 }
+
+#labelRecentes:hover, #labelDestaques:hover{
+	border: solid 2px #C5E77D !important;
+}
+
+.labelActive{
+	border: solid 2px #A0D431 !important;
+}
+
+.labelHover:hover{
+	cursor: pointer;
+}
+
+/*  =============================================================================================
+						//FIM	Página Adicionar recentes / destaques 							*/
