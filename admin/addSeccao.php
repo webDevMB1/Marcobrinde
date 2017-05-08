@@ -91,10 +91,10 @@
 </footer>
 
 
-
 </body>
 
 <script type="text/javascript">
+
 
     $(window).load(function(){
 
