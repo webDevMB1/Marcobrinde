@@ -85,7 +85,7 @@
 
 </div><!-- /container -->
 	
-<footer>
+<footer id="footerSeccao">
 	<div class="linhaFooter"></div>
     <p id="copyright">© 2017 MarcoBrinde</p>
 </footer>

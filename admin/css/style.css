@@ -53,6 +53,49 @@ footer{
 	display: none;
 }*/
 
+
+/*  ===============================================================================
+									Página Index
+	=============================================================================== */
+
+	#footerIndex{
+		position: fixed;
+		bottom: 0;
+	}
+
+	#linhaButtons{
+		margin-top: 10%;
+	}
+
+	#labelRecDest, #labelAddSeccao, #labelAddTransfer{
+		height: 200px;
+		width: 100%;
+		padding-top: 27px;
+		border-radius: 10px;
+		padding-bottom: 50px;
+	}
+
+	#labelRecDest:hover, #labelAddSeccao:hover, #labelAddTransfer:hover{
+		border: solid 2px #C5E77D !important;
+	}
+
+	.labelActiveIndex{
+		border: solid 2px #A0D431 !important;
+	}
+
+	.labelHover:hover{
+		cursor: pointer;
+	}
+
+	.labelActiveIndex{
+		text-align: center;
+		padding-top: 22% !important;
+	}
+
+/*  =============================================================================================
+								//FIM	Página Index							*/
+
+
 /*  =============================================================================================
 							Página Adicionar recentes / destaques
 	============================================================================================= */
@@ -103,5 +146,23 @@ footer{
 		border: solid 2px black;
 	}
 
+	#footerAddTransfer{
+		position: fixed;
+		bottom: 0;
+	}
+
 /*  =============================================================================================
 						//FIM	Página Adicionar recentes / destaques 							*/
+
+
+/*  ===============================================================================
+							Página Adicionar Secção
+	=============================================================================== */
+
+	#footerSeccao{
+		position: fixed;
+		bottom: 0;
+	}
+
+/*  =============================================================================================
+						//FIM	Página Adicionar Secção						*/

@@ -31,14 +31,49 @@
 
 	<div class="container">
 		<div class="row">
-			<center><h4>ADMINISTRAÇÃO - LOJA ONLINE</h4></center>
-			<a href="refreshInicial.php"><p>Actualizar recentes / destaques</p></a>
-			<a href="addSeccao.php"><p>Adicionar Secção Nova</p></a>
-			<a href="addTransfer.php"><p>Adicionar Novo Transfer</p></a>	
+			<center><h2>ADMINISTRAÇÃO - LOJA ONLINE</h2></center>
+			<br>
 		</div>
+
+		<div id="linhaButtons" class="row">
+			<div class="col-md-4">
+				<label id="labelRecDest" class="labelHover labelActiveIndex"><input class="hidden" type="radio" name="seccao" checked="checked" onclick="location.href = 'refreshInicial.php';">Actualizar recentes / destaques</label>
+			</div>
+			<div class="col-md-4">
+				<label id="labelAddSeccao" class="labelHover labelActiveIndex"><input class="hidden" type="radio" name="seccao" onclick="location.href = 'addSeccao.php';">Adicionar Secção Nova</label>
+			</div>
+			<div class="col-md-4">
+				<label id="labelAddTransfer" class="labelHover labelActiveIndex"><input class="hidden" type="radio" name="seccao" onclick="location.href = 'addTransfer.php';">Adicionar Novo Transfer</label>
+			</div>
+		</div>
+
+		<!--<div id="linhaButtons" class="row">
+			<div class="col-md-4">
+				<div class="square">
+					<a href="refreshInicial.php"><p>Actualizar recentes / destaques</p></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="square">
+					<a href="addSeccao.php"><p>Adicionar Secção Nova</p></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="square">
+					<a href="addTransfer.php"><p>Adicionar Novo Transfer</p></a>
+				</div>
+			</div>
+		</div>-->
+		
 	</div>
 
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<footer id="footerIndex">
+		<div class="linhaFooter"></div>
+	    <p id="copyright">© 2017 MarcoBrinde</p>
+	</footer>
 
+
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </html>
