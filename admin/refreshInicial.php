@@ -353,7 +353,7 @@
 		 <!-- ================== Row Button Update ==================== -->
 	    <div class="row">
 			<!--<a class="btn btn-lg" width="100%" style="border-radius: 0" id="submit">Enviar</a>-->
-			<input id="updateButton" type="submit" value="UPDATE">
+			<input id="updateButton" class="updateButton" type="submit" value="UPDATE">
 	    </div>
 
     </form>
@@ -417,7 +417,7 @@
 
 				$.ajax({
 			        type: 'POST',
-			        url: 'sqlRecentes.php',
+			        url: 'PHPsqlRecentes.php',
 			        data: { seccao: mSeccao,
 			        		nome1: mNome1,
 			        		referencia1: mReferencia1,

@@ -11,6 +11,7 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
 	<!-- /css files -->
 	<!-- fonts -->
@@ -23,35 +24,18 @@
 </head>
 <body> 
 
-	<h4>ADMINISTRAÇÃO - LOJA ONLINE</h4>
+	<!-- ROW Logo -->
+	<div id="rowLogo" class="row">
+		<a href="index.html"><img id="logoImg" src="../images/index/10l.png" alt="logo" height="110" style="padding-bottom: 10px"></a>
+	</div>
 
-	<a href="refreshInicial.php">Actualizar recentes / destaques</a>
-
-	<!--<h3><font color="white"> To return to home 
-	 <a href="NurseCall.php" >click here<$ <form action="changelogo.php" method="POST" enctype="multipart/form-data"> 
-	 <input type="file" name="image" size="50"> <br><br> 
-	 <input type="Submit" name="submitted" value="Upload"/> </form>
-	<?php
-		if(isset($_POST['submitted'])) {
-			$file=$_FILES['image']['name'];
-			
-			if ($file=$_FILES['image']['name'] !=""){
-				$file=$_FILES['image']['name'];
-				$file_tmp=$_FILES['image']['tmp_name'];
-				$path="/home/pi/image/".$file;
-				
-				chmod($path,0777);
-				
-				if(move_uploaded_file($file_tmp,$path)){
-					echo(" move file");
-				}else{
-					echo ("Could not move file");
-				}else{
-					echo("No file selected");
-				}
-			}
-		}
-	?>-->
+	<div class="container">
+		<div class="row">
+			<center><h4>ADMINISTRAÇÃO - LOJA ONLINE</h4></center>
+			<a href="refreshInicial.php"><p>Actualizar recentes / destaques</p></a>
+			<a href="addSeccao.php"><p>Adicionar Secção Nova</p></a>	
+		</div>
+	</div>
 
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
