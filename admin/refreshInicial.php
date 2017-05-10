@@ -105,8 +105,8 @@
 				    	</div>
 				    </div>
 
-				    <!-- ================== Row Input Imagem ==================== -->
-			    	<!--<div class="row marBot">
+				    <!-- ================== Row Input Imagem ==================== 
+			    	<div class="row marBot">
 					    <div class="col-md-4">
 					    	<center>
 						    	<h4>Imagem do transfer</h4>

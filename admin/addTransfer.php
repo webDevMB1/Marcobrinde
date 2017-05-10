@@ -34,6 +34,8 @@
 
 <div class="container">
 
+<div id="teste"></div>
+
 	<div id="descricaoSeccao" class="row">
 		<center>
 			<h2>Adicionar Transfer</h2>
@@ -53,7 +55,7 @@
 
 	<hr>
 
-	<form name="form"> 
+	<form id="form" name="form" enctype="multipart/form-data"> 
 		<div id="parentDiv">
 			<!-- ============================================== ROW PRIMEIRO TRANSFER ============================================= -->
 			<div class="row">
@@ -98,7 +100,7 @@
 		    	</div>
 		    	<div class="col-md-2">
 			    	<h4>Referência</h4>
-			    	<input type="text" id="tReferencia" name="referencia" placeholder="Referência" required>
+			    	<input type="text" id="tReferencia" name="referencia" placeholder="Referência" disabled="disabled">
 		    	</div>
 		    	<div class="col-md-2">
 		    		<h4>Dimensões</h4>
@@ -106,13 +108,42 @@
 		    	</div>
 		    	<div class="col-md-2">
 		    		<h4>Link</h4>
-		    		<input type="text" id="tLink" name="link" placeholder="Link" required>	
+		    		<input type="text" id="tLink" name="link" placeholder="Link" disabled="disabled">	
 		    	</div>
 		    	<div class="col-md-2">
 	    			<h4>Link Versão Dark</h4>
-		    		<input type="text" id="tLinkDark" name="link dark" placeholder="Link Dark">	
+		    		<input type="text" id="tLinkDark" name="link dark" placeholder="Link Dark" disabled="disabled">	
 	    		</div>
 	    	</div>
+
+	    	<hr>
+
+	    	<!-- ================== Row Input Imagem ==================== -->
+			    	<div class="row marBot">
+			    		
+			    		<h2 id="tituloUploadImgs">Upload das imagens</h2>
+						<br>
+
+					    <div class="col-md-4">
+					    	<center>
+						    	<h4>Imagem do transfer</h4>
+						    	<br>
+						    	<img id="blah1t" src="#" alt="imagem" />
+						    	<br>
+							 	<input id="transfer" type='file' name="transfer" onchange="readURL('1', 't', this);"/ required>
+							</center>
+					    </div>
+			    		<div class="col-md-4">
+					    	<center>
+						    	<h4>Imagem do transfer Versão Dark</h4>
+						    	<br>
+						    	<img id="blah1td" src="#" alt="imagem" />
+						    	<br>
+						    	<p>O nome do ficheiro tem de ser exactamente igual à versão normal do transfer mas com "dark-" no inicio.</p>
+							 	<input id="transferDark" type='file' name="transferDark" onchange="readURL('1', 'td',this);"/>
+							</center>
+					    </div>
+				    </div>
 
 	    	<hr>
 
@@ -133,6 +164,28 @@
     <p id="copyright">© 2017 MarcoBrinde</p>
 </footer>
 
+<!-- Modal para alertar o utilizador de que o upload foi efectuado com sucesso -->
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close hide" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sucesso!</h4>
+      </div>
+      <div class="modal-body">
+        <p>Foi adicionado um novo transfer com sucesso!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default hide" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 </body>
 
@@ -143,18 +196,19 @@
 
     	$("#addTransfer").click(function(){
 
-
     			var seccaoEscolhida = $.trim($("#products").text());
     			var eNome = $("#tNome").val();
     			var eReferencia = $("#tReferencia").val();
     			var eDimensoes = $("#tDimensoes").val();
     			var eLink = $("#tLink").val();
     			var eLinkDark = $("#tLinkDark").val();
+    			//var eTransfer = $("#transfer").val();
 
     			if(seccaoEscolhida != "Produtos"){
     				$("#avisoSeccao").addClass("hidden");
 
-    				if(eNome && eReferencia && eDimensoes && eLink ){
+    				if(eNome && eDimensoes){
+
 
 	    				$.ajax({
 					        type: 'POST',
@@ -167,7 +221,70 @@
 					        		linkDark: eLinkDark }
 					  	});
 
-					  	alert('Foi adicionado um novo transfer!');
+
+	    				/* Upload das imagens para o servidor */
+
+
+					    //php para enviar a primeira imagem
+					    var file_data = $('#transfer').prop('files')[0];
+					    var form_data = new FormData();
+					    form_data.append('file', file_data);
+					    form_data.append('seccao', seccaoEscolhida);
+					    form_data.append('versao', "light");
+
+					    $.ajax({
+					        url: 'uploadImgs.php',
+					       	dataType: 'text',
+					       	cache: false,
+			                contentType: false,
+			                processData: false,
+			                data:  form_data, 
+			                type: 'post',
+							success: function(){
+							 	console.log("Upload da imagem com sucesso");
+							},
+							error: function(){
+							 	console.log("Erro no upload da imagem");
+							}
+					    });
+
+
+
+					    //php para enviar a primeira imagem
+					    var file_data2 = $('#transferDark').prop('files')[0];
+					    var form_data2 = new FormData();
+					    form_data2.append('file', file_data2);
+					    form_data2.append('seccao', seccaoEscolhida);
+					    form_data2.append('versao', "dark");
+
+					    $.ajax({
+					        url: 'uploadImgs.php',
+					       	dataType: 'text',
+					       	cache: false,
+			                contentType: false,
+			                processData: false,
+			                data:  form_data2, 
+			                type: 'post',
+							success: function(){
+							 	console.log("Upload da imagem com sucesso");
+							},
+							error: function(){
+							 	console.log("Erro no upload da imagem");
+							}
+					    });
+
+						alert('Foi adicionado um novo transfer!');
+
+						/* Impossibilitar de fechar o modal na parte preta 
+
+				    	$('#modal').modal({
+						    backdrop: 'static',
+						    keyboard: false
+						})
+
+						$("#modal").modal('show');
+						//setTimeout(function() {$('#modal').modal('hide');}, 3500);
+					  	*/
 
 					}
 
@@ -182,12 +299,63 @@
 
     var changeGaleria = function(seccao){
     	$("#products").html(seccao + " <span class=\"caret\"></span>");
+
+		var sSeccao = $.trim($("#products").text());
+
+    	$.ajax({
+    		type: 'POST',
+	        url: 'PHPgetLastRef.php',
+	        data: { seccao: sSeccao }
+    	})
+    		.done(function(data){
+    			preencheReferencia(data);
+    		});
+
+    }
+
+    var preencheReferencia = function(refAntiga){
+
+    	var ref = refAntiga.split("#")[1];
+    	ref++;
+    	var novaRef = ("0000" + ref).slice(-4);
+    	var stringSend = refAntiga.split("#")[0] + "#" + novaRef;
+    	$("#tReferencia").val(stringSend);
+    }
+
+
+    /* ============================================== 
+		Função para mostrar as imagens seleccionadas
+       ============================================== */
+
+    var readURL = function (num, tipo, input) {
+        
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah'+ num + tipo +'')
+                    .attr('src', e.target.result)
+                    .width(300)
+                    .css('display','block');
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+            if(tipo == "t"){
+            	var filenameT = $("#transfer").val().split("\\")[2]; 
+	    		$("#tLink").val("light/" + filenameT);
+	    	}else{
+	    		var filenameTD = $("#transferDark").val().split("\\")[2];
+	    		$("#tLinkDark").val("dark/" + filenameTD);
+	    	}
+        }
+
     }
 
 </script>
 <!-- JS Files -->
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <!--//\\ -->
 
 </html>
