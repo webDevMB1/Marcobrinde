@@ -47,7 +47,7 @@ footer{
 
 /* Esconder alt das imagens */
 
-#blah1t, #blah1td, #blah1r, #blah2t, #blah2td, #blah2r, #blah3t, #blah3td, #blah3r, #blah4t, #blah4td, #blah4r{
+#blah1t, #blah1td, #blah1r, #blah2t, #blah2td, #blah2r, #blah3t, #blah3td, #blah3r, #blah4t, #blah4td, #blah4r, #blah1tDR, #blah2tDR, #blah3tDR, #blah4tDR{
 	display: none;
 }
 

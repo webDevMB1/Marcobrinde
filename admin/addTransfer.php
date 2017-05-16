@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
 	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	
+
 	<link rel="icon" href="../images/logo/icon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -55,8 +54,14 @@
 
 	<hr>
 
-	<form id="form" name="form" enctype="multipart/form-data"> 
+	<form id="form" name="form" enctype="multipart/form-data">
 		<div id="parentDiv">
+		    	<div id="avisoSeccao" class="alert alert-danger hidden">
+		    		<strong>Erro!</strong> Por favor preencha todos os campos obrigatórios.
+		    	</div>
+		    	<div id="sucesso" class="alert alert-success hidden">
+		    		<strong>Sucesso!</strong> Foi adicionado um novo transfer!
+		    	</div>
 			<!-- ============================================== ROW PRIMEIRO TRANSFER ============================================= -->
 			<div class="row">
 
@@ -74,16 +79,13 @@
 				                  <?php
 				                  	require_once("../lista.php");
 				                  ?>
-			                  
+
 			                  </ul>
 			                </li>
 			              </ul>
 			    	</div>
 		    	</div>
 
-		    	<div id="avisoSeccao" class="alert alert-danger hidden">
-		    		<strong>Aviso!</strong> Por favor seleccione uma secção.
-		    	</div>
 
 			    <hr>
 
@@ -108,11 +110,11 @@
 		    	</div>
 		    	<div class="col-md-2">
 		    		<h4>Link</h4>
-		    		<input type="text" id="tLink" name="link" placeholder="Link" disabled="disabled">	
+		    		<input type="text" id="tLink" name="link" placeholder="Link" disabled="disabled">
 		    	</div>
 		    	<div class="col-md-2">
 	    			<h4>Link Versão Dark</h4>
-		    		<input type="text" id="tLinkDark" name="link dark" placeholder="Link Dark" disabled="disabled">	
+		    		<input type="text" id="tLinkDark" name="link dark" placeholder="Link Dark" disabled="disabled">
 	    		</div>
 	    	</div>
 
@@ -120,9 +122,13 @@
 
 	    	<!-- ================== Row Input Imagem ==================== -->
 			    	<div class="row marBot">
-			    		
+
 			    		<h2 id="tituloUploadImgs">Upload das imagens</h2>
 						<br>
+
+						<!--<div id="alertWait" class="alert alert-warning hidden">
+						  <strong>Aguarde!</strong> Estamos a processar o seu pedido...
+						</div>-->
 
 					    <div class="col-md-4">
 					    	<center>
@@ -152,13 +158,13 @@
 		 <!-- ================== Row Button Update ==================== -->
 	    <div class="row">
 			<!--<a class="btn btn-lg" width="100%" style="border-radius: 0" id="submit">Enviar</a>-->
-			<input id="addTransfer" class="updateButton" type="submit" value="ADICIONAR">
+			<input id="addTransfer" class="updateButton" type="button" value="ADICIONAR">
 	    </div>
 
     </form>
 
 </div><!-- /container -->
-	
+
 <footer id="footerAddTransfer">
 	<div class="linhaFooter"></div>
     <p id="copyright">© 2017 MarcoBrinde</p>
@@ -202,96 +208,79 @@
     			var eDimensoes = $("#tDimensoes").val();
     			var eLink = $("#tLink").val();
     			var eLinkDark = $("#tLinkDark").val();
-    			//var eTransfer = $("#transfer").val();
 
-    			if(seccaoEscolhida != "Produtos"){
+    			if(seccaoEscolhida != "Produtos" && eNome && eDimensoes){
     				$("#avisoSeccao").addClass("hidden");
 
-    				if(eNome && eDimensoes){
+
+						  	//php para enviar a primeira imagem
+						    var file_data = $('#transfer').prop('files')[0];
+						    var form_data = new FormData();
+						    form_data.append('file', file_data);
+						    form_data.append('seccao', seccaoEscolhida);
+						    form_data.append('versao', "light");
+
+								//php para enviar a segunda imagem
+							 var file_data2 = $('#transferDark').prop('files')[0];
+							 var form_data2 = new FormData();
+							 form_data2.append('file', file_data2);
+							 form_data2.append('seccao', seccaoEscolhida);
+							 form_data2.append('versao', "dark");
 
 
-	    				$.ajax({
-					        type: 'POST',
-					        url: 'PHPaddTransfer.php',
-					        data: { seccao: seccaoEscolhida,
-					        		nome: eNome,
-					        		referencia: eReferencia,
-					        		dimensoes: eDimensoes,
-					        		link: eLink,
-					        		linkDark: eLinkDark }
-					  	});
+							 $.when(
+								 $.ajax({ //Actualizar a base de dados
+										 type: 'POST',
+										 url: 'PHPaddTransfer.php',
+										 data: { seccao: seccaoEscolhida,
+												 nome: eNome,
+												 referencia: eReferencia,
+												 dimensoes: eDimensoes,
+												 link: eLink,
+												 linkDark: eLinkDark }
+								 }),
+								 $.ajax({
+										url: 'uploadImgs.php',
+												type: 'post',
+										dataType: 'text',
+										cache: false,
+												contentType: false,
+												processData: false,
+												data: form_data
+										}),
+									$.ajax({
+							        url: 'uploadImgs.php',
+							       	dataType: 'text',
+							       	cache: false,
+					                contentType: false,
+					                processData: false,
+					                data:  form_data2,
+					                type: 'post'
+					            })
+							 ).then( function(){
+										 // Remover val dos campos preenchidos
+										$("#tNome").val('');
+										$("#tReferencia").val('');
+										$("#tDimensoes").val('');
+										$("#tLink").val('');
+										$("#tLinkDark").val('');
+
+													/* Modal de sucesso */
+										$('#modal').modal({
+												backdrop: 'static',
+												keyboard: false
+										});
+
+										setTimeout(function() {
+												$("#modal").modal('hide');
+										}, 3000);
+							 });
 
 
-	    				/* Upload das imagens para o servidor */
-
-
-					    //php para enviar a primeira imagem
-					    var file_data = $('#transfer').prop('files')[0];
-					    var form_data = new FormData();
-					    form_data.append('file', file_data);
-					    form_data.append('seccao', seccaoEscolhida);
-					    form_data.append('versao', "light");
-
-					    $.ajax({
-					        url: 'uploadImgs.php',
-					       	dataType: 'text',
-					       	cache: false,
-			                contentType: false,
-			                processData: false,
-			                data:  form_data, 
-			                type: 'post',
-							success: function(){
-							 	console.log("Upload da imagem com sucesso");
-							},
-							error: function(){
-							 	console.log("Erro no upload da imagem");
-							}
-					    });
-
-
-
-					    //php para enviar a primeira imagem
-					    var file_data2 = $('#transferDark').prop('files')[0];
-					    var form_data2 = new FormData();
-					    form_data2.append('file', file_data2);
-					    form_data2.append('seccao', seccaoEscolhida);
-					    form_data2.append('versao', "dark");
-
-					    $.ajax({
-					        url: 'uploadImgs.php',
-					       	dataType: 'text',
-					       	cache: false,
-			                contentType: false,
-			                processData: false,
-			                data:  form_data2, 
-			                type: 'post',
-							success: function(){
-							 	console.log("Upload da imagem com sucesso");
-							},
-							error: function(){
-							 	console.log("Erro no upload da imagem");
-							}
-					    });
-
-						alert('Foi adicionado um novo transfer!');
-
-						/* Impossibilitar de fechar o modal na parte preta 
-
-				    	$('#modal').modal({
-						    backdrop: 'static',
-						    keyboard: false
-						})
-
-						$("#modal").modal('show');
-						//setTimeout(function() {$('#modal').modal('hide');}, 3500);
-					  	*/
-
-					}
 
     			}else{
     				$("#avisoSeccao").removeClass("hidden");
     			}
-
 
     	});
 
@@ -323,12 +312,12 @@
     }
 
 
-    /* ============================================== 
+    /* ==============================================
 		Função para mostrar as imagens seleccionadas
        ============================================== */
 
     var readURL = function (num, tipo, input) {
-        
+
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
@@ -342,7 +331,7 @@
             reader.readAsDataURL(input.files[0]);
 
             if(tipo == "t"){
-            	var filenameT = $("#transfer").val().split("\\")[2]; 
+            	var filenameT = $("#transfer").val().split("\\")[2];
 	    		$("#tLink").val("light/" + filenameT);
 	    	}else{
 	    		var filenameTD = $("#transferDark").val().split("\\")[2];
