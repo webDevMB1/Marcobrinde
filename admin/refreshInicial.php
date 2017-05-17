@@ -382,7 +382,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close hide" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Por favor aguarde...</h4>
+        <h4 class="modal-title">Por favor aguarde.</h4>
       </div>
       <div class="modal-body">
         <p>Estamos a processar o seu pedido, por favor aguarde...</p>
@@ -608,6 +608,7 @@
 
 							 setTimeout(function() {
 									 $("#modal").modal('hide');
+									 location.reload();
 							 }, 3000);
 				    });
 

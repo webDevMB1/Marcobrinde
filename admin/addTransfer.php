@@ -192,6 +192,26 @@
   </div>
 </div>
 
+<div id="modalAguarde" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close hide" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Por favor aguarde.</h4>
+      </div>
+      <div class="modal-body">
+        <p>Estamos a processar o seu pedido, por favor aguarde...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default hide" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 </body>
 
@@ -211,6 +231,12 @@
 
     			if(seccaoEscolhida != "Produtos" && eNome && eDimensoes){
     				$("#avisoSeccao").addClass("hidden");
+
+								/* Modal Aguarde */
+								$('#modalAguarde').modal({
+										backdrop: 'static',
+										keyboard: false
+								});
 
 
 						  	//php para enviar a primeira imagem
@@ -258,6 +284,7 @@
 					                type: 'post'
 					            })
 							 ).then( function(){
+								 		$("#modalAguarde").modal('hide');
 										 // Remover val dos campos preenchidos
 										$("#tNome").val('');
 										$("#tReferencia").val('');
@@ -265,7 +292,7 @@
 										$("#tLink").val('');
 										$("#tLinkDark").val('');
 
-													/* Modal de sucesso */
+										/* Modal de sucesso */
 										$('#modal').modal({
 												backdrop: 'static',
 												keyboard: false
