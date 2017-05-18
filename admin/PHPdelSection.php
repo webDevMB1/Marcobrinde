@@ -6,43 +6,64 @@
                             'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',
                             'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o',
                             'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
-	/* /Limpeza de string */
 
-	/*------ Adicionar nova entrada ao menu */
+	/* Eliminar entrada do menu */
 	$listaAntiga = file_get_contents("../lista.php");
 
-	$add = "<li id=\"li_". strtolower($_POST['nome']) ."\"><a href=\"#\" onclick=\"changeGaleria('". strtolower($_POST['nome']) ."')\">". $_POST['nome'] ."</a></li>";
-
-	$listaNova = $listaAntiga . $add;
+	$listaNova = str_replace($_POST['li'], '', $listaAntiga);
 
 	file_put_contents('../lista.php', $listaNova);
 
-	/* Adicionar directorios para as imagens */
+	/* Eliminar directorios com as imagens */
 
 	$seccaoAntesSerLimpa = strtolower($_POST['nome']);
 
 	$seccaoLimpa = strtr( $seccaoAntesSerLimpa, $unwanted_array );
 
-	//$seccaoLimpaLower = strtolower($seccaoLimpa);
+	$seccaoLimpaLower = strtolower($seccaoLimpa);
 
-	mkdir("../images/transfers/". $seccaoLimpa ."");
-
-	mkdir("../images/transfers/". $seccaoLimpa ."/light");
-	mkdir("../images/transfers/". $seccaoLimpa ."/dark");
-	mkdir("../images/transfers/". $seccaoLimpa ."/DR");
+	Delete("../images/transfers/" . $seccaoLimpaLower);
 
 	/* Adicionar tabela à base de dados */
 
 	include('../connectBD.php');
 
-	$createTable = "CREATE TABLE transfers_". $seccaoLimpa ." (id int( 10 ) , nome varchar( 50 ) , referencia varchar( 50 ) , dimensoes varchar( 50 ) , link varchar( 150 ) , linkDark varchar( 150 ) )";
+	$seccao = $_POST['nome'];
 
-	if ($db->query($createTable) === TRUE) {
-	    echo "Tabela criada com sucesso";
+	$delTable = "DROP TABLE transfers_" . $seccao;
+
+	if ($db->query($delTable) === TRUE) {
+	    echo "Tabela eliminada com sucesso";
 	} else {
-	    echo "Erro: " . $createTable . "<br>" . $db->error;
+	    echo "Erro: " . $delTable . "<br>" . $db->error;
 	}
 
 	$db->close();
+
+
+ /* ==================================================
+ 				Função para apagar as pastas no servidor
+		================================================== */
+
+	function Delete($path){
+	    if (is_dir($path) === true)
+	    {
+	        $files = array_diff(scandir($path), array('.', '..'));
+
+	        foreach ($files as $file)
+	        {
+	            Delete(realpath($path) . '/' . $file);
+	        }
+
+	        return rmdir($path);
+	    }
+
+	    else if (is_file($path) === true)
+	    {
+	        return unlink($path);
+	    }
+
+	    return false;
+	}
 
 ?>

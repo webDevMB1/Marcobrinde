@@ -171,7 +171,6 @@
 </footer>
 
 <!-- Modal para alertar o utilizador de que o upload foi efectuado com sucesso -->
-
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 

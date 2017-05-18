@@ -1,3 +1,8 @@
+<script type="text/javascript">
+		//Iniciação de variaveis globais
+		var sSeccao = "";
+</script>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +27,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- /fonts -->
 
-	<title>ADMIN - Adicionar Secção</title>
+	<title>ADMIN - Apagar Secção</title>
 </head>
 <body>
 
@@ -36,10 +41,10 @@
 
 	<div id="descricaoSeccao" class="row">
 		<center>
-			<h2>Adicionar Secção</h2>
+			<h2>Eliminar Secção</h2>
 			<br>
-			<p>Esta area adiciona uma nova secção de transfers.</p>
-			<p>As edições feitas aqui, alteram a tabela "recentes_transfers" na Base de Dados. Troca a informação existente na tabela com a informação inserida aqui.</p>
+			<p>Esta area elimina uma secção de transfers.</p>
+			<p>As edições feitas aqui, apagam a respectiva tabela na Base de Dados e elimina as pastas do servidor.</p>
 		</center>
 	</div>
 
@@ -48,7 +53,7 @@
 	<div id="explicacao" class="row">
 		<center><h4><strong>ATENÇÃO</strong></h4></center>
 		<br>
-		<p>Esta área efectua alterações tanto a nível de website como a nível de Base de Dados e pastas dos transfers. Ao adicionar uma nova secção está a ser adicionada uma nova entrada à listagem "Produtos" no menu da Loja, a ser criada uma nova tabela na BD, sobre o nome "transfers_" + o nome da secção e está ainda a ser criada uma nova pasta dentro da pasta "transfers". </p>
+		<p>Esta área efectua alterações tanto a nível de website como a nível de Base de Dados e pastas dos transfers. Ao eliminar uma secção está a eliminar uma entrada à listagem "Produtos" no menu da Loja, a eliminar uma tabela completa da BD e está ainda a eliminar as pastas relacionadas com essa secção do servidor. </p>
 	</div>
 
 	<hr>
@@ -58,16 +63,26 @@
 			<!-- ============================================== ROW PRIMEIRO TRANSFER ============================================= -->
 			<div class="row">
 
-				<h2 id="trans1">Nova Secção</h2>
+				<h2 id="trans1">Secção a eliminar</h2>
 				<br>
 
 				 <!-- ================== Row 1 Inputs ==================== -->
-			 	<div class="row marBot">
-			 		<div class="col-md-2">
-				    	<h4>Nome</h4>
-				    	<input type="text" id="nomeSeccao" name="nome" placeholder="Nome">
-			    	</div>
-		    	</div>
+				 <div class="row marBot">
+ 			 		<div class="col-md-3">
+ 				    	<ul class="nav navbar-nav">
+ 			                <li id="dropdownProdutos" class="dropdown" style="margin-right: 25px">
+ 			                  <a href="#" id="products" class="dropdown-toggle buttonDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black; background-color: white">Produtos <span class="caret"></span></a>
+ 			                  <ul class="dropdown-menu">
+
+ 				                  <?php
+ 				                  	require_once("../lista.php");
+ 				                  ?>
+
+ 			                  </ul>
+ 			                </li>
+ 			              </ul>
+ 			    	</div>
+ 		    	</div>
 
 			    <hr>
 
@@ -78,7 +93,7 @@
 		 <!-- ================== Row Button Update ==================== -->
 	    <div class="row">
 			<!--<a class="btn btn-lg" width="100%" style="border-radius: 0" id="submit">Enviar</a>-->
-			<input id="addSection" class="updateButton" type="button" value="ADICIONAR">
+			<input id="delSection" class="updateButton" type="submit" value="Eliminar">
 	    </div>
 
     </form>
@@ -90,7 +105,7 @@
     <p id="copyright">© 2017 MarcoBrinde</p>
 </footer>
 
-<!-- Modal para alertar o utilizador de que o upload foi efectuado com sucesso -->
+<!-- Modal para alertar o utilizador de que a secção foi eliminada com sucesso -->
 
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -102,7 +117,7 @@
         <h4 class="modal-title">Sucesso!</h4>
       </div>
       <div class="modal-body">
-        <p>Foi adicionada uma nova secção com sucesso!</p>
+        <p>A secção foi eliminada com sucesso!</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default hide" data-dismiss="modal">Close</button>
@@ -120,34 +135,45 @@
 
     $(window).load(function(){
 
-    	$("#addSection").click(function(){
+    	$("#delSection").click(function(){
 
-				if(confirm("Está prestes a adicionar uma nova secção. Deseja avançar?")) {
-						var mNomeSeccao = $("#nomeSeccao").val();
+				if(confirm("Está prestes a eliminar uma secção. Ao confirmar não há como voltar atrás. Deseja avançar?")) {
+					var mNomeSeccao = $.trim($("#products").text());
+					var mLiSave = $("#li_" + mNomeSeccao + "")[0].outerHTML;
 
-						$.when(
-								$.ajax({
-											type: 'POST',
-											url: 'PHPaddSection.php',
-											data: { nome: mNomeSeccao }
-								})
-							).then( function(){
-									 /* Modal de sucesso */
-									 $('#modal').modal({
-											 backdrop: 'static',
-											 keyboard: false
-									 });
+					$.when(
+						$.ajax({
+									type: 'POST',
+									url: 'PHPdelSection.php',
+									data: { nome: mNomeSeccao,
+													li: mLiSave }
+							})
+						).then( function(){
+								 /* Modal de sucesso */
+								 $('#modal').modal({
+										 backdrop: 'static',
+										 keyboard: false
+								 });
 
-									 setTimeout(function() {
-											 $("#modal").modal('hide');
-											 location.reload();
-									 }, 3000);
-							});
-
-			  } // if confirm
+								 setTimeout(function() {
+									 	$("#modal").modal('hide');
+										 location.reload();
+								 }, 3000);
+						});
+				} // if confirm
 
     	}); // click event
     }); // load
+
+
+		/* ===================================================
+				Função para alterar o nome da seccao seleccionada
+		   =================================================== */
+
+			 var changeGaleria = function(seccao){
+		     	$("#products").html(seccao + " <span class=\"caret\"></span>");
+		 			sSeccao = $.trim($("#products").text());
+	     }
 
 </script>
 <!-- JS Files -->

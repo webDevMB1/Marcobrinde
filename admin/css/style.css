@@ -1,5 +1,5 @@
 body{
-	background-color: #ECECEC;			
+	background-color: #ECECEC;
 }
 
 hr{
@@ -65,7 +65,7 @@ footer{
 		margin-top: 10%;
 	}
 
-	#labelRecDest, #labelAddSeccao, #labelAddTransfer{
+	#labelRecDest, #labelAddSeccao, #labelAddTransfer, #labelDelSeccao{
 		height: 200px;
 		width: 100%;
 		padding-top: 27px;
@@ -77,18 +77,35 @@ footer{
 		border: solid 2px #C5E77D !important;
 	}
 
+	#labelDelSeccao:hover{
+		border: solid 2px #D59D9D !important;
+	}
+
 	.labelActiveIndex{
 		border: solid 2px #A0D431 !important;
+		text-align: center;
+		padding-top: 22% !important;
 	}
 
 	.labelHover:hover{
 		cursor: pointer;
 	}
 
-	.labelActiveIndex{
+	.labelActiveRedIndex{
+		border: solid 2px #D43131 !important;
 		text-align: center;
 		padding-top: 22% !important;
 	}
+
+	.labelRedHover:hover{
+		cursor: pointer;
+	}
+
+	#segundaLinhaButtons{
+		margin-top: 30px;
+	}
+
+
 
 /*  =============================================================================================
 								//FIM	Página Index							*/
@@ -119,9 +136,9 @@ footer{
 }
 
 .updateButton{
-	width: 100%; 
+	width: 100%;
 	border: none;
-	color: white; 
+	color: white;
 	background-color: black;
 	height: 40px;
 }
