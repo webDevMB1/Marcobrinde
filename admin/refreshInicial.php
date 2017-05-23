@@ -652,7 +652,7 @@
        }
 
     /* ==============================================
-		Função para mostrar as imagens seleccionadas
+				Função para mostrar as imagens seleccionadas
        ============================================== */
 
     var readURLTR = function (num, input) {
@@ -694,7 +694,7 @@
 
 
     /* ===============================================================
-			Função para alterar a descrição da secção seleccionada
+						Função para alterar a descrição da secção seleccionada
        =============================================================== */
 
     var changeSeccao = function(seccao){
