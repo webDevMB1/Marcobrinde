@@ -6,7 +6,7 @@
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessario para Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="MarcoBrinde Loja Online Website Roupa Desenhos Personalizados" />
@@ -38,7 +38,7 @@
 <body>
 
 <?php
-	
+
 	require_once('header.php');
 ?>
 
@@ -48,7 +48,7 @@
 
 			<!-- Area destinada aos transfers -->
 			<div id="areaTransfers" class="col-md-12 product1">
-				
+
 				<?php
 				 	include('connectBD.php');
 
@@ -69,7 +69,7 @@
 				 	$linha4 = 1;
 				 	$pastaImgs = "";
 				 	$range = 1;
-				 	
+
 				 	$counterTransfers = 0;
 				 	$counterPages = 1;
 
@@ -82,7 +82,7 @@
 				 			$pastaImgs = "1R";
 				 			$range = rand(1, 18);
 				 		}
-				 		
+
 				 		if($row['linkDark'] != "" ){
 			 				$secondVersion = $row['linkDark'];
 			 			}else{
@@ -147,7 +147,7 @@
 				 	}
 				?>
 			</div>
-			
+
 			</div>
 				<div class="clearfix"></div>
 		</div>
@@ -163,7 +163,7 @@
 <script type="text/javascript">
 
 	cookies = $.cookie("seccao");
-	
+
 		if(cookies === "diversos" || cookies === " seccao=diversos"){                 				/* Diversos */
 			$("#tituloSeccao").text("Diversos");
 		}else if(cookies == "caca_pesca" || cookies == " seccao=caca_pesca"){		  				/* Caça/Pesca */
@@ -210,7 +210,7 @@
 	       		localStorage.setItem("artigoRef", ref);
 	       		localStorage.setItem("artigoDim", dim);
 	       		localStorage.setItem("versaoDark", versao);
-	       		window.location.replace("single.php");
+	       		window.location.replace("single");
 	       }
 
 	       /*  ----------------------------------------------------------- PESQUISA
@@ -225,17 +225,17 @@
 				}
 				//document.cookie = "sql="+ querySQL;
 
-				/* POST para preencher area dos transfers 
+				/* POST para preencher area dos transfers
 
 				$.ajax({
 					type: "POST",
 					url: 'preencheTransfer.php',
 					data: { 'SQL' : querySQL },
 					success: function(response){
-						$("#areaTransfers").html(response);	
+						$("#areaTransfers").html(response);
 					}
 				});
-				
+
 			});*/
 
 </script>

@@ -59,6 +59,269 @@
 	</div>
 </section>
 <!-- Top Section -->
+
+
+
+
+
+<section class="curriculum" id="seccaoInterior">
+	<h3 class="text-center slideanim">Soluções de Interior</h3>
+	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<div class="container">
+		<div class="row info-part">
+			<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+				<div class="info-details slideanim">
+					<h4>Collegiate, The Meaning Of Life</h4>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+				<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
+			</div>
+		</div>
+		<!--<div class="info-pics">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-sm-2 info-images">
+						<img src="images/info-img1.jpg" alt="" class="img-responsive slideanim">
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 info-images">
+						<img src="images/info-img2.jpg" alt="" class="img-responsive slideanim">
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 info-images">
+						<img src="images/info-img3.jpg" alt="" class="img-responsive slideanim">
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 info-images">
+						<img src="images/info-img4.jpg" alt="" class="img-responsive slideanim">
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 info-images">
+						<img src="images/info-img5.jpg" alt="" class="img-responsive slideanim">
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 info-images">
+						<img src="images/info-img6.jpg" alt="" class="img-responsive slideanim">
+					</div>
+				</div>
+			</div>
+		</div>-->	
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container projects" id="projects">
+		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+					<ul id="myTab" class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#home-main" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Muppies</a></li>
+						<li role="presentation"><a href="#learning" role="tab" id="learning-tab" data-toggle="tab" aria-controls="learning">Sistema Caixa</a></li>
+						<li role="presentation"><a href="#playing" role="tab" id="playing-tab" data-toggle="tab" aria-controls="playing">Sistema L</a></li>
+						<li role="presentation"><a href="#painting" role="tab" id="painting-tab" data-toggle="tab" aria-controls="painting">Sistema T</a></li>
+						<li role="presentation"><a href="#school" role="tab" id="school-tab" data-toggle="tab" aria-controls="school">Letterings Monobloco</a></li>
+						<li role="presentation"><a href="#school" role="tab" id="school-tab" data-toggle="tab" aria-controls="school">Totem</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="home-main" aria-labelledby="home-tab">
+						<div class="col-md-12">
+							<p>Cenas derivadas são fixes se por acaso funcionarem</p>
+						</div>
+							<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p1.jpg">
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/p1.jpg" alt=" " class="img-responsive" />
+										  </figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p2.jpg">
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/p2.jpg" alt=" " class="img-responsive" />
+										  </figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p3.jpg">
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/p3.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p4.jpg">
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/p4.jpg" alt=" " class="img-responsive" />
+										</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p5.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p5.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p6.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p6.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p7.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p7.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p8.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p8.jpg" alt=" " class="img-responsive" />
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="learning" aria-labelledby="learning-tab">
+							<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p6.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p6.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p9.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p9.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="playing" aria-labelledby="playing-tab">
+							<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p1.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p1.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p5.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p5.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p7.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p7.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p3.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p3.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="painting" aria-labelledby="painting-tab">
+							<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p2.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p2.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p4.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p4.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p10.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p10.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="school" aria-labelledby="school-tab">
+							<div class="w3_tab_img">
+								<div class="col-md-3 w3_tab_img_left">
+									<div class="demo">
+										<a class="cm-overlay" href="images/p8.jpg">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/p8.jpg" alt=" " class="img-responsive">
+											</figure>
+										</a>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+		</div>
+		<script src="../website/js/jquery.tools.min.js"></script>
+			<script src="../website/js/jquery.mobile.custom.min.js"></script>
+			<script src="../website/js/jquery.cm-overlay.js"></script>
+			<script>
+				$(document).ready(function(){
+					$('.cm-overlay').cmOverlay();
+				});
+			</script>
+
+	</div>
+
+
+
 <!-- Reclamos -->
 <section class="our-services experience" id="reclamos">
 
@@ -458,7 +721,7 @@
 </section>
 <!-- /sinaletica -->
 <?php
-	require_once("footer.html");
+	require_once("../website/footer.html");
 ?>
 
 <!-- ==================== AREA MODAL =================== -->
@@ -480,6 +743,7 @@
       
     </div>
   </div>
+<!-- =================== // AREA MODAL ================== -->
 
 <!-- Back To Top -->
 <a href="#0" class="cd-top">Top</a>

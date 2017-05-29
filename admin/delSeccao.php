@@ -34,7 +34,7 @@
 
 	<!-- ROW Logo -->
 	<div id="rowLogo" class="row">
-		<a href="index.html"><img id="logoImg" src="../images/index/10l.png" alt="logo" height="110" style="padding-bottom: 10px"></a>
+		<a href="http://www.marcobrinde.com/admin"><img id="logoImg" src="../images/index/10l.png" alt="logo" height="110" style="padding-bottom: 10px"></a>
 	</div>
 
 <div class="container">

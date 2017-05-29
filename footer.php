@@ -4,13 +4,13 @@
 			<div class="col-md-3 amet-sed w3l">
 			<h4>MAIS INFORMAÇÃO</h4>
 			<ul class="nav-bottom">
-				<li><a href="info.php">Compras</a></li>
-				<li><a href="guiaTamanhos.php">Guia Tamanhos</a></li>
-				<li><a href="lavagem.php">Instruções de Lavagem</a></li>
-			</ul>	
+				<li><a href="info">Compras</a></li>
+				<li><a href="guiaTamanhos">Guia Tamanhos</a></li>
+				<li><a href="lavagem">Instruções de Lavagem</a></li>
+			</ul>
 			</div>
 			<div class="col-md-3 amet-sed agileits-w3layouts">
-				<a id="contactoFooter" href="contact.php"><h4>CONTACTE-NOS</h4></a>
+				<a id="contactoFooter" href="contacto"><h4>CONTACTE-NOS</h4></a>
 				<p>Zona Industrial da Lagoa</p>
 				<p>4950-850 Cortes Monção</p>
 				<p>Telefone: 251 654 317</p>
@@ -19,7 +19,7 @@
 			<div id="vota" class="col-md-3 amet-sed agileits-w3layouts">
 				<h4>Avaliação do Site</h4>
 				<div style="margin-left: 6%; margin-right: 12%">
-				
+
 				<?php
 					include('connectBD.php');
 

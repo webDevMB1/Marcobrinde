@@ -5,10 +5,10 @@
 		$(".grow").css("position", "inherit");
 		$(".grow").css("z-index", "90");
 	});
-	
+
 	function changeGaleria(seccao){
 		document.cookie = "seccao=" + seccao;
-		window.location.replace("products.php");
+		window.location.replace("productos");
 	}
 
 </script>
@@ -29,8 +29,8 @@
 	<div class="header-top" style="margin-bottom: -5%">
 		<div class="container"><!-- style="padding-bottom: 0.6%">-->
 			<!--<div class="logo" style="width: 60%">-->
-				<a href="indexLoja.php"><img src="images/logo/logo.png" alt="logo" height="110" style="padding-bottom: 10px"></a>
-				<a id="slogan" href="indexLoja.php"><img src="images/logo/slogan.png" alt="slogan" height="55" style="float: right; margin-top: 2.5%; margin-right: 1%; max-width: 100%; max-height: 100%"></a>
+				<a href="loja"><img src="images/logo/logo.png" alt="logo" height="110" style="padding-bottom: 10px"></a>
+				<a id="slogan" href="loja"><img src="images/logo/slogan.png" alt="slogan" height="55" style="float: right; margin-top: 2.5%; margin-right: 1%; max-width: 100%; max-height: 100%"></a>
 			<!--</div>-->
 		</div>
 			<!-- grow -->
@@ -58,15 +58,15 @@
 				                  <?php
 				                  	require_once("lista.php");
 				                  ?>
-			                  
+
 			                  </ul>
 			                </li>
 			                <li>
 			                	<center>
 				                	<div class="total" style="padding: 5px 1px;">
 										<div id="rowCarrinho" class="row">
-											<a href="checkout.php" class="padding-right0">
-													<span id="valor" class="simpleCart_total" style="color: white"></span> 
+											<a href="checkout" class="padding-right0">
+													<span id="valor" class="simpleCart_total" style="color: white"></span>
 												<img id="cart" src="images/cart/cart.png" alt=""/>
 											</a>
 										</div>
@@ -100,14 +100,14 @@
 									<li id="lihipsterRetro"><a href="#" onclick="changeGaleria('hipster_retro')">Hipster / Retro</a></li>
 									<li id="liMotores"><a href="#" onclick="changeGaleria('motores')">Motores</a></li>
 									<li id="liMusica"><a href="#" onclick="changeGaleria('musica')">Música</a></li>
-								</ul>	
+								</ul>
 			              </li>
 			               CARRINHO -->
 			              <!--<li id="liCart">
 			              	<div class="total">
 								<div id="rowCarrinho" class="row">
 									<a href="checkout.php" class="padding-right0">
-											<span id="valor" class="simpleCart_total"></span> 
+											<span id="valor" class="simpleCart_total"></span>
 										<img id="cart" src="images/cart/cart.png" alt=""/>
 									</a>
 								</div>
@@ -124,8 +124,8 @@
 									<span class="sb-icon-search"> </span>
 								</form>
 							</div>
-							
-							 search-scripts 
+
+							 search-scripts
 							<script src="js/classie.js"></script>
 							<script src="js/uisearch.js"></script>
 								<script>
@@ -147,7 +147,7 @@
 
 	<div class="container menuFundo">
 		<div class="head-top">
-			
+
 			<div class="clearfix"> </div>
 		</div><!-- /head-top -->
 	</div> <!-- /container MenuFundo -->
@@ -155,20 +155,20 @@
 
 	<!--
 	 ___________________________________________________
-	 
-	 FIM HEADER 
+
+	 FIM HEADER
 	 ___________________________________________________-->
 
 
 <script type="text/javascript">
 
 	$(".total").on("mouseenter", function() {
-       	$("#cart").attr("src","images/cart/cartGrey.png"); 
+       	$("#cart").attr("src","images/cart/cartGrey.png");
        	$("#valor").css("color","#ACACAC");
        	$("#esvaziar").css("color","#ACACAC");
 	}).on('mouseleave', function(){
-		$("#cart").attr("src","images/cart/cart.png");
-		$("#valor").css("color","white");
+		  $("#cart").attr("src","images/cart/cart.png");
+		  $("#valor").css("color","white");
 	    $("#esvaziar").css("color","white");
 	});
 
@@ -179,7 +179,7 @@
 	    	$('#cart').css('width', '6%');
 	    	$("#rowEsvaziar").css('padding-left', '12%');
 	    	$("#sb-search").css('margin-left', '0');
-	    	$("#sb-search").css('margin-top', '3%');	
+	    	$("#sb-search").css('margin-top', '3%');
 	    	$("#search").css('background-color', 'white');
 	    	$(".inlineBlock").css('float', 'right');
 	    	$(".inlineBlock").css('width', '50%');
@@ -187,7 +187,7 @@
 	    	$(".inlineBlock").css('width', '100%');
 	    	$(".inlineBlock").css('padding-right', '10%');
 	    }
-	});	
+	});
 
 	$(document).ready(function(){
 		$("#products").on('click', function(){

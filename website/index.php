@@ -50,7 +50,7 @@
 					<p>O crescimento e a expanção além fronteiras (Espanha e França) da Marcobrinde só é possível através de um excelente relacionamento de parceria, que se traduz na simpatia, dedicação e profissionalismo para com os nossos clientes.</p>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<!--<div class="row below">
 			<div class="col-lg-6 col-md-6">
 				<div class="about-details">
@@ -63,7 +63,7 @@
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 							</div>
 						</div>
-					</div>		
+					</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6">
@@ -77,13 +77,13 @@
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 							</div>
 						</div>
-					</div>		
+					</div>
 				</div>
 			</div>
 		</div>-->
 	</div>
 </section>
-<!-- /About Section -->	
+<!-- /About Section -->
 <!-- Our Services -->
 <section class="our-services experience" id="trabalho">
 	<!--<h3 class="text-center slideanim">O que fazemos</h3>
@@ -161,7 +161,7 @@
 					</div>
 					<div class="clearfix"> </div>
 				</div>
-					
+
 			</div>
 			<!--<div class="row text-center" style="position: relative; margin-top: 25px;">
 
@@ -238,14 +238,14 @@
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 </section>-->
 <!-- /Our Information -->
-<!-- Our Gallery 
+<!-- Our Gallery
 <section class="our-gallery" id="gifts">
 	<h3 class="text-center slideanim">Gifts / Texteis Publicitários</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
+	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 	<div class="container">
 		<div class="content slideanim">
 			<div class="chroma-gallery mygallery">
@@ -262,7 +262,7 @@
 	</div>
 </section>
 <!-- /Our Gallery -->
-<!-- Our Curriculum 
+<!-- Our Curriculum
 <section class="curriculum" id="imgDesign">
 	<h3 class="text-center slideanim">Imagem e Design</h3>
 	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -273,9 +273,9 @@
 					<h4>Our Important Aspects</h4>
 					<p class="cur1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 					<div class="curriculum-info">
-						<div>	
+						<div>
 							<i class="fa fa-fort-awesome"></i>
-							<h5>Collegiate Stays On Track</h5> 
+							<h5>Collegiate Stays On Track</h5>
 							<p class="cur2">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
 						</div>
 						<div>
@@ -285,16 +285,16 @@
 						</div>
 						<div>
 							<i class="fa fa-graduation-cap"></i>
-							<h5>Step Into Graduation</h5> 
+							<h5>Step Into Graduation</h5>
 							<p class="cur2">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 slideanim">
-				<div class="video"> 
+				<div class="video">
 					<iframe src="https://player.vimeo.com/video/15428374?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
@@ -306,7 +306,7 @@
 		<div class="row">
 			<div class="col-lg-12 slideanim">
 				<iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d656.1292217127174!2d-8.509244597263303!3d42.06318954911575!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa0a2ad151468a3aa!2sMarcobrinde+Sociedade+Unipessoal+Lda!5e1!3m2!1spt-PT!2spt!4v1488819083312" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>	
+			</div>
 		</div>
 	</div>
 </section>
@@ -338,7 +338,7 @@
 						</div>
 					</div>
 				</form>
-			</div>	
+			</div>
 		</div>
 	</div>
 </section>
@@ -356,12 +356,12 @@
 <!-- js files for gallery -->
 <script src="js/chromagallery.pkgd.min.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() 
+		$(document).ready(function()
 		{
 		    $(".mygallery").chromaGallery();
 		});
 	</script>
-<!-- /js files for gallery -->	
+<!-- /js files for gallery -->
 <!-- Back To Top -->
 <script src="js/backtotop.js"></script>
 <!-- /Back To Top -->
@@ -377,9 +377,9 @@
 
 		// Remover e Colocar scroll Google Maps
 
-        $('.divMap').addClass('scrollOfGoogle'); 
+        $('.divMap').addClass('scrollOfGoogle');
         $('.map').on('click', function () {
-            $('.divMap').removeClass('scrollOfGoogle'); 
+            $('.divMap').removeClass('scrollOfGoogle');
         });
 
 

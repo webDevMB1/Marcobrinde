@@ -3,7 +3,7 @@
 ?>
 
 <script type="text/javascript">
-	
+
 	document.cookie = "seccao=index";
 	/*document.cookie = "pesquisa=false";
 	document.cookie = "sql=";*/
@@ -18,11 +18,11 @@
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessario para Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- navbar -->
 <link href="css/navbar.css" rel="stylesheet" type="text/css"/>
 <!-- carousel -->
-<link href="css/carousel.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/carousel.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="MarcoBrinde Loja Online Website Roupa Desenhos Personalizados" />
@@ -107,7 +107,7 @@
 					 	$recentes = "recentes_transfers";
 
 					 	$sqlRecentes = "SELECT * FROM " . $recentes . " ORDER BY id DESC";
-					 	
+
 					 	$resultRecentes = mysqli_query($db, $sqlRecentes);
 
 					 	$dest4 = 0;
@@ -128,8 +128,8 @@
 						 					echo '<h3 class="b-animate b-from-left b-delay03 "><span>' . $row['nome'] . '</span></h3>';
 						 				echo '</div>';
 						 			echo '</a>';
-						 			echo '<p><a href="single.php">' . $row['nome'] . '</a></p>';
-						 			echo '<p style="font-size: 14px"><a href="single.php">' . $row['referencia'] . '</a></p>';
+						 			echo '<p><a href="single">' . $row['nome'] . '</a></p>';
+						 			echo '<p style="font-size: 14px"><a href="single">' . $row['referencia'] . '</a></p>';
 						 		echo '</div>';
 						 		$dest4++;
 						 	}else{
@@ -140,7 +140,7 @@
 
 					<div class="clearfix"> </div>
 				</div><!--// row -->
-				
+
 				<!-- Area de Destaques -->
 				<div id="rowDestaques" class="row" style="margin-top: 10%">
 					<h1>DESTAQUES</h1>
@@ -149,7 +149,7 @@
 							<div class="row" id="destWindowLarge">
 								<?php
 									include('connectBD.php');
-						 			
+
 						 			$table_transfers = "destaque_transfers";
 
 									$sql = "SELECT * FROM " . $table_transfers;
@@ -198,7 +198,7 @@
 							<div class="row hidden" id="destFeiraFoda">
 								<?php
 									include('connectBD.php');
-						 			
+
 						 			$table_transfers = "transfers_moncao";
 
 									$sql = "SELECT * FROM " . $table_transfers;
@@ -262,7 +262,7 @@
 			$("#destWindowLarge").removeClass('hidden');
 			$("#destFeiraFoda").addClass('hidden');
 		}
-	});	
+	});
 
 
 	/* ===============
@@ -275,7 +275,7 @@
        		localStorage.setItem("artigoRef", ref);
        		localStorage.setItem("artigoDim", dim);
        		localStorage.setItem("versaoDark", versao);
-       		window.location.replace("single.php");
+       		window.location.replace("single");
        }
 
        /* Actualizar cookie seccao */
