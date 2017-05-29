@@ -38,7 +38,7 @@
 <body>
 
 <?php
-	
+
 	require_once('header.php');
 ?>
 		<div class="product">
@@ -110,9 +110,9 @@
 			<?php
 				session_destroy();
 			?>
-			
+
 			localStorage.clear();
-			window.location.replace("indexLoja.php");
+			window.location.replace("loja");
 		});
 
 	});

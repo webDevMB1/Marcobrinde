@@ -6,7 +6,7 @@
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessario para Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="MarcoBrinde Loja Online Website Roupa Desenhos Personalizados" />
@@ -42,7 +42,7 @@
 ?>
 <!--content-->
 <div class="contact">
-			
+
 			<div class="container">
 			<div class="contact-form">
 				<div class="col-md-2"></div>
@@ -60,11 +60,11 @@
 					<p>Será notificado pela transportadora acerca do dia e periodo de entrega da encomenda. <br>
 					Caso não receba a encomenda, nem o postal dos CTT, no prazo de 2 dias úteis
 					seguintes a essa notificação, por favor entre em contacto connosco através de email - apoio.marcobrinde@gmail.com</p>
-					 
+
 					 <br><div class="divider"></div></br>
 					<h4>Trocas</h4>
 					 <br>
-					<p>Só serão efectuadas trocas / devoluções de artigo(s) caso sejam detectados defeitos na peça ou no transfer, num prazo de 7 dias úteis após a recepção. Não serão efectuadas trocas / devoluções caso o artigo já tenha sido lavado. Não nos responsabilizamos por danos causados no transfer por má conduta no processo de lavagem e que não obdeçam às instruções referenciadas na etiqueta. Consulte <a href="lavagem.php">AQUI</a> as instruções de lavagem.</p>
+					<p>Só serão efectuadas trocas / devoluções de artigo(s) caso sejam detectados defeitos na peça ou no transfer, num prazo de 7 dias úteis após a recepção. Não serão efectuadas trocas / devoluções caso o artigo já tenha sido lavado. Não nos responsabilizamos por danos causados no transfer por má conduta no processo de lavagem e que não obdeçam às instruções referenciadas na etiqueta. Consulte <a href="lavagem">AQUI</a> as instruções de lavagem.</p>
 					<br>
 					<p>Para efectuar trocas / devoluções por favor envie o(s) seu(s) artigo(s) para a seguinte morada:</p>
 					 <br>
@@ -108,7 +108,7 @@
 				<div class="col-md-2"></div>
 			</div>
 		</div>
-		
+
 	</div>
 
 <?php
@@ -117,7 +117,7 @@
 
 </body>
 </html>
-			
+
 <script type="text/javascript">
 	changeTituloSeccao("Informação de Compras");
 </script>

@@ -39,16 +39,16 @@
 <body>
 
 <?php
-	
+
 	require_once('header.php');
 ?>
 
 		<div class="product">
 			<div class="container">
-				
+
 				<div class="product-price1">
 					<div class="top-sing">
-							
+
 						<?php
 							include('connectBD.php');
 
@@ -120,7 +120,7 @@
 							    <label for="nif">NIF</label>
 							    <input name="nif" type="text" class="form-control" id="formNIF" placeholder="NIF">
 							  </div>
-						  </div>	
+						  </div>
 
 						  <!-- ==== Morada Fatura ==== -->
 						  <div class="col-md-12 padding0">
@@ -198,7 +198,7 @@
 		//var artigos = $("#cartForm").html();
 		//$("#hiddenArtigosCarrinho").text(artigos);
 
-		
+
 		$(".item-decrement").remove();
 		$(".item-increment").remove();
 		$(".item-remove").remove();
@@ -258,10 +258,10 @@
 			        		valCompra: totalComPortes,
 			        		numeroEncomenda: sGetNumEncomenda}
 			    });
-			    window.location.replace("asdjkRBPN.php");
+			    window.location.replace("asdjkRBPN");
 			}
 
-			
+
 		});
 
 		/* Esconder button avançar se carrinho estiver vazio */

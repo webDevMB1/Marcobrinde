@@ -11,10 +11,10 @@
 
 		if(mail($para, $assunto, $mensagem, $headers)){
 			echo("<script> alert('Mensagem Enviada!');
-				window.location = 'index.html'</script>");
+				window.location = 'http://www.marcobrinde.com'</script>");
 		}else{
-			echo("<script> alert('Falha no envio!'); 
-				window.location = 'index.html'</script>");
+			echo("<script> alert('Falha no envio!');
+				window.location = 'http://www.marcobrinde.com'</script>");
 		}
 	}
 ?>

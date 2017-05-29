@@ -38,7 +38,7 @@
 <body>
 
 <?php
-	
+
 	require_once('header.php');
 ?>
 		<div class="product">
@@ -125,7 +125,7 @@
 				        data: { votacao: $('input[name=votacao]:checked').attr("val")}
 				    });
 
-				window.location.replace("pagamento.php");
+				window.location.replace("pagamento");
 			}
 
 		});

@@ -93,7 +93,7 @@
 <body>
 
 <?php
-	
+
 	require_once('header.php');
 ?>
 
@@ -105,14 +105,14 @@
 				  <strong>Atenção!</strong> O transfer seleccionado tem uma versão para fundos escuros. Para alterar <a id="changeVersion" href="#" onclick="">CLIQUE AQUI</a>
 				</div>
 				<div class="col-md-7 single-top">
-					<div id="divFlexslider" class="flexslider" style="background: url('images/roupa/tshirtUni/tshirtGreen.jpg') no-repeat center center; 
-						-webkit-background-size: 100%; 
-					    -moz-background-size: 100%; 
-					    -o-background-size: 100%; 
-					    background-size: 100%; 
-					    -webkit-background-size: cover; 
-					    -moz-background-size: cover; 
-					    -o-background-size: cover; 
+					<div id="divFlexslider" class="flexslider" style="background: url('images/roupa/tshirtUni/tshirtGreen.jpg') no-repeat center center;
+						-webkit-background-size: 100%;
+					    -moz-background-size: 100%;
+					    -o-background-size: 100%;
+					    background-size: 100%;
+					    -webkit-background-size: cover;
+					    -moz-background-size: cover;
+					    -o-background-size: cover;
 					    background-size: cover;">
 						<ul class="slides">
 						    <li id="liThumbFirst" data-thumb="#">
@@ -161,7 +161,7 @@
 					<!-- FlexSlider -->
 				  <script defer src="js/jquery.flexslider.js"></script>
 				<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-				</div>	
+				</div>
 
 					<div class="col-md-5 backColor">
 						<div class="single-top-in simpleCart_shelfItem">
@@ -171,7 +171,7 @@
 								<br>
 								<h4 id="nomeTransfer" style="font-size: 20px"></h4>
 								<br>
-								
+
 								<h5 id="preçoArtigo" class="item_price">11.95€</h5>
 								<p id="pRef" class="item_ref"></p>
 								<p id="dimTransfer"></p>
@@ -217,8 +217,8 @@
 											</li>
 										</ul>
 									</div>
-									
-									<div class="row">	
+
+									<div class="row">
 										<ul>
 											<li id="liTamanho" style="width: 100%; margin-left: 0">Tamanho <br>
 												<select id="selectSize" style="width: 100%; margin-left: 0" onclick="changeTamanho();">
@@ -241,21 +241,21 @@
 									<div id="sucessoCarrinho" class="alert alert-success hidden">
 									  Adicionado ao carrinho.
 									</div>
-								
+
 									<center>
 										<div style="display: inline-block;"><a id="buttonAdd" href="#" class="buttonAdd" onclick="checkValsDefault(); changeThumb()" style="margin-right: 2.5%; margin-bottom: 10%">ADICIONAR</a></div>
-										<div style="display: inline-block;"><a href="checkout.php" class="irCarrinho">IR PARA CARRINHO</a></div>
+										<div style="display: inline-block;"><a href="checkout" class="irCarrinho">IR PARA CARRINHO</a></div>
 									</center>
 
-								
+
 							</div>
 						</div>
 					</div> <!-- /Close Color -->
 					<div class="clearfix"> </div>
 				</div>
-					
 
-		<!-- Secção Destaques -->		
+
+		<!-- Secção Destaques -->
 		<div class=" bottom-product">
 			<center><h2 style="font-size: 26px">DESTAQUES</h2></center>
 			<br>
@@ -289,7 +289,7 @@
 
 			<div class="clearfix"> </div>
 		</div>
-		
+
 
 
 </div>
@@ -317,9 +317,9 @@
 
 	$(window).on('resize', function () {
 	    $('.single-top').removeClass('single-top', $(window).width() < 992);
-	});	
+	});
 
-	
+
 	$(window).load(function() {
 
 		/* se a secção for monção (especial feira foda); apenas existem t-shirts, areia */
@@ -328,14 +328,14 @@
 			$("#liTipo").html("<option value = \"T-Shirt Unisexo\">T-Shirt Unisexo</option>");
 			$("#selectCor").html("<option cor=\"defaultCor\" value = \"defaultCor\">----------</option>\
 								  <option cor=\"Areia\" value = \"tshirtUniAreia\">Areia</option>");
-			$("#divFlexslider").css({"background": "url('images/roupa/tshirtUni/tshirtSand.jpg') no-repeat center center", 
-						"-webkit-background-size": "100%", 
-					    "-moz-background-size": "100%", 
-					    "-o-background-size": "100%", 
-					    "background-size": "100%", 
-					    "-webkit-background-size": "cover", 
-					    "-moz-background-size": "cover", 
-					    "-o-background-size": "cover", 
+			$("#divFlexslider").css({"background": "url('images/roupa/tshirtUni/tshirtSand.jpg') no-repeat center center",
+						"-webkit-background-size": "100%",
+					    "-moz-background-size": "100%",
+					    "-o-background-size": "100%",
+					    "background-size": "100%",
+					    "-webkit-background-size": "cover",
+					    "-moz-background-size": "cover",
+					    "-o-background-size": "cover",
 					    "background-size": "cover"});
 			$("#preçoArtigo").text("9.99€");
 			$.cookie('valorCompra', "9.99");
@@ -349,7 +349,7 @@
 		checkVersionBlackSelectedTransfer(localStorage.getItem("versaoDark"), 1, $(".flex-control-nav").find("li:nth-child(1)").find("img").attr("src"));
 
 		var varJsonResults = "<?php Print($jsonResults); ?>";
-		
+
 		/* receber do PHP o valor do linkDark */
 		var jsonResult2 = varJsonResults.split(";")[0].split(",");
 		var jsonResult3 = varJsonResults.split(";")[1].split(",");
@@ -406,7 +406,7 @@
 		/* Colocar max height nas miniaturas */
 
 		$(".flex-control-nav").find("li").css("max-height","150px");
-	
+
 	});
 
 	/* Actualizar cookie seccao */
@@ -423,9 +423,9 @@
        		localStorage.setItem("artigoImg", img);
        		localStorage.setItem("artigoNome", nome);
        		localStorage.setItem("artigoRef", ref);
-       		window.location.replace("single.php");
+       		window.location.replace("single");
        }
-          
+
 
       /* ======================================================
 	 	  Confirmar se o transfer seleccionado tem versão dark
@@ -444,7 +444,7 @@
 				$("#alertSecondVersion").html("<strong>Atenção!</strong> O transfer seleccionado tem uma versão para fundos escuros. Para alterar <a id=\"changeVersion\" href=\"#\" onclick=\"\">CLIQUE AQUI</a>");
 
 				$("#changeVersion").attr("onclick", "changeVersionTransfer("+ numDos4 +", \""+ localVersaoDark +"\", \""+ $.cookie("seccao") + "\"	, \"" + versaoLight + "\")");
-				
+
 				$("#thumb1").find("img").attr("src", versaoLight);
 			}else if(numDos4 == 3){
 				$("#alertSecondVersion").html("<strong>Atenção!</strong> O transfer seleccionado tem uma versão para fundos escuros. Para alterar <a id=\"changeVersion\" href=\"#\" onclick=\"\">CLIQUE AQUI</a>");
@@ -501,7 +501,7 @@
              ============================================ */
 
             var voltaWhite = function(numDos4){
-             	
+
 
              	if(numDos4 == 1){
 
@@ -522,7 +522,7 @@
 					$("#alertSecondVersion").html("<strong>Atenção!</strong> O transfer seleccionado tem uma versão para fundos escuros. Para alterar <a id=\"changeVersion\" href=\"#\" onclick=\"\">CLIQUE AQUI</a>");
 
 					$("#changeVersion").attr("onclick", "changeVersionTransfer("+ numDos4 +", \""+ localStorage.getItem("versaoDark2") +"\", \""+ $.cookie("seccao") + "\"	, \"" + versaoLight + "\")");
-					
+
 					$("#thumb1").find("img").attr("src", versaoLight);
 					oldRef = $("#pRef").text();
 					oldRefSplit = oldRef.split("-");
@@ -561,7 +561,7 @@
 	       ===================================================================== */
 
 
-	      var actualizaInfoTransfer = function(nome, ref, dim){ 
+	      var actualizaInfoTransfer = function(nome, ref, dim){
 
 	      		changeTituloSeccao(nome);
 

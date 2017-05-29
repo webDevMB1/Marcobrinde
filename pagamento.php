@@ -43,7 +43,7 @@
 	<div id="cartForm" name="cartForm" class="simpleCart_items hidden"></div>
 
 <?php
-	
+
 	require_once('header.php');
 ?>
 
@@ -87,7 +87,7 @@
 </html>
 
 <script type="text/javascript">
-	
+
 	$(window).load(function(){
 
 		/* Limpar campos desnecessarios do carrinho */
@@ -109,7 +109,7 @@
 			        data: { email: $("#emailTransferencia").text(),
 			        		valor: $(".simpleCart_total").text().split("€")[1]}
 			    });
-			window.location.replace("asdjkRBPN.php");
+			window.location.replace("asdjkRBPN");
 		});
 
 
@@ -134,8 +134,8 @@
 
 
 
-			/* 
-			 * Preencher var items com os valores reais do carrinho 
+			/*
+			 * Preencher var items com os valores reais do carrinho
 			 */
 
 			 items = "";
@@ -154,12 +154,12 @@
 				items = items + "<item id='"+ count +"'><name>"+ nome +"</name><infos>"+ cor +", "+ tamanho +"</infos><amount>"+ preco +"</amount><categoryId>331</categoryId><quantity>"+ quantidade +"</quantity><reference>"+ referencia +"</reference></item>";
 				count++;
 			});
-			
+
 			var totalComPortes = $.cookie("valorPortes");
 
 			items = items + " <item id='portes'><name>Portes</name><infos>Valor total com portes</infos><amount>"+ totalComPortes +"</amount><categoryId>331</categoryId><quantity>1</quantity><reference>#portes</reference></item> ";
 
-			$("#artigosTransferencia").text(items); 
+			$("#artigosTransferencia").text(items);
 			console.log("items: " + items);
 
 			//Post para poder utilizar a variavel no PHP
@@ -168,11 +168,11 @@
 				url: 'pagaInfo.php',
 				data: { 'itemsPHP' : items },
 				success: function(response){
-					$("#divHipay").html(response);	
+					$("#divHipay").html(response);
 				}
 			});
 
-		
+
 
 	});
 

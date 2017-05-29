@@ -28,10 +28,10 @@
 
 		if(mail($para, $assunto, $corpo, $headers)){
 			echo("<script> alert('Email Enviado!');
-				window.location = 'index.php'</script>");
+				window.location = 'http://www.marcobrinde.com'</script>");
 		}else{
-			echo("<script> alert('Falha no envio!'); 
-				window.location = 'index.php'</script>");
+			echo("<script> alert('Falha no envio!');
+				window.location = 'http://www.marcobrinde.com'</script>");
 		}
 	}
 

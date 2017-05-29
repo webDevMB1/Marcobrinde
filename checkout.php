@@ -6,7 +6,7 @@
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessario para Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="MarcoBrinde Loja Online Website Roupa Desenhos Personalizados" />
@@ -56,7 +56,7 @@
 ?>
 
 <div class="container">
-	<div class="check">	 
+	<div class="check">
 		 <div class="col-md-9 cart-items simpleCart_items" style="margin-bottom: 35px"></div>
 		  <div class="col-md-3 cart-total">
 			 <a class="continue" href="#" onclick="changeGaleria('diversos')">Continuar a comprar</a>
@@ -68,16 +68,16 @@
 				 <span id="portes" class="total1"></span>
 				 <div class="divider" style="margin-top: 26%"></div>
 				 <br>
-			 	<h3>Entregas</h3>	
+			 	<h3>Entregas</h3>
 				 <label style="font-size: 12px"><input id="entregaCasa" type="radio" name="entrega" onclick="calculaPortes(true);"> Morada</label><br>
 				 <label style="font-size: 12px"><input id="entregaMB" type="radio" name="entrega" onclick="calculaPortes(false)"> Loja</label>
 				 <div id="alertEntrega" class="alert alert-danger hidden" role="alert" style="margin-left: 1.5%; margin-top: 10%">
 				  <p style="font-size: 10px">Campo de preenchimento obrigatório.</p>
 				</div>
 				<br>
-			 </div>	
+			 </div>
 			 <ul class="total_price">
-			   <li class="last_price"> <h4>TOTAL</h4></li>	
+			   <li class="last_price"> <h4>TOTAL</h4></li>
 			   <h4><li id="valTotal"></li></h4>
 			 </ul>
 			 <div class="clearfix"></div>
@@ -88,7 +88,7 @@
 			<div class="divider"></div>
 		 	<center>
 			 	<strong><p style="margin-top: 4%">Entrega até 5 dias uteis após confirmação do pagamento.</p>
-			 	<p>No caso de estar no estrangeiro, por favor contacte-nos através de <a href="contact.php">apoio.marcobrinde@gmail.com</a> antes de efectuar a sua compra.</p></strong>
+			 	<p>No caso de estar no estrangeiro, por favor contacte-nos através de <a href="contacto">apoio.marcobrinde@gmail.com</a> antes de efectuar a sua compra.</p></strong>
 			 </center>
 		 </div>
 	 </div>
@@ -151,14 +151,14 @@
 	}
 
 </style>
-			
+
 <script type="text/javascript">
 
 	changeTituloSeccao("Carrinho");
 
 	$(window).load(function(){
 		estiloCheckout();
-		
+
 		$(".simpleCart_remove").click(function(){
 			location.reload();
 		});
@@ -228,7 +228,7 @@
 			$("#alertEntrega").removeClass("hidden");
 			return;
 		}else{
-			window.location.replace("formulario.php");
+			window.location.replace("formulario");
 		}
 	}
 

@@ -9,14 +9,14 @@
 		$headers .= "MIME-Version: 1.0" . "\r\n";
 		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-		$mensagem = 'Nome: ' . $_POST['nome'] . '<br><br> Email: ' . $_POST['email'] . '<br><br>' . $mensagem; 
+		$mensagem = 'Nome: ' . $_POST['nome'] . '<br><br> Email: ' . $_POST['email'] . '<br><br>' . $mensagem;
 
 		if(mail($para, $assunto, $mensagem, $headers)){
 			echo("<script> alert('Email enviado com sucesso! Entraremos em contacto assim que possivel.');
-				window.location = 'indexLoja.php'</script>");
+				window.location = 'loja'</script>");
 		}else{
-			echo("<script> alert('Falha no envio!'); 
-				window.location = 'indexLoja.php'</script>");
+			echo("<script> alert('Falha no envio!');
+				window.location = 'loja'</script>");
 		}
 	}
 ?>
