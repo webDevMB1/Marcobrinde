@@ -40,11 +40,11 @@ jQuery(document).ready(function($){
 			var selectedTab = selectedItem.data('content'),
 				selectedContent = tabContentWrapper.find('li[data-content="'+selectedTab+'"]'),
 				slectedContentHeight = selectedContent.innerHeight();
-			
+
 			tabItems.removeClass('selected');
 			selectedItem.addClass('selected');
 			selectedContent.addClass('selected').siblings('li').removeClass('selected');
-			//animate tabContentWrapper height when content changes 
+			//animate tabContentWrapper height when content changes
 			tabContentWrapper.animate({
 				'height': slectedContentHeight
 			}, 200);
@@ -57,7 +57,7 @@ jQuery(document).ready(function($){
 		checkScrolling($('.cd-tabs nav'));
 		tabContentWrapper.css('height', 'auto');
 	});
-	$('.cd-tabs nav').on('scroll', function(){ 
+	$('.cd-tabs nav').on('scroll', function(){
 		checkScrolling($(this));
 	});
 
@@ -80,7 +80,7 @@ jQuery(document).ready(function($){
 	}
 
 	/* ===============================
-			Remover :hover em mobile 
+			Remover :hover em mobile
 	   =============================== */
 
 	var touch = 'ontouchstart' in document.documentElement
@@ -127,7 +127,7 @@ var changeTituloSeccao = function(titulo){
 
 
 
-/*=========================================================================================================== 
+/*===========================================================================================================
 									ZONA SINGLE ; Selecção das camisolas
   ========================================================================================================= */
 
@@ -136,11 +136,11 @@ var changeTituloSeccao = function(titulo){
   	$(".item_thumb").text(transferSelected);
   }
 
-/*========================================= 
+/*=========================================
 	Alterar Cor da Camisola Seleccionada
 
 	Tem em consideração o tipo da cami-
-	sola e actualiza a imagem com o 
+	sola e actualiza a imagem com o
 	tipo e cor seleccionados.
   =========================================*/
 var changeCor = function(){
@@ -169,108 +169,110 @@ var changeCor = function(){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtUni/tshirtDarkGrey.jpg) no-repeat center center;');
 		}else if(selectedCor === "tshirtUniVerde"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtUni/tshirtGreen.jpg) no-repeat center center;');
+		}else if(selectedCor === "tshirtAppleGreen"){
+			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtUni/tshirtAppleGreen.jpg) no-repeat center center;');
 		}else if(selectedCor === "tshirtMulherPreto"){ 	/* === Tshirt Mulher =================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtMulher/tshirtMulherPreto.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtMulherBranco"){ 	
+		}else if(selectedCor === "tshirtMulherBranco"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtMulher/tshirtMulherBranco.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtMulherOrquidea"){ 	
+		}else if(selectedCor === "tshirtMulherOrquidea"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtMulher/tshirtMulherOrq.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtMulherRosa"){ 	
+		}else if(selectedCor === "tshirtMulherRosa"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtMulher/tshirtMulherRosa.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtMulherAmarelo"){ 	
+		}else if(selectedCor === "tshirtMulherAmarelo"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtMulher/tshirtMulherYellow.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtMulherVerde"){ 	
+		}else if(selectedCor === "tshirtMulherVerde"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtMulher/tshirtMulherVerde.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtMulherAzul"){ 	
+		}else if(selectedCor === "tshirtMulherAzul"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtMulher/tshirtMulherAzul.jpg) no-repeat center center;');
 		}else if(selectedCor === "tshirtCriancaAmarelo"){ 	/* === Tshirt Criança =================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtCriança/tshirtCriancaYellow.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtCriancaVerde"){ 	
+		}else if(selectedCor === "tshirtCriancaVerde"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtCriança/tshirtCriancaVerde.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtCriancaVermelho"){ 	
+		}else if(selectedCor === "tshirtCriancaVermelho"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtCriança/tshirtCriancaRed.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtCriancaAzul"){ 	
+		}else if(selectedCor === "tshirtCriancaAzul"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtCriança/tshirtCriancaAzul.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtCriancaRosa"){ 	
+		}else if(selectedCor === "tshirtCriancaRosa"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtCriança/tshirtCriancaRosa.jpg) no-repeat center center;');
-		}else if(selectedCor === "tshirtCriancaLaranja"){ 	
+		}else if(selectedCor === "tshirtCriancaLaranja"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtCriança/tshirtCriancaLaranja.jpg) no-repeat center center;');
 		}else if(selectedCor === "sweatCapuzUniPreto"){ 	/* === Sweat Capuz Unisexo =================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni/sweatCapuzPreto.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzUniVerde"){ 	
+		}else if(selectedCor === "sweatCapuzUniVerde"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni/sweatCapuzMaca.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzUniCamel"){ 	
+		}else if(selectedCor === "sweatCapuzUniCamel"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni/sweatCapuzCamel.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzUniAzulCiano"){ 	
+		}else if(selectedCor === "sweatCapuzUniAzulCiano"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni/sweatCapuzCyan.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzUniCinza"){ 	
+		}else if(selectedCor === "sweatCapuzUniCinza"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni/sweatCapuzCinza.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzUniAzulMar"){ 	
+		}else if(selectedCor === "sweatCapuzUniAzulMar"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni/sweatCapuzAzul.jpg) no-repeat center center;');
 		}else if(selectedCor === "sweatCapuz2Preto"){ 	/* === Sweat Capuz Unisexo (2 Cores) =================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni2/sweatUniPreto.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuz2Cinza"){ 	
+		}else if(selectedCor === "sweatCapuz2Cinza"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni2/sweatUniCinza.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuz2AzulMar"){ 	
+		}else if(selectedCor === "sweatCapuz2AzulMar"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni2/sweatUniMar.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuz2AzulRoyal"){ 	
+		}else if(selectedCor === "sweatCapuz2AzulRoyal"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatCapuzUni2/sweatUniRoyal.jpg) no-repeat center center;');
 		}else if(selectedCor === "sweatCapuzMulherRosa"){ 	/* === Sweat Capuz Senhora =================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatWoman/sweatWRosa.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzMulherRosetón"){ 	
+		}else if(selectedCor === "sweatCapuzMulherRosetón"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatWoman/sweatWRoseton.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzMulherAzul"){ 	
+		}else if(selectedCor === "sweatCapuzMulherAzul"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatWoman/sweatWMar.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzMulherChocolate"){ 	
+		}else if(selectedCor === "sweatCapuzMulherChocolate"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatWoman/sweatWChoco.jpg) no-repeat center center;');
 		}else if(selectedCor === "sweatCapuzCriancaGris"){ 	/* === Sweat Capuz Criança =================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatChild/sweatChildCinza.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzCriancaVermelho"){ 	
+		}else if(selectedCor === "sweatCapuzCriancaVermelho"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatChild/sweatChildRed.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatCapuzCriancaAzul"){ 	
+		}else if(selectedCor === "sweatCapuzCriancaAzul"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatChild/sweatChildAzul.jpg) no-repeat center center;');
 		}else if(selectedCor === "sweatSimplesUniVermelho"){ 	/* === Sweat Simples Unisexo =================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleUni/sweatSimpleRed.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesUniCaqui"){ 	
+		}else if(selectedCor === "sweatSimplesUniCaqui"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleUni/sweatSimpleCaqui.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesUniAzulPorto"){ 	
+		}else if(selectedCor === "sweatSimplesUniAzulPorto"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleUni/sweatSimpleAzulPorto.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesUniMagenta"){ 	
+		}else if(selectedCor === "sweatSimplesUniMagenta"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleUni/sweatSimpleMag.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesUniCinza"){ 	
+		}else if(selectedCor === "sweatSimplesUniCinza"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleUni/sweatSimpleCinza.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesUniAntracite"){ 	
+		}else if(selectedCor === "sweatSimplesUniAntracite"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleUni/sweatSimpleAntra.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesUniAzulMarengo"){ 	
+		}else if(selectedCor === "sweatSimplesUniAzulMarengo"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleUni/sweatSimpleAzulMarengo.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesUniCamel"){ 	
+		}else if(selectedCor === "sweatSimplesUniCamel"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleUni/sweatSimpleCamel.jpg) no-repeat center center;');
 		}else if(selectedCor === "sweatSimplesCriancaAzul"){ 	/* === Sweat Simples Criança =================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleCrianca/sweatSimpleCriancaCyan.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesCriancaVerde"){ 	
+		}else if(selectedCor === "sweatSimplesCriancaVerde"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleCrianca/sweatSimpleCriancaMaca.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesCriancaVermelho"){ 	
+		}else if(selectedCor === "sweatSimplesCriancaVermelho"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleCrianca/sweatSimpleCriancaRed.jpg) no-repeat center center;');
-		}else if(selectedCor === "sweatSimplesCriancaMagenta"){ 	
+		}else if(selectedCor === "sweatSimplesCriancaMagenta"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/sweatSimpleCrianca/sweatSimpleCriancaMag.jpg) no-repeat center center;');
-		}/*else if(selectedCor === "colUniCaqui"){ 	/* === Colete Unisexo =================== 
+		}/*else if(selectedCor === "colUniCaqui"){ 	/* === Colete Unisexo ===================
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/colUni/colUniCaqui.jpg) no-repeat center center;');
-		}else if(selectedCor === "colUniCinza"){ 
+		}else if(selectedCor === "colUniCinza"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/colUni/colUniCinza.jpg) no-repeat center center;');
-		}else if(selectedCor === "colUniAmarelo"){ 
+		}else if(selectedCor === "colUniAmarelo"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/colUni/colUniYellow.jpg) no-repeat center center;');
-		}else if(selectedCor === "colUniAzul"){ 
+		}else if(selectedCor === "colUniAzul"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/colUni/colUniCyan.jpg) no-repeat center center;');
-		}else if(selectedCor === "colUniMagenta"){ 
+		}else if(selectedCor === "colUniMagenta"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/colUni/colUniMag.jpg) no-repeat center center;');
 		}*/else if(selectedCor === "casacoPreto"){ 	/* === Casaco =================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/casaco/casacoPreto.jpg) no-repeat center center;');
-		}else if(selectedCor === "casacoCinza"){ 
+		}else if(selectedCor === "casacoCinza"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/casaco/casacoCinza.jpg) no-repeat center center;');
-		}else if(selectedCor === "casacoBranco"){ 
+		}else if(selectedCor === "casacoBranco"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/casaco/casacoBranco.jpg) no-repeat center center;');
 		}
-		
+
 		corCamisola = $("#selectCor option").filter(':selected').text();
 	}
 
@@ -284,7 +286,7 @@ var changeCor = function(){
 	}
 
 
-	/*========================================= 
+	/*=========================================
 		Alterar Tipo da Camisola Seleccionada
 
 		Actualiza listagem de cores consoante
@@ -331,7 +333,7 @@ var changeCor = function(){
 								   <option value = \"M\">M</option>\
 								   <option value = \"S\">S</option>");
 
-		}else if(tipoDetalhado === "T-Shirt Criança"){ 
+		}else if(tipoDetalhado === "T-Shirt Criança"){
 			tipoCamisola = "T-shirt";
 			qualidade = "100% Algodão, 190g";
 			$("#selectCor").html("<option value = \"tshirtCriancaVerde\">Verde</option>\
@@ -348,7 +350,7 @@ var changeCor = function(){
 								   <option value = \"4 anos\">4 anos</option>\
 								   <option value = \"2 anos\">2 anos</option>");
 
-		}else if(tipoDetalhado === "Sweat Capuz Unisexo"){	
+		}else if(tipoDetalhado === "Sweat Capuz Unisexo"){
 			tipoCamisola = "Sweat Capuz";
 			$("#selectCor").html("<option value = \"sweatCapuzUniVerde\">Verde</option>\
 								  <option value = \"sweatCapuzUniPreto\">Preto</option>\
@@ -362,9 +364,9 @@ var changeCor = function(){
 								   <option value = \"M\">M</option>\
 								   <option value = \"S\">S</option>");
 
-		}else if(tipoDetalhado === "Sweat Capuz Unisexo (2 Cores)"){		
-			tipoCamisola = "Sweat Capuz";	
-			qualidade = "65% Poliéster, 35% Algodão, 280g";				
+		}else if(tipoDetalhado === "Sweat Capuz Unisexo (2 Cores)"){
+			tipoCamisola = "Sweat Capuz";
+			qualidade = "65% Poliéster, 35% Algodão, 280g";
 			$("#selectCor").html("<option value = \"sweatCapuz2Preto\">Preto</option>\
 								  <option value = \"sweatCapuz2Cinza\">Cinza</option>\
 								  <option value = \"sweatCapuz2AzulMar\">Azul Marinho</option>\
@@ -375,9 +377,9 @@ var changeCor = function(){
 								   <option value = \"M\">M</option>\
 								   <option value = \"S\">S</option>");
 
-		}else if(tipoDetalhado === "Sweat Capuz Senhora"){	
-			tipoCamisola = "Sweat Capuz";	
-			qualidade = "65% Poliéster, 35% Algodão, 280g";						
+		}else if(tipoDetalhado === "Sweat Capuz Senhora"){
+			tipoCamisola = "Sweat Capuz";
+			qualidade = "65% Poliéster, 35% Algodão, 280g";
 			$("#selectCor").html("<option value = \"sweatCapuzMulherRosa\">Rosa</option>\
 								  <option value = \"sweatCapuzMulherRosetón\">Rosetón</option>\
 								  <option value = \"sweatCapuzMulherAzul\">Azul Marinho</option>\
@@ -388,9 +390,9 @@ var changeCor = function(){
 								   <option value = \"M\">M</option>\
 								   <option value = \"S\">S</option>");
 
-		}else if(tipoDetalhado === "Sweat Capuz Criança"){	
-			tipoCamisola = "Sweat Capuz";		
-			qualidade = "65% Poliéster, 35% Algodão, 280g";						
+		}else if(tipoDetalhado === "Sweat Capuz Criança"){
+			tipoCamisola = "Sweat Capuz";
+			qualidade = "65% Poliéster, 35% Algodão, 280g";
 			$("#selectCor").html("<option value = \"sweatCapuzCriancaGris\">Gris Vigoré</option>\
 								  <option value = \"sweatCapuzCriancaVermelho\">Vermelho</option>\
 								  <option value = \"sweatCapuzCriancaAzul\">Azul Royal</option>");
@@ -400,8 +402,8 @@ var changeCor = function(){
 								   <option value = \"7/8 anos\">7/8 anos</option>\
 								   <option value = \"5/6 anos\">5/6 anos</option>");
 
-		}else if(tipoDetalhado === "Sweat Simples Unisexo"){	
-			tipoCamisola = "Sweat Simples";								
+		}else if(tipoDetalhado === "Sweat Simples Unisexo"){
+			tipoCamisola = "Sweat Simples";
 			$("#selectCor").html("<option value = \"sweatSimplesUniVermelho\">Vermelho</option>\
 								  <option value = \"sweatSimplesUniCaqui\">Caqui</option>\
 								  <option value = \"sweatSimplesUniAzulPorto\">Azul Porto</option>\
@@ -417,8 +419,8 @@ var changeCor = function(){
 								   <option value = \"S\">S</option>");
 
 
-		}else if(tipoDetalhado === "Sweat Simples Criança"){		
-			tipoCamisola = "Sweat Simples";									
+		}else if(tipoDetalhado === "Sweat Simples Criança"){
+			tipoCamisola = "Sweat Simples";
 			$("#selectCor").html("<option value = \"sweatSimplesCriancaAzul\">Azul Ciano</option>\
 								  <option value = \"sweatSimplesCriancaVerde\">Verde</option>\
 								  <option value = \"sweatSimplesCriancaVermelho\">Vermelho</option>\
@@ -429,7 +431,7 @@ var changeCor = function(){
 								   <option value = \"4/5 anos\">4/5 anos</option>");
 
 		}/*else if(tipoDetalhado === "Colete Unisexo"){
-			tipoCamisola = "Colete";	
+			tipoCamisola = "Colete";
 			$("#selectCor").html("<option value = \"colUniCaqui\">Caqui</option>\
 								  <option value = \"colUniCinza\">Cinza</option>\
 								  <option value = \"colUniAmarelo\">Amarelo Florescente</option>\
@@ -442,7 +444,7 @@ var changeCor = function(){
 								   <option value = \"S\">S</option>");
 
 		}*/else if(tipoDetalhado === "Casaco"){
-			tipoCamisola = "Casaco";	
+			tipoCamisola = "Casaco";
 			$("#selectCor").html("<option value = \"casacoPreto\">Preto</option>\
 								  <option value = \"casacoCinza\">Cinza</option>\
 								  <option value = \"casacoBranco\">Branco</option>");
@@ -462,7 +464,7 @@ var changeCor = function(){
 		ajustaPreço();
 	}
 
-	  /*======================================= 
+	  /*=======================================
 	      			Detalhes da camisola
 	    =======================================*/
 
@@ -543,7 +545,7 @@ var changeCor = function(){
 	    }
 
 	    /*  =========================================================
-	      		Função para verificar peso total da encomenda e 
+	      		Função para verificar peso total da encomenda e
 	      		ajustar os portes consoante esse valor
 
 	      		T-shirt Unisexo = 230g

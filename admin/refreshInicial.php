@@ -57,7 +57,7 @@
 	<div id="explicacao" class="row">
 		<center><h4><strong>ATENÇÃO</strong></h4></center>
 		<br>
-		<p>Esta área altera os dados na base de dados. Sempre que adicionar um transfer para além de adicionar a respectiva informação na base de dados (os campos pedidos a baixo), deverá também adicionar as imagens através de FTP à respectiva pasta. Por outras palavras, ao adicionar um transfer sobre música, deve-se ir por FTP à pasta images/transfers/musica e adicionar as versões do transfer nas devidas pastas (light e dark) e adicionar a fotomontagem do transfer numa peça de roupa na pasta DR. (se esta pasta não existir deverá ser criada)</p>
+		<p>Esta área altera os dados na base de dados. Sempre que adicionar um transfer para além de adicionar a respectiva informação na base de dados (os campos pedidos a baixo), adiciona também as imagens através de FTP à respectiva pasta. Por outras palavras, ao adicionar um transfer sobre música, o transfer é adicionado por FTP à pasta images/transfers/musica, são adicionadas as versões do transfer nas devidas pastas (light e dark) e a fotomontagem do transfer numa peça de roupa na pasta DR.</p>
 		<hr>
 	</div>
 
@@ -753,6 +753,8 @@
    			var sReferencia = $("#recentesReferencia" + numTransfer).val();
    			var sSeccao = $("#recentesReferencia" + numTransfer).val().split("-")[1];
 
+				sSeccao = sSeccao.toLowerCase();
+
 
        		$.ajax({
 	    		type: 'POST',
@@ -772,7 +774,7 @@
 		    			$("#recentestipo"+ numTransfer).val(sSeccao);
 		    			$("#recentesNome"+ numTransfer).val(dataSplit[0]);
 		    			$("#recentesDimensoes"+ numTransfer).val(dataSplit[1]);
-		    			$("#recenteslink"+ numTransfer).val(dataSplit[2]);
+		    			$("#recenteslink"+ numTransfer).val(sSeccao + "/" + dataSplit[2]);
 		    			$("#recentesLinkDark"+ numTransfer).val(dataSplit[3]);
 	    			}
 

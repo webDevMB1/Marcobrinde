@@ -71,15 +71,26 @@
 	      <!-- Indicators -->
 	      <ol class="carousel-indicators">
 	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	        <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	        <li data-target="#myCarousel" data-slide-to="2"></li>
 	      </ol>
 	      <div class="carousel-inner" role="listbox">
 	        <!--<div class="item active">
 	          <center><a href="#" onclick="changeGaleria('moncao')"><img class="second-slide" src="images/bannerFeiraFoda.jpg" alt="Second slide" style="width: 100%; height: auto; max-width: 2500px"></a></center>
 	        </div>-->
-	        <div class="item active">
-	          <center><img class="first-slide" src="images/banner.jpg" alt="First slide" style="width: 100%; height: auto"></center>
-	        </div>
+
+					<div class="item active">
+						<center><a href="#" onclick="changeGaleria('moncao')"><img class="first-slide" src="images/bannerFeiraAlvarinho.jpg" alt="First slide" style="width: 100%; height: auto"></a></center>
+					</div>
+
+					<div class="item">
+						<center><a href="#" onclick="changeGaleria('moncao')"><img class="second-slide" src="images/bannerFeiraAlvarinho2.jpg" alt="Second slide" style="width: 100%; height: auto"></a></center>
+					</div>
+
+					<div class="item">
+						<center><img class="last-slide" src="images/banner.jpg" alt="Last slide" style="width: 100%; height: auto"></center>
+					</div>
+
 	      </div>
 	      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 	        <span aria-hidden="true"><img src="images/prev.png" style="width: 30%; margin-top: 60%"></span>

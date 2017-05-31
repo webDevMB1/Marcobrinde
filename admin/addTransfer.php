@@ -228,7 +228,7 @@
     			var eLink = $("#tLink").val();
     			var eLinkDark = $("#tLinkDark").val();
 
-    			if(seccaoEscolhida != "Produtos" && eNome && eDimensoes){
+    			if(seccaoEscolhida != "Produtos" && eNome && eDimensoes && eLink){
     				$("#avisoSeccao").addClass("hidden");
 
 								/* Modal Aguarde */

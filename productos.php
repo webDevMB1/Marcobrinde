@@ -75,13 +75,25 @@
 
 				 	while($row = mysqli_fetch_array($result)){
 
+				 		// Verificação casos especiais
+				 		// Para alterar a imagem de fundo atrás do transfer
+
 				 		if($_COOKIE["seccao"] == "criancas"){
 				 			$pastaImgs = "1RC";
 				 			$range = rand(1, 8);
-				 		}else{
+				 		}else if($row['referencia'] == "MB-Moncao-#0005" || $row['referencia'] == "MB-Moncao-#0006" || $row['referencia'] == "MB-Moncao-#0007" || $row['referencia'] == "MB-Moncao-#0008"){ // especial feira alvarinho
+				 			$pastaImgs = "1R";
+				 			$range = 19;
+				 		}else if($row['referencia'] == "MB-Moncao-#0001" || $row['referencia'] == "MB-Moncao-#0002" || $row['referencia'] == "MB-Moncao-#0003" || $row['referencia'] == "MB-Moncao-#0004"){ // especial feira foda
+				 			$pastaImgs = "1R";
+				 			$range = 20;
+				 		}else {
 				 			$pastaImgs = "1R";
 				 			$range = rand(1, 18);
 				 		}
+
+
+				 		// Verifica link Dark
 
 				 		if($row['linkDark'] != "" ){
 			 				$secondVersion = $row['linkDark'];

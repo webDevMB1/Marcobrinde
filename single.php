@@ -189,7 +189,6 @@
 													<option value = "Sweat Capuz Criança">Sweat Capuz Criança</option>
 													<option value = "Sweat Simples Unisexo">Sweat Simples Unisexo</option>
 													<option value = "Sweat Simples Criança">Sweat Simples Criança</option>
-													<!--<option value = "Colete Unisexo">Colete Unisexo</option>-->
 													<option value = "Casaco">Casaco</option>
 												</select>
 											</li>
@@ -213,6 +212,7 @@
 													<option cor="Verde Tropa" value = "tshirtUniVerdeTropa">Verde Tropa</option>
 													<option cor="Branco" value = "tshirtUniBranco">Branco</option>
 													<option cor="Cinza Escura" value = "tshirtUniCinza">Cinza Escura</option>
+													<option cor="Verde Maca" value = "tshirtAppleGreen">Verde Maçã</option>
 												</select>
 											</li>
 										</ul>
@@ -322,9 +322,25 @@
 
 	$(window).load(function() {
 
-		/* se a secção for monção (especial feira foda); apenas existem t-shirts, areia */
+		/* se o transfer for do alvarinho; apenas existem t-shirts verde maça */
 
-		if($.cookie('seccao') == "moncao"){
+		if($.cookie('refActivo') == "MB-Moncao-#0005" || $.cookie('refActivo') == "MB-Moncao-#0006" || $.cookie('refActivo') == "MB-Moncao-#0007" || $.cookie('refActivo') == "MB-Moncao-#0008"){
+			$("#liTipo").html("<option value = \"T-Shirt Unisexo\">T-Shirt Unisexo</option>");
+			$("#selectCor").html("<option cor=\"defaultCor\" value = \"defaultCor\">----------</option>\
+								  <option cor=\"Verde Maçã\" value = \"tshirtAppleGreen\">Verde Maçã</option>");
+			$("#divFlexslider").css({"background": "url('images/roupa/tshirtUni/tshirtAppleGreen.jpg') no-repeat center center",
+						"-webkit-background-size": "100%",
+					    "-moz-background-size": "100%",
+					    "-o-background-size": "100%",
+					    "background-size": "100%",
+					    "-webkit-background-size": "cover",
+					    "-moz-background-size": "cover",
+					    "-o-background-size": "cover",
+					    "background-size": "cover"});
+			$("#preçoArtigo").text("9.99€");
+			$.cookie('valorCompra', "9.99");
+		} // se for da feira da foda só dá para por areia
+		else if($.cookie('refActivo') == "MB-Moncao-#0001" || $.cookie('refActivo') == "MB-Moncao-#0002" || $.cookie('refActivo') == "MB-Moncao-#0003" || $.cookie('refActivo') == "MB-Moncao-#0004"){
 			$("#liTipo").html("<option value = \"T-Shirt Unisexo\">T-Shirt Unisexo</option>");
 			$("#selectCor").html("<option cor=\"defaultCor\" value = \"defaultCor\">----------</option>\
 								  <option cor=\"Areia\" value = \"tshirtUniAreia\">Areia</option>");
@@ -341,7 +357,7 @@
 			$.cookie('valorCompra', "9.99");
 		}
 
-		// / Fim verificação seccao monção
+		// / Fim verificação transfers
 
 		$("#qualidadeRoupa").text(qualidade);
 
@@ -568,6 +584,60 @@
 	      		$("#nomeTransfer").text(nome);
 	      		$("#pRef").text(ref);
 	      		$("#dimTransfer").text("Dimensões do desenho (aprox.): " + dim);
+
+
+						if($("#pRef").text() == "MB-Moncao-#0005" || $("#pRef").text() == "MB-Moncao-#0006" || $("#pRef").text() == "MB-Moncao-#0007" || $("#pRef").text() == "MB-Moncao-#0008"){  //Se altera para o transfer do alvarinho só dá para escolher verde maçã
+								$("#liTipo").html("<option value = \"T-Shirt Unisexo\">T-Shirt Unisexo</option>");
+								$("#selectCor").html("<option cor=\"defaultCor\" value = \"defaultCor\">----------</option>\
+														<option cor=\"Verde Maçã\" value = \"tshirtAppleGreen\">Verde Maçã</option>");
+								$("#divFlexslider").css({"background": "url('images/roupa/tshirtUni/tshirtAppleGreen.jpg') no-repeat center center",
+											"-webkit-background-size": "100%",
+												"-moz-background-size": "100%",
+												"-o-background-size": "100%",
+												"background-size": "100%",
+												"-webkit-background-size": "cover",
+												"-moz-background-size": "cover",
+												"-o-background-size": "cover",
+												"background-size": "cover"});
+
+						} // Se for da feira da foda só dá para seleccionar areia
+						else if($("#pRef").text() == "MB-Moncao-#0001" || $("#pRef").text() == "MB-Moncao-#0002" || $("#pRef").text() == "MB-Moncao-#0003" || $("#pRef").text() == "MB-Moncao-#0004"){
+							$("#liTipo").html("<option value = \"T-Shirt Unisexo\">T-Shirt Unisexo</option>");
+							$("#selectCor").html("<option cor=\"defaultCor\" value = \"defaultCor\">----------</option>\
+													<option cor=\"Areia\" value = \"tshirtUniAreia\">Areia</option>");
+							$("#divFlexslider").css({"background": "url('images/roupa/tshirtUni/tshirtSand.jpg') no-repeat center center",
+										"-webkit-background-size": "100%",
+											"-moz-background-size": "100%",
+											"-o-background-size": "100%",
+											"background-size": "100%",
+											"-webkit-background-size": "cover",
+											"-moz-background-size": "cover",
+											"-o-background-size": "cover",
+											"background-size": "cover"});
+						}else{ //Se não poe tudo disponível
+							$("#liTipo").html("<option value = \"T-Shirt Unisexo\">T-Shirt Unisexo</option>");
+							$("#selectCor").html("<option cor=\"defaultCor\" value = \"defaultCor\">----------</option>\
+													<option cor=\"Verde\" value = \"tshirtUniVerde\">Verde</option>\
+													<option cor=\"Preto\" value = \"tshirtUniPreto\">Preto</option>\
+													<option cor=\"Vermelho\" value = \"tshirtUniVermelho\">Vermelho</option>\
+													<option cor=\"Azul Royal\" value = \"tshirtUniAzulRoyal\">Azul Royal</option>\
+													<option cor=\"Azul Marinho\" value = \"tshirtUniAzulMar\">Azul Marinho</option>\
+													<option cor=\"Areia\" value = \"tshirtUniAreia\">Areia</option>\
+													<option cor=\"Laranja\" value = \"tshirtUniLaranja\">Laranja</option>\
+													<option cor=\"Verde Tropa\" value = \"tshirtUniVerdeTropa\">Verde Tropa</option>\
+													<option cor=\"Branco\" value = \"tshirtUniBranco\">Branco</option>\
+													<option cor=\"Cinza Escura\" value = \"tshirtUniCinza\">Cinza Escura</option>\
+													<option cor=\"Verde Maçã\" value = \"tshirtAppleGreen\">Verde Maçã</option>");
+							$("#divFlexslider").css({"background": "url('images/roupa/tshirtUni/tshirtGreen.jpg') no-repeat center center",
+										"-webkit-background-size": "100%",
+											"-moz-background-size": "100%",
+											"-o-background-size": "100%",
+											"background-size": "100%",
+											"-webkit-background-size": "cover",
+											"-moz-background-size": "cover",
+											"-o-background-size": "cover",
+											"background-size": "cover"});
+						}
 
 	      }
 

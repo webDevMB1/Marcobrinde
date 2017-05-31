@@ -53,7 +53,7 @@
 					<p>Todas as encomendas são enviadas em Correio Registado via CTT. <br>
 					O correio registado permite-nos ter informação rápida sobre o estado da encomenda.</p>
 					 <br>
-					<p>As encomendas serão entegues no prazo de até 5 dias úteis após a confirmação de pagamento.</p>
+					<p>As encomendas serão entregues no prazo de até 5 dias úteis após a confirmação de pagamento.</p>
 					 <br>
 					<p>A encomenda será entregue na morada inserida no formulário de compra ("Morada de Envio"). Se por motivo de ausência a encomenda não for entregue em mão, é deixado um postal com o número do registo da encomenda. Esse postal serve para levantar a encomenda na estação dos CTT correspondente à area de recepção.</p>
 					 <br>
