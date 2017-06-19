@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Admin Protection"
+AuthUserFile "/home/on26868r/.htpasswds/public_html/admin/passwd"
+require user EXIT

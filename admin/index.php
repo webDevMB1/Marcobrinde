@@ -22,6 +22,22 @@
 
 	<title>ADMIN - MarcoBrinde</title>
 </head>
+
+<style type="text/css">
+	#logout{
+		text-decoration: none;
+		color: black;
+		border: solid 1px black;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	#logout:hover{
+		color: white;
+		background-color: black;
+	}
+</style>
+
 <body>
 
 	<!-- ROW Logo -->
@@ -33,6 +49,7 @@
 		<div class="row">
 			<center><h2>ADMINISTRAÇÃO - LOJA ONLINE</h2></center>
 			<br>
+			<center><a href="javascript:;" class="btn btn-lg simpleCart_empty" width="100%" style="border-radius: 0" id="logout">LOGOUT</a></center>
 		</div>
 
 		<div id="linhaButtons" class="row">
@@ -68,3 +85,15 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 </html>
+
+<script type="text/javascript">
+
+	$(window).load(function(){
+
+		$("#logout").click(function(){
+			window.location.replace("logout");
+		});
+
+	});
+
+</script>

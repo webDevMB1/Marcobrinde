@@ -70,26 +70,17 @@
 	    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="overflow: hidden">
 	      <!-- Indicators -->
 	      <ol class="carousel-indicators">
-	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	        <li data-target="#myCarousel" data-slide-to="1"></li>
-	        <li data-target="#myCarousel" data-slide-to="2"></li>
+
+	        <?php
+							require_once("bannersLista.php");
+					?>
+
 	      </ol>
 	      <div class="carousel-inner" role="listbox">
-	        <!--<div class="item active">
-	          <center><a href="#" onclick="changeGaleria('moncao')"><img class="second-slide" src="images/bannerFeiraFoda.jpg" alt="Second slide" style="width: 100%; height: auto; max-width: 2500px"></a></center>
-	        </div>-->
 
-					<div class="item active">
-						<center><a href="#" onclick="changeGaleria('moncao')"><img class="first-slide" src="images/bannerFeiraAlvarinho.jpg" alt="First slide" style="width: 100%; height: auto"></a></center>
-					</div>
-
-					<div class="item">
-						<center><a href="#" onclick="changeGaleria('moncao')"><img class="second-slide" src="images/bannerFeiraAlvarinho2.jpg" alt="Second slide" style="width: 100%; height: auto"></a></center>
-					</div>
-
-					<div class="item">
-						<center><img class="last-slide" src="images/banner.jpg" alt="Last slide" style="width: 100%; height: auto"></center>
-					</div>
+					<?php
+							require_once("banners.php");
+					?>
 
 	      </div>
 	      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -107,53 +98,9 @@
 	<div class="cont">
 		<div class="content-top">
 			<div class="grid-in">
-				<div id="rowRecentes" class="row">
-					<h1>RECENTES</h1>
-					<div class="divider" style="margin-bottom: 30px"></div>
-
-					<?php
-
-						include('connectBD.php');
-
-					 	$recentes = "recentes_transfers";
-
-					 	$sqlRecentes = "SELECT * FROM " . $recentes . " ORDER BY id DESC";
-
-					 	$resultRecentes = mysqli_query($db, $sqlRecentes);
-
-					 	$dest4 = 0;
-
-					 	while($row = mysqli_fetch_array($resultRecentes)){
-
-					 		if($row['linkDark'] != "" ){
-				 				$secondVersion = $row['linkDark'];
-				 			}else{
-				 				$secondVersion = "";
-				 			}
-
-					 		if($dest4 != 4){
-						 		echo '<div class="col-md-3 col-sm-6 col-xs-6 grid-top simpleCart_shelfItem">';
-						 			echo '<a href="#" onclick="actualCookieSeccao('. '\'' . $row['tipo'] . '\'' .'); setLocalArtigo(\'' . $row['link'] .'\',\''. $row['nome'] .'\',\'' . $row['referencia'] .'\',\''. $row['dimensoes'] .'\',\''. $secondVersion .'\')" class="b-link-stripe b-animate-go  thickbox">';
-						 				echo '<img class="img-responsive" src="images/transfers/' . $row['linkRoupa'] . '" alt="">';
-						 				echo '<div class="b-wrapper">';
-						 					echo '<h3 class="b-animate b-from-left b-delay03 "><span>' . $row['nome'] . '</span></h3>';
-						 				echo '</div>';
-						 			echo '</a>';
-						 			echo '<p><a href="single">' . $row['nome'] . '</a></p>';
-						 			echo '<p style="font-size: 14px"><a href="single">' . $row['referencia'] . '</a></p>';
-						 		echo '</div>';
-						 		$dest4++;
-						 	}else{
-						 		return;
-						 	}
-					 	}
-					?>
-
-					<div class="clearfix"> </div>
-				</div><!--// row -->
 
 				<!-- Area de Destaques -->
-				<div id="rowDestaques" class="row" style="margin-top: 10%">
+				<div id="rowDestaques" class="row">
 					<h1>DESTAQUES</h1>
 					<div class="divider" style="margin-bottom: 30px"></div>
 						<div class="container">
@@ -245,7 +192,56 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-				</div><!--// row -->
+				</div><!--// row destaques-->
+
+
+				<div id="rowRecentes" class="row" style="margin-top: 10%">
+					<h1>RECENTES</h1>
+					<div class="divider" style="margin-bottom: 30px"></div>
+
+					<?php
+
+					include('connectBD.php');
+
+					$recentes = "recentes_transfers";
+
+					$sqlRecentes = "SELECT * FROM " . $recentes . " ORDER BY id DESC";
+
+					$resultRecentes = mysqli_query($db, $sqlRecentes);
+
+					$dest4 = 0;
+
+					while($row = mysqli_fetch_array($resultRecentes)){
+
+						if($row['linkDark'] != "" ){
+							$secondVersion = $row['linkDark'];
+						}else{
+							$secondVersion = "";
+						}
+
+						if($dest4 != 4){
+							echo '<div class="col-md-3 col-sm-6 col-xs-6 grid-top simpleCart_shelfItem">';
+							echo '<a href="#" onclick="actualCookieSeccao('. '\'' . $row['tipo'] . '\'' .'); setLocalArtigo(\'' . $row['link'] .'\',\''. $row['nome'] .'\',\'' . $row['referencia'] .'\',\''. $row['dimensoes'] .'\',\''. $secondVersion .'\')" class="b-link-stripe b-animate-go  thickbox">';
+							echo '<img class="img-responsive" src="images/transfers/' . $row['linkRoupa'] . '" alt="">';
+							echo '<div class="b-wrapper">';
+							echo '<h3 class="b-animate b-from-left b-delay03 "><span>' . $row['nome'] . '</span></h3>';
+							echo '</div>';
+							echo '</a>';
+							echo '<p><a href="single">' . $row['nome'] . '</a></p>';
+							echo '<p style="font-size: 14px"><a href="single">' . $row['referencia'] . '</a></p>';
+							echo '</div>';
+							$dest4++;
+						}else{
+							return;
+						}
+					}
+					?>
+
+					<div class="clearfix"> </div>
+				</div><!--// row recentes -->
+
+
+
 			</div><!--// grid in -->
 		</div>
 	</div>
