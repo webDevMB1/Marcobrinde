@@ -669,7 +669,18 @@
 
 				if(confirmSize == true && confirmCor == true){
 					$("#alertDefault").addClass("hidden");
-					$("#sucessoCarrinho").removeClass("hidden");
+					
+					//Fade in e Fade out do alert success "adicionado ao carrinho"
+					$("#sucessoCarrinho").fadeIn( "fast", function() {
+						$("#sucessoCarrinho").removeClass("hidden");
+					});
+
+					setTimeout(function(){
+						$("#sucessoCarrinho").fadeOut( 2000, function() {
+						    $("#sucessoCarrinho").addClass("hidden");
+						  });
+					}, 1500);
+					
 					$("#buttonAdd").addClass("add-cart");
 					$("#buttonAdd").addClass("item_add");
 				}else{

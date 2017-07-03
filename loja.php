@@ -153,9 +153,10 @@
 
 								?>
 							</div>
-							<div class="row hidden" id="destFeiraFoda">
+							<!-- Destaques para a feira da foda -->
+							<!--<div class="row hidden" id="destFeiraFoda">
 								<?php
-									include('connectBD.php');
+									/*include('connectBD.php');
 
 						 			$table_transfers = "transfers_moncao";
 
@@ -187,9 +188,9 @@
 									 		echo '</div>';
 									 		$destaques3++;
 									 	}
-								 	}
+								 	}*/
 								?>
-							</div>
+							</div>-->
 						</div>
 						<div class="clearfix"></div>
 				</div><!--// row destaques-->
@@ -259,7 +260,8 @@
 		$(".header-top").removeClass("header-top");
 	}
 
-	$(window).on('resize', function () {
+	//Em ecrãs mais pequenos os destaques passam a ser da feira da foda
+	/*$(window).on('resize', function () {
 		if($(window).width() < 768){
 			$('#myCarousel').addClass('hidden');
 			$("#destWindowLarge").addClass('hidden');
@@ -269,7 +271,7 @@
 			$("#destWindowLarge").removeClass('hidden');
 			$("#destFeiraFoda").addClass('hidden');
 		}
-	});
+	});*/
 
 
 	/* ===============

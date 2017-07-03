@@ -22,6 +22,7 @@
 <!-- /fonts -->
 <!-- js files -->
 <script src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <!-- /js files -->
 
 <style type="text/css">
@@ -61,74 +62,106 @@
 </section>
 <!-- Top Section -->
 
-<!-- Estores Section -->
-<section class="our-services experience" id="estores" style="background:none">
-	<h3 class="text-center slideanim" style="color: black">Estores</h3>
-	<div class="w3-agile-experience-grids slideanim">
-		<div class="experience-top-grids">
-			<div class="row">
-				<div class="col-md-3 experience-grid hover">
-					<div class="wrapper experience-grid-icon icon-left">
-						<img class="imgExterior" src="images/gallery-img1.jpg" style="font-size: 20px; width: 70%; height: auto" alt="Reclamos">
-						<a href="solExterior.php">
-							<p class="text" style="margin-left: -2%" visible="false">
-							<strong style="font-size: 20px">Sistema Runny / Rolo</strong> 
-							<br>
-							Estores de enrolar simples e funcionais, em tecidos que podem ser lisos para um contraste perfeito com a decoração ou screen (tela perfurada) que permite a circulação de ar e uma excelente protecção solar. Além disso , permitem estores de grandes dimensões sem uniões.</p>
-						</a>
+
+
+<!-- ====================================================================================================
+										
+												ESTORES
+
+     ==================================================================================================== -->
+
+
+<div class="container projects" id="sectionEstores">
+		<h4 class="text-center slideanim" style="color: black; font-size: 40px; margin-bottom: 50px;">Estores</h4>
+		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+					<ul id="myTab" class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#runny-tab-info" id="runny-tab" role="tab" data-toggle="tab" aria-controls="runny" aria-expanded="true">Runny / Rolo</a></li>
+						<li role="presentation"><a href="#vertical-tab-info" role="tab" id="vertical-tab" data-toggle="tab" aria-controls="vertical">Vertical</a></li>
+						<li role="presentation"><a href="#horizontal-tab-info" role="tab" id="horizontal-tab" data-toggle="tab" aria-controls="horizontal">Horizontal</a></li>
+						<li role="presentation"><a href="#roman-tab-info" role="tab" id="roman-tab" data-toggle="tab" aria-controls="roman">Roman</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<!-- tab Runny ====================================================================== -->
+						<div role="tabpanel" class="tab-pane fade in active" id="runny-tab-info" aria-labelledby="runny-tab-info">
+							<div class="container">
+									<div class="container">
+										<div class="row info-part">
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<div class="info-details slideanim">
+													<p class="textonoClaro">Estores de enrolar simples e funcionais, em tecidos que podem ser lisos para um contraste perfeito com a decoração ou screen (tela perfurada) que permite a circulação de ar e uma excelente protecção solar. Além disso , permitem estores de grandes dimensões sem uniões.</p>
+												</div>
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
+											</div>
+										</div>	
+									</div>
+							</div>
+						</div>
+						<!-- // tab Runny -->
+
+						<!-- tab Vertical ============================================================================== -->
+						<div role="tabpanel" class="tab-pane fade" id="vertical-tab-info" aria-labelledby="vertical-tab-info">
+							<div class="container">
+									<div class="container">
+										<div class="row info-part">
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<div class="info-details slideanim">
+													<p class="textonoClaro">É um modelo de estore decorativo com cores e design modernos e que pode ser aplicado mesmo em áreas de grande dimensão. Estes permitem um óptimo controlo de luminosidade aliado à facilidade de operação, através de corrente ou cordão. Um mecanismo inovador e fiável aliado à estética da calha de alumínio fazem deste produto uma das melhores opções para decoração do seu lar ou local de trabalho. As bandas do estore podem ser em tecido ou em PVC, e cada banda pode ter de largura 89mm ou 127mm. Existem quatro tipos de abertura: à direita,à esquerda, do centro para as pontas Ideal para Portas) ou a recolher ao meio.</p>
+												</div>
+											</div>
+										</div>	
+									</div>
+							</div>	
+						</div>
+						<!-- //tab Vertical -->
+
+
+						<!-- tab Horizontal =================================================================================== -->
+						<div role="tabpanel" class="tab-pane fade" id="horizontal-tab-info" aria-labelledby="horizontal-tab-info">
+								<div class="container">
+									<div class="row info-part">
+										<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+											<div class="info-details slideanim">
+												<p class="textonoClaro">Este estore é uma solução interessante para o controle e protecção da luz solar. Este permite-nos a intimidade no interior, assim como uma perfeita visão do exterior, sendo uma boa solução para projectos de decoração. A vasta gama de cores permitirá criar-lhe o ambiente que sempre desejou. Para alem de muitas cores, este tipo de estore tem à sua disponibilidade vários padrões e a oportunidade de decorar o seu estore com o logótipo, desenho que quiser.</p>
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+											<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
+										</div>
+									</div>	
+								</div>
+						</div>
+						<!-- // tab Horizontal -->
+
+						<!-- tab Roman ====================================================================================== -->
+						<div role="tabpanel" class="tab-pane fade" id="roman-tab-info" aria-labelledby="roman-tab-info">
+							<div class="container">
+									<div class="container">
+										<div class="row info-part">
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<div class="info-details slideanim">
+													<p class="textonoClaro">A elegancia e comodidade oferecidos por este modelo fazem deste a opção mais decorativa e orientada para o Lar. Confeccionado numa vasta gama de tecidos, tanto tecnicos como decorativos, oferecem diversidade de combinações que se adaptam a qualquer tipo de ambiente; modernos, elegantes e sobrios.</p>
+												</div>
+											</div>
+										</div>	
+									</div>
+							</div>
+						</div>
+						<!-- // tab Roman -->
+
 					</div>
-					<div class="experience-grid-info">
-						<h5 style="color: black">Runny / Rolo</h5>
-					</div>
-				</div>
-				<div class="col-md-3 experience-grid experience-grid1 hover">
-					<div class="wrapper experience-grid-icon icon-left">
-						<img class="imgExterior" src="images/gallery-img2.jpg" style="font-size: 20px; width: 70%; height: auto" alt="Reclamos">
-						<a href="solExterior.php">
-							<p class="text" style="margin-left: -7%" visible="false">
-							<strong style="font-size: 20px">Sistema Vertical</strong> 
-							<br>
-							É um modelo de estore decorativo com cores e design modernos e que pode ser aplicado mesmo em áreas de grande dimensão. Estes permitem um óptimo controlo de luminosidade aliado à facilidade de operação, através de corrente ou cordão. Um mecanismo inovador e fiável aliado à estética da calha de alumínio fazem deste produto uma das melhores opções para decoração do seu lar ou local de trabalho. As bandas do estore podem ser em tecido ou em PVC, e cada banda pode ter de largura 89mm ou 127mm. Existem quatro tipos de abertura: à direita,à esquerda, do centro para as pontas Ideal para Portas) ou a recolher ao meio.</p>
-						</a>
-					</div>
-					<div class="experience-grid-info">
-						<h5 style="color: black">Vertical</h5>
-					</div>
-				</div>
-				<div class="col-md-3 experience-grid experience-grid2 hover">
-					<div class="wrapper experience-grid-icon icon-left">
-						<img class="imgExterior" src="images/gallery-img2.jpg" style="font-size: 20px; width: 70%; height: auto" alt="Reclamos">
-						<a href="solExterior.php">
-							<p class="text" style="margin-left: -7%" visible="false">
-							<strong style="font-size: 20px">Sistema Horizontal</strong> 
-							<br>
-							Este estore é uma solução interessante para o controle e protecção da luz solar. Este permite-nos a intimidade no interior, assim como uma perfeita visão do exterior, sendo uma boa solução para projectos de decoração. A vasta gama de cores permitirá criar-lhe o ambiente que sempre desejou. Para alem de muitas cores, este tipo de estore tem à sua disponibilidade vários padrões e a oportunidade de decorar o seu estore com o logótipo, desenho que quiser.</p>
-						</a>
-					</div>
-					<div class="experience-grid-info">
-						<h5 style="color: black">Horizontal</h5>
-					</div>
-				</div>
-				<div class="col-md-3 experience-grid experience-grid hover">
-					<div class="wrapper experience-grid-icon icon-left">
-						<img class="imgExterior" src="images/gallery-img2.jpg" style="font-size: 20px; width: 70%; height: auto" alt="Reclamos">
-						<a href="solExterior.php">
-							<p class="text" style="margin-left: -7%" visible="false">
-							<strong style="font-size: 20px">Sistema Roman</strong> 
-							<br>
-							A elegancia e comodidade oferecidos por este modelo fazem deste a opção mais decorativa e orientada para o Lar. Confeccionado numa vasta gama de tecidos, tanto tecnicos como decorativos, oferecem diversidade de combinações que se adaptam a qualquer tipo de ambiente; modernos, elegantes e sobrios.</p>
-						</a>
-					</div>
-					<div class="experience-grid-info">
-						<h5 style="color: black">Roman</h5>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>	
+		</div>
+
 	</div>
-</section>
-<!-- /Estores Section -->	
+
+
 <!-- decoracao -->
 <section class="our-services experience" id="decoracao">
 	<h3 class="text-center slideanim" style="color: white">Decoracao</h3>

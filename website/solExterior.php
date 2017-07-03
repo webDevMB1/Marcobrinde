@@ -22,6 +22,7 @@
 <!-- /fonts -->
 <!-- js files -->
 <script src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <!-- /js files -->
 
 <style type="text/css">
@@ -244,12 +245,12 @@
 									<div class="container">
 										<div class="row info-part">
 											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
 												<div class="info-details slideanim">
 													<p class="textonoEscuro">Sistema de toldo compacto bastante resistente que incorpora um mecanismo de enrolamento motorizado ou manual. Por possuir braços extensiveis (Simples ou reforçados) permitem alcançar uma maior cobertura da area desejavel.</p>
 												</div>
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
-												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
 											</div>
 										</div>	
 									</div>
@@ -263,12 +264,12 @@
 									<div class="container">
 										<div class="row info-part">
 											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
-												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
 												<div class="info-details slideanim">
 													<p class="textonoEscuro">Sistema de Toldo de design elegante, particularmente apto para proteger janelas e montras.</p>
 												</div>
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
 											</div>
 										</div>	
 									</div>
@@ -282,12 +283,12 @@
 								<div class="container">
 									<div class="row info-part">
 										<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+											<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
 											<div class="info-details slideanim">
 												<p class="textonoEscuro">Sistema de toldo que se enquadra em qualquer ambiente, na loja ou em casa. Ideal se a intenção for proteger janelas e portas do sol e da chuva em locais com muito vento, pois eles são presos em diversos lugares da parede e por isso oferecem mais segurança.</p>
 											</div>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
-											<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
 										</div>
 									</div>	
 								</div>
@@ -300,9 +301,6 @@
 									<div class="container">
 										<div class="row info-part">
 											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
-												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
 												<div class="info-details slideanim">
 													<p class="textonoEscuro">Modelos:<br>
 														HIGHWAY - Modelo ideal para colocar em parques de estacionamento.<br>
@@ -310,6 +308,9 @@
 														MEIO ROBOT - O modelo mais implantado no mercadopela sua relação preço/lugares de sombreamento.<br>
 														ROMP - Variante do modelo "Meio Robot" mas com postes inclinados e com braços que não excedem os 5m.</p>
 												</div>
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
 											</div>
 										</div>	
 									</div>
@@ -408,12 +409,12 @@
 									<div class="container">
 										<div class="row info-part">
 											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
 												<div class="info-details slideanim">
 													<p class="textonoEscuro">Metodo  tradicional de corte e aplicação de peliculas de vinil autocolante de várias cores. Ideal para rotulação de logotipos e legendas simples. Este método permite tambem a fuscagem de montras de forma a impedir a visão directa para o interior da area comercial sem afectar a claridade do espaço.</p>
 												</div>
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
-												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
 											</div>
 										</div>	
 									</div>
@@ -427,12 +428,12 @@
 									<div class="container">
 										<div class="row info-part">
 											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
-												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
 												<div class="info-details slideanim">
 													<p class="textonoEscuro">Metodo inovador permite a reprodução de imagens de alta resolução atraves de um processo de impressão sobre vinil autocolante. Sendo este processo de decoração para aplicação exterior, o material utilizado é impresso com tintas de base solvente, e posteriormente laminado com uma pelicula transparente que lhe confere uma protecção contra riscos e o rápido desgaste provocado pelas condições climatericas. Dentro deste processo existe ainda a possibilidade de impressão sobre uma pelicula micro-perfurada, que permite a visibilidade do interior para o exterior atraves da mesma.</p>
 												</div>
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
+												<img src="images/info-img.jpg" alt="" class="img-responsive main-img slideanim">
 											</div>
 										</div>	
 									</div>
@@ -750,22 +751,6 @@
 	  });
 	});
 
-	// Função para colocar cor branca no texto quando o fundo é escuro
-
-	function checkFundoEscuro(){
-		setTimeout(function(){
-		  var array = $(".checkColor");
-			$.each(array, function(){
-				if($(this).hasClass("active")){
-					$(this).find("p").removeClass("colorWhite");
-					$(this).find("p").addClass("colorBlack");
-				}else{
-					$(this).find("p").removeClass("colorBlack");
-					$(this).find("p").addClass("colorWhite");
-				}
-			});
-		}, 100);
-	}
 
 </script>
 </body>
