@@ -326,6 +326,9 @@
 <!-- Back To Top -->
 <script src="js/backtotop.js"></script>
 <!-- /Back To Top -->
+<!-- Main -->
+<script type="text/javascript" src="js/main.js"></script>
+<!-- /Main -->
 <script>
 
 	$(document).ready(function(){
@@ -425,11 +428,9 @@
 	});
 
 
-	// Remove o menu se estiver aberto
+	//Ao fazer scroll até aos elementos com a classe ".slideanim" 
+	//faz animação para mostrar
 	$(window).scroll(function() {
-		if($("#aMenu").hasClass("navicon--active")){
-			$("#aMenu").trigger("click");
-		}
 	  $(".slideanim").each(function(){
 	    var pos = $(this).offset().top;
 
@@ -438,6 +439,17 @@
 	      $(this).addClass("slide");
 	    }
 	  });
+	});
+
+	// Fechar o menu ao clicar fora dele
+	$(window).click(function() {
+		if($("#aMenu").hasClass("navicon--active")){
+			$("#aMenu").trigger("click");
+		}
+	});
+
+	$('#aMenu').click(function(event){
+	    event.stopPropagation();
 	});
 
 </script>

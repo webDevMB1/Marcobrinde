@@ -1175,6 +1175,9 @@ button.btn-outline {
 section.footer .footer-center .form-control {
 	height:40px;
 }
+#logoFooter{
+	left: 265%;
+}
 }
 
 @media (max-width: 1050px) {
@@ -1201,7 +1204,10 @@ section.our-services .serv-info {
 }
 
 @media (max-width: 991px) {
-	.carousel, .carousel .item {
+#logoFooter{
+	left: 190%;
+}
+.carousel, .carousel .item {
     height: 516px;
 }
 .nav>li>a {
@@ -1298,7 +1304,7 @@ section.our-info .info-details h4 {
 }
 
 @media (max-width: 768px) {
-	.carousel, .carousel .item {
+.carousel, .carousel .item {
     height: 398px;
 }
 .row.info-part {
@@ -1373,6 +1379,9 @@ section.footer .contact-info p.p3 {
 }
 
 @media (max-width: 667px) {
+#logoFooter{
+	left: 160%;
+}
 section.footer .footer-left .contact-info {
     margin-left: 155px;
 }
@@ -1438,6 +1447,9 @@ section.footer .footer-center .form-control {
 }
 
 @media (max-width: 568px) {
+#logoFooter{
+	left: 135%;
+}
 .curriculum-info {
     margin-left: 27px;
 }
@@ -1468,6 +1480,9 @@ section.map iframe.googlemaps {
 }
 
 @media (max-width:480px) {
+#logoFooter{
+	left: 100%;
+}
 
 	#logoImg{
 		width: 75%;
@@ -1550,6 +1565,9 @@ section.footer .footer-left .contact-info {
 }
 
 @media (max-width: 414px) {
+#logoFooter{
+	left: 80%;
+}
 section.about-us h3.text-center, section.our-services h3.text-center, section.our-info h3.text-center, section.our-gallery h3.text-center, section.curriculum h3.text-center, section.our-contacts h3.text-center {
     font-size: 35px;
 	}	
@@ -1587,6 +1605,9 @@ section.about-us .about-details {
 }
 
 @media (max-width: 384px) {
+#logoFooter{
+	left: 65%;
+}
 section.top-bar a.logo h1 {
     font-size: 30px;
 }
@@ -1689,6 +1710,9 @@ section.footer .contact-info p.p4 {
 }
 
 @media (max-width: 320px) {
+#logoFooter{
+	left: 45%;
+}
 	section.top-bar a.logo h1 {
     font-size: 30px;
 }

@@ -90,37 +90,37 @@
 				<div class="experience-top-grids">
 					<div class="col-md-3 experience-grid">
 						<div class="experience-grid-icon icon-left hvr-radial-out">
-							<a href="solExterior.php"><i class="fa fa-folder-open" aria-hidden="true"></i></a>
+							<a href="solExterior"><i class="fa fa-folder-open" aria-hidden="true"></i></a>
 						</div>
 						<div class="experience-grid-info">
-							<a href="solExterior.php" style="text-decoration: none;"><h5 style="color: white">Soluções de Exterior</h5>
+							<a href="solExterior" style="text-decoration: none;"><h5 style="color: white">Soluções de Exterior</h5>
 							<p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p></a>
 						</div>
 					</div>
 					<div class="col-md-3 experience-grid experience-grid1">
 						<div class="experience-grid-icon icon-left hvr-radial-out">
-							<a href="solInterior.php"><i class="fa fa-bell" aria-hidden="true"></i></a>
+							<a href="solInterior"><i class="fa fa-bell" aria-hidden="true"></i></a>
 						</div>
 						<div class="experience-grid-info">
-							<a href="solExterior.php" style="text-decoration: none"><h5 style="color: white">Soluções de Interior</h5>
+							<a href="solExterior" style="text-decoration: none"><h5 style="color: white">Soluções de Interior</h5>
 							<p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p></a>
 						</div>
 					</div>
 					<div class="col-md-3 experience-grid experience-grid2">
 						<div class="experience-grid-icon icon-left hvr-radial-out">
-							<a href="gifts.php"><i class="fa fa-comments" aria-hidden="true"></i></a>
+							<a href="gifts"><i class="fa fa-comments" aria-hidden="true"></i></a>
 						</div>
 						<div class="experience-grid-info">
-							<a href="solExterior.php" style="text-decoration: none"><h5 style="color: white">Gifts / Texteis Publicitários</h5>
+							<a href="solExterior" style="text-decoration: none"><h5 style="color: white">Gifts / Texteis Publicitários</h5>
 							<p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p></a>
 						</div>
 					</div>
 					<div class="col-md-3 experience-grid experience-grid3">
 						<div class="experience-grid-icon icon-left hvr-radial-out">
-							<a href="imgDesign.php"><i class="fa fa-asterisk" aria-hidden="true"></i></a>
+							<a href="imgDesign"><i class="fa fa-asterisk" aria-hidden="true"></i></a>
 						</div>
 						<div class="experience-grid-info">
-							<a href="solExterior.php" style="text-decoration: none"><h5 style="color: white">Imagem e Design</h5>
+							<a href="solExterior" style="text-decoration: none"><h5 style="color: white">Imagem e Design</h5>
 							<p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p></a>
 						</div>
 					</div>
@@ -330,11 +330,13 @@
 <!-- Back To Top -->
 <script src="js/backtotop.js"></script>
 <!-- /Back To Top -->
+<!-- Main -->
+<script type="text/javascript" src="js/main.js"></script>
+<!-- /Main -->
 
 <script>
 
 	$(document).ready(function(){
-
 
 		// Remover e Colocar scroll Google Maps
 
@@ -374,11 +376,9 @@
 	});
 
 
-	// Remove o menu se estiver aberto
+	//Ao fazer scroll até aos elementos com a classe ".slideanim" 
+	//faz animação para mostrar
 	$(window).scroll(function() {
-		if($("#aMenu").hasClass("navicon--active")){
-			$("#aMenu").trigger("click");
-		}
 	  $(".slideanim").each(function(){
 	    var pos = $(this).offset().top;
 
@@ -387,6 +387,17 @@
 	      $(this).addClass("slide");
 	    }
 	  });
+	});
+
+	// Fechar o menu ao clicar fora dele
+	$(window).click(function() {
+		if($("#aMenu").hasClass("navicon--active")){
+			$("#aMenu").trigger("click");
+		}
+	});
+
+	$('#aMenu').click(function(event){
+	    event.stopPropagation();
 	});
 
 </script>

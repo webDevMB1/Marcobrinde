@@ -1,3 +1,20 @@
+$(document).ready(function(){
+	//Se estiver no mobile, esconde socials icons
+	if ($(window).width() < 532) {
+	   $("#divSocials").addClass("hidden");
+	}else{
+		$("#divSocials").removeClass("hidden");
+	}
+});
+
+$(window).resize(function(){
+	if ($(window).width() < 532) {
+	   $("#divSocials").addClass("hidden");
+	}else{
+		$("#divSocials").removeClass("hidden");
+	}
+});
+
 // Função para colocar cor branca no texto quando o fundo é escuro
 
 	function checkFundoEscuro(){
