@@ -64,8 +64,8 @@
 <?php
 	require_once("topBar.html");
 ?>
-<!-- Top Section -->
-<section class="our-info" id="top" style="margin-top: 10%">
+<!-- Top Section 
+<section class="our-info" id="top">
 	<div class="container">
 		<div class="row info-part">
 			<h3 class="text-center slideanim" style="color: white">Soluções de Exterior</h3>
@@ -76,7 +76,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 <!-- Top Section -->
 
 
@@ -88,9 +88,9 @@
 
      ==================================================================================================== -->
 
-
-<div class="container projects" id="sectionReclamos">
-		<h4 class="text-center slideanim" style="color: black; font-size: 40px; margin-bottom: 50px;">Reclamos</h4>
+<section class="experience">
+	<div class="container projects" id="sectionReclamos">
+		<h4 class="text-center" style="color: black; font-size: 40px; margin-bottom: 50px;">Reclamos</h4>
 		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					<ul id="myTab" class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active"><a href="#muppies-tab-info" id="muppies-tab" role="tab" data-toggle="tab" aria-controls="muppies" aria-expanded="true">Muppies</a></li>
@@ -219,6 +219,7 @@
 		</div>
 
 	</div>
+</section>
 
 
 <!-- ====================================================================================================
@@ -230,7 +231,7 @@
 
 <section class="our-services experience " id="toldos">
 	<div class="container projects" id="sectionToldos">
-		<h4 class="text-center slideanim" style="color: white; font-size: 40px; margin-bottom: 50px;">Toldos</h4>
+		<h4 class="text-center" style="color: white; font-size: 40px; margin-bottom: 50px;">Toldos</h4>
 		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					<ul id="myTab" class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="checkColor active"><a href="#extensivo-tab-info" id="extensivo-tab" role="tab" data-toggle="tab" aria-controls="extensivo" aria-expanded="true" onclick="checkFundoEscuro()"><p>Extensivo</p></a></li>
@@ -334,7 +335,7 @@
 
 <section class="experience " id="viaturas">
 	<div class="container projects" id="sectionViaturas">
-		<h4 class="text-center slideanim" style="color: black; font-size: 40px; margin-bottom: 50px;">Viaturas</h4>
+		<h4 class="text-center" style="color: black; font-size: 40px; margin-bottom: 50px;">Viaturas</h4>
 		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					<ul id="myTab" class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active"><a href="#corte-tab-info" id="corte-tab" role="tab" data-toggle="tab" aria-controls="corte" aria-expanded="true">Vinil de Corte</a></li>
@@ -396,7 +397,7 @@
 
 <section class="our-services experience " id="montras">
 	<div class="container projects" id="sectionMontras">
-		<h4 class="text-center slideanim" style="color: white; font-size: 40px; margin-bottom: 50px;">Montras</h4>
+		<h4 class="text-center" style="color: white; font-size: 40px; margin-bottom: 50px;">Montras</h4>
 		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					<ul id="myTab" class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="checkColor active"><a href="#corteMontras-tab-info" id="corteMontras-tab" role="tab" data-toggle="tab" aria-controls="corteMontras" aria-expanded="true" onclick="checkFundoEscuro()"><p>Vinil de Corte</p></a></li>
@@ -457,7 +458,7 @@
 
 <section class="experience " id="outdoors">
 	<div class="container projects" id="sectionOutdoors">
-		<h4 class="text-center slideanim" style="color: black; font-size: 40px; margin-bottom: 50px;">Outdoors</h4>
+		<h4 class="text-center" style="color: black; font-size: 40px; margin-bottom: 50px;">Outdoors</h4>
 		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					<ul id="myTab" class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active"><a href="#outdoorsPub-tab-info" id="outdoorsPub-tab" role="tab" data-toggle="tab" aria-controls="outdoorsPub" aria-expanded="true">Outdoors Publicitários</a></li>
@@ -516,8 +517,8 @@
 
      ==================================================================================================== -->
 
-<section class="our-services experience" id="montras">
-	<h4 class="text-center slideanim" style="color: white">Impressão Digital</h4>
+<section class="our-services experience" id="impDigital">
+	<h4 class="text-center" style="color: white">Impressão Digital</h4>
 	<div class="w3-agile-experience-grids slideanim">
 		<div class="experience-top-grids">
 			<div class="row">
@@ -554,7 +555,7 @@
      ==================================================================================================== -->
 
 <section class="our-services experience" id="chapas" style="background:none">
-	<h3 class="text-center slideanim" style="color: black">Chapas Obras</h3>
+	<h3 class="text-center" style="color: black">Chapas Obras</h3>
 	<div class="w3-agile-experience-grids slideanim">
 		<div class="experience-top-grids">
 			<div class="row">
@@ -591,7 +592,7 @@
      ==================================================================================================== -->
 
 <section class="our-services experience" id="sinaletica">
-	<h3 class="text-center slideanim" style="color: white">Sinalética</h3>
+	<h3 class="text-center" style="color: white">Sinalética</h3>
 	<div class="w3-agile-experience-grids slideanim">
 		<div class="experience-top-grids">
 			<div class="row">
@@ -699,16 +700,17 @@
 
 		/* Mudar menu */
 
-		$("#nav-collapse1").css("width", "92%");
 
-		$("#nav-collapse1").html("<li><a href=\"#sinaletica\" style=\"font-size: 14px; background-color: transparent; padding: 10px 30px\"><p style=\"color: white\">Sinalética</p></a></li>\
-				<li><a href=\"#chapas\" style=\"font-size: 14px; background-color: transparent; padding: 10px 30px\"><p style=\"color: white\">Chapas Obra</p></a></li>\
-				<li><a href=\"#impDigital\" style=\"font-size: 14px; background-color: transparent; padding: 10px 30px\"><p style=\"color: white\">Imp. Digital</p></a></li>\
-				<li><a href=\"#outdoors\" style=\"font-size: 14px; background-color: transparent; padding: 10px 30px\"><p style=\"color: white\">Outdoors</p></a></li>\
-				<li><a href=\"#montras\" style=\"font-size: 14px; background-color: transparent; padding: 10px 30px\"><p style=\"color: white\">Montras</p></a></li>\
-				<li><a href=\"#viaturas\" style=\"font-size: 14px; background-color: transparent; padding: 10px 30px\"><p style=\"color: white\">Viaturas</p></a></li>\
-				<li><a href=\"#toldos\" style=\"font-size: 14px; background-color: transparent; padding: 10px 30px\"><p style=\"color: white\">Toldos</p></a></li>\
-	            <li><a href=\"#reclamos\" style=\"font-size: 14px; background-color: transparent; padding: 10px 30px\"><p style=\"color: white\">Reclamos</p></a></li>");
+		$("#ulMenu").html("<li><a href=\"../website\" class=\"active\"> Home</a></li>\
+						   <li><a href=\"#sectionReclamos\"> Reclamos</p></a></li>\
+						   <li><a href=\"#toldos\"> Toldos</p></a></li>\
+						   <li><a href=\"#viaturas\"> Viaturas</p></a></li>\
+						   <li><a href=\"#montras\"> Montras</p></a></li>\
+						   <li><a href=\"#outdoors\"> Outdoors</p></a></li>\
+						   <li><a href=\"#impDigital\"> Imp. Digital</p></a></li>\
+						   <li><a href=\"#chapas\"> Chapas Obra</p></a></li>\
+						   <li><a href=\"#sinaletica\"> Sinalética</p></a></li>");
+
 
 	  // Smooth scrolling
 	  $("#navbar a, #faContact, footer a[href='#myPage']").on('click', function(event) {
@@ -734,12 +736,55 @@
 		$(this).css("color", "black");
 	});
 
+</script>
 
+<script>
+
+	$(document).ready(function(){
+
+
+		// Remover e Colocar scroll Google Maps
+
+        $('.divMap').addClass('scrollOfGoogle');
+        $('.map').on('click', function () {
+            $('.divMap').removeClass('scrollOfGoogle');
+        });
+
+
+        $(".map").mouseleave(function () {
+            $('.divMap').addClass('scrollOfGoogle');
+        });
+
+
+
+	  // Smooth scrolling
+	  $(".toggle-menu a, #faContact, footer a[href='#myPage']").on('click', function(event) {
+
+	  var hash = this.hash;
+
+	  $('html, body').animate({
+	    scrollTop: $(hash).offset().top
+	  }, 900, function(){
+
+	    window.location.hash = hash;
+	    });
+	  });
+	})
+
+	/* Hover texto secção interior */
+
+	$(".aInterior").hover(function(){
+		$(this).css("text-decoration", "none");
+		$(this).css("color", "lightgrey");
+	}, function(){
+		$(this).css("color", "black");
+	});
+
+
+	// Remove o menu se estiver aberto
 	$(window).scroll(function() {
-
-		// Remove o menu se estiver aberto
-		if($("#nav-collapse1").hasClass("in")){
-			$("#toggleMenu").trigger("click");
+		if($("#aMenu").hasClass("navicon--active")){
+			$("#aMenu").trigger("click");
 		}
 	  $(".slideanim").each(function(){
 	    var pos = $(this).offset().top;
@@ -751,7 +796,18 @@
 	  });
 	});
 
-
 </script>
+
+
+<!-- menu-js -->
+<script>
+	$('.navicon').on('click', function (e) {
+	  e.preventDefault();
+	  $(this).toggleClass('navicon--active');
+	  $('.toggle').toggleClass('toggle--active');
+	});
+</script> 
+<!-- //menu-js -->
+
 </body>
 </html>

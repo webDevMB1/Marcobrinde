@@ -28,7 +28,6 @@
 <!-- Top Bar -->
 <?php
 	require_once("topBar.html");
-	require_once("carousel.html");
 ?>
 <!-- Quem Somos Section -->
 <section class="our-info" id="quemSomos">
@@ -86,40 +85,6 @@
 <!-- /About Section -->
 <!-- Our Services -->
 <section class="our-services experience" id="trabalho">
-	<!--<h3 class="text-center slideanim">O que fazemos</h3>
-	<p class="text-center slideanim">Lorem Ipsum</p>
-		<div class="content slideanim">
-			<div id="rowMenuSeccao" class="row text-center" style="position: relative; padding: 0px">
-				<div class="col-lg-3 col-md-3" style="padding: 0px">
-					<a class="aImgExterior" href="solExterior.php">
-						<p class="spanExterior">Soluções de Exterior</p>
-						<img class="imgExterior" src="images/gallery-img1.jpg" style="font-size: 20px" alt="Reclamos">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-3" style="padding: 0px">
-					<a class="aImgExterior" href="solExterior.php">
-						<p class="spanExterior">Soluções de Interior</p>
-						<img class="imgExterior" src="images/gallery-img2.jpg" style="font-size: 20px" alt="Reclamos">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-3" style="padding: 0px">
-					<a class="aImgExterior" href="solExterior.php">
-						<p class="spanExterior">Gifts / Texteis Publicitários</p>
-						<img class="imgExterior" src="images/gallery-img3.jpg" style="font-size: 20px" alt="Reclamos">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-3" style="padding: 0px">
-					<a class="aImgExterior" href="solExterior.php">
-						<p class="spanExterior">Imagem e Design</p>
-						<img class="imgExterior" src="images/gallery-img4.jpg" style="font-size: 20px" alt="Reclamos">
-					</a>
-				</div>
-
-				<a class="aImgToldos" href="#"><img class="imgToldos" src="images/gallery-img2.jpg" alt="Toldos"></a>
-				<a class="aImgViaturas" href="#"><img class="imgViaturas" src="images/gallery-img3.jpg" alt="Viaturas"></a>
-				<a class="aImgMontras" href="#"><img class="imgMontras" src="images/gallery-img4.jpg" alt="Montras"></a>
-			</div>-->
-
 			<h3 class="text-center slideanim">O que fazemos</h3>
 			<div class="w3-agile-experience-grids slideanim">
 				<div class="experience-top-grids">
@@ -128,7 +93,7 @@
 							<a href="solExterior.php"><i class="fa fa-folder-open" aria-hidden="true"></i></a>
 						</div>
 						<div class="experience-grid-info">
-							<a href="solExterior.php" style="text-decoration: none"><h5 style="color: white">Soluções de Exterior</h5>
+							<a href="solExterior.php" style="text-decoration: none;"><h5 style="color: white">Soluções de Exterior</h5>
 							<p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p></a>
 						</div>
 					</div>
@@ -365,15 +330,11 @@
 <!-- Back To Top -->
 <script src="js/backtotop.js"></script>
 <!-- /Back To Top -->
+
 <script>
 
 	$(document).ready(function(){
 
-		// Centrar menu
-
-		$("#nav-collapse1").css("width", "75%");
-
-		$("#rowMenuSeccao").css("margin", "0px");
 
 		// Remover e Colocar scroll Google Maps
 
@@ -389,9 +350,8 @@
 
 
 
-
 	  // Smooth scrolling
-	  $("#navbar a, #faContact, footer a[href='#myPage']").on('click', function(event) {
+	  $(".toggle-menu a, #faContact, footer a[href='#myPage']").on('click', function(event) {
 
 	  var hash = this.hash;
 
@@ -414,11 +374,10 @@
 	});
 
 
+	// Remove o menu se estiver aberto
 	$(window).scroll(function() {
-
-		// Remove o menu se estiver aberto
-		if($("#nav-collapse1").hasClass("in")){
-			$("#toggleMenu").trigger("click");
+		if($("#aMenu").hasClass("navicon--active")){
+			$("#aMenu").trigger("click");
 		}
 	  $(".slideanim").each(function(){
 	    var pos = $(this).offset().top;
@@ -431,5 +390,17 @@
 	});
 
 </script>
+
+
+<!-- menu-js -->
+<script>
+	$('.navicon').on('click', function (e) {
+	  e.preventDefault();
+	  $(this).toggleClass('navicon--active');
+	  $('.toggle').toggleClass('toggle--active');
+	});
+</script> 
+<!-- //menu-js -->
+
 </body>
 </html>

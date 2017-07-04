@@ -163,7 +163,7 @@
 
 
 <!-- decoracao -->
-<section class="our-services experience" id="decoracao">
+<section class="our-services experience" id="sectionDecoracao">
 	<h3 class="text-center slideanim" style="color: white">Decoracao</h3>
 	<div class="w3-agile-experience-grids slideanim">
 		<!--<div class="experience-top-grids">
@@ -234,7 +234,7 @@
 </section>
 <!-- /decoracao -->
 <!-- Sinaletica -->
-<section class="our-services experience" id="sinaletica" style="background:none">
+<section class="our-services experience" id="sectionSinaletica" style="background:none">
 	<h3 class="text-center slideanim" style="color: black">Sinalética</h3>
 	<div class="w3-agile-experience-grids slideanim">
 		<!--<div class="experience-top-grids">
@@ -353,12 +353,10 @@
 
 		/* Mudar menu */
 
-		$("#nav-collapse1").css("width", "69%");
-
-		$("#nav-collapse1").html("<li><a href=\"#viaturas\" style=\"font-size: 14px; background-color: transparent\"><p style=\"color: white\">Sinalética</p></a></li>\
-				<li><a href=\"#toldos\" style=\"font-size: 14px; background-color: transparent\"><p style=\"color: white\">Decoração</p></a></li>\
-	            <li><a href=\"#reclamos\" style=\"font-size: 14px; background-color: transparent\"><p style=\"color: white\">Estores</p></a></li>");
-		$("#nav-collapse1").addClass("text-center");
+		$("#ulMenu").html("<li><a href=\"../website\" class=\"active\"> Home</a></li>\
+						   <li><a href=\"#sectionEstores\"> Estores</p></a></li>\
+						   <li><a href=\"#sectionDecoracao\"> Decoração</p></a></li>\
+						   <li><a href=\"#sectionSinaletica\"> Sinalética</p></a></li>");
 
 	  // Smooth scrolling
 	  $("#navbar a, #faContact, footer a[href='#myPage']").on('click', function(event) {
@@ -383,12 +381,54 @@
 		$(this).css("color", "black");
 	});
 
+</script>
 
+<script>
+
+	$(document).ready(function(){
+
+		// Remover e Colocar scroll Google Maps
+
+        $('.divMap').addClass('scrollOfGoogle');
+        $('.map').on('click', function () {
+            $('.divMap').removeClass('scrollOfGoogle');
+        });
+
+
+        $(".map").mouseleave(function () {
+            $('.divMap').addClass('scrollOfGoogle');
+        });
+
+
+
+	  // Smooth scrolling
+	  $(".toggle-menu a, #faContact, footer a[href='#myPage']").on('click', function(event) {
+
+	  var hash = this.hash;
+
+	  $('html, body').animate({
+	    scrollTop: $(hash).offset().top
+	  }, 900, function(){
+
+	    window.location.hash = hash;
+	    });
+	  });
+	})
+
+	/* Hover texto secção interior */
+
+	$(".aInterior").hover(function(){
+		$(this).css("text-decoration", "none");
+		$(this).css("color", "lightgrey");
+	}, function(){
+		$(this).css("color", "black");
+	});
+
+
+	// Remove o menu se estiver aberto
 	$(window).scroll(function() {
-
-		// Remove o menu se estiver aberto
-		if($("#nav-collapse1").hasClass("in")){
-			$("#toggleMenu").trigger("click");
+		if($("#aMenu").hasClass("navicon--active")){
+			$("#aMenu").trigger("click");
 		}
 	  $(".slideanim").each(function(){
 	    var pos = $(this).offset().top;
@@ -401,5 +441,17 @@
 	});
 
 </script>
+
+
+<!-- menu-js -->
+<script>
+	$('.navicon').on('click', function (e) {
+	  e.preventDefault();
+	  $(this).toggleClass('navicon--active');
+	  $('.toggle').toggleClass('toggle--active');
+	});
+</script> 
+<!-- //menu-js -->
+
 </body>
 </html>

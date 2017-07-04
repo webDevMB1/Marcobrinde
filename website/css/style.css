@@ -57,130 +57,223 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 }
-/*-- Top-Bar --*/
-section.top-bar {
-	background-color:transparent;
-	z-index:9;
+
+/* ========================  Menu  ====================== */
+
+/*-- banner --*/  
+.banner{ 
+	background:url(../images/bannertigre.jpg)no-repeat center center;
+	background-attachment: fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;    
 	position:relative;
+	padding:100px 0;
 } 
-section.top-bar a.logo {
-	text-decoration:none;
-	position:absolute;
-	z-index:99;
-    top: 25px;
-	left:75px;
-	color:#fff;
-	font-weight: 500;
-	font-family: 'Viga', sans-serif;
+
+
+.header .container { 
+    position: relative;
 }
-section.top-bar a.logo h1 {
-	font-size:35px;
+.menu, .social-w3licon {
+    margin-top: 1em;
 }
-section.top-bar ul.social-icons1 {
-	list-style:none;
-	position:absolute;
-	z-index:99;
-	top: 60px;
-	right:105px;
+/*-- menu-navigation --*/
+.menu {
+    position: absolute;
+    z-index: 9999;
+    right: 15px;
 }
-section.top-bar ul.social-icons1 li {
-	display:inline;
-    margin-right:1px;
+.menu .navicon {
+    background: transparent;
+    margin-top: 40%;
+    position: relative;
+    height: 46px;
+    width: 46px;
+    display: block;
+    z-index: 9999;
+    -webkit-transition: linear 0.5s all;
+    -moz-transition: linear 0.5s all;
+	-ms-transition: linear 0.5s all;
+	-o-transition: linear 0.5s all;
+    transition: linear 0.5s all;
+	outline: none;
 }
-section.top-bar ul.social-icons1 li a i.fa.fa-facebook {
-	background-color:black;
-    width: 36px;
-    height: 36px;
-    line-height: 37px;
+.menu .navicon:before, .menu .navicon:after {
+	background: #fff;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	content: "";
+	height: 3px;
+	left: 0;
+	-webkit-transition: 0.8s ease;
+	-moz-transition: 0.8s ease;
+	-o-transition: 0.8s ease;
+	-ms-transition: 0.8s ease;
+	transition: 0.8s ease;
+	width: 45px;
+} 
+.menu .navicon:before {
+	-moz-box-shadow: #fff 0 14px 0 0;
+	-o-box-shadow: #fff 0 14px 0 0;
+	-ms-box-shadow: #fff 0 14px 0 0;
+	-webkit-box-shadow: #fff 0 14px 0 0;
+	box-shadow: #fff 0 14px 0 0;
+	position: absolute;
+	top: 0;
+} 
+.menu .navicon:after {
+	position: absolute;
+	top: 28px;
+} 
+.menu .navicon--active { 
+	-webkit-transition: linear 0.5s all;
+	-moz-transition: linear 0.5s all; 
+	-moz-transition: linear 0.5s all; 
+	-o-transition: linear 0.5s all;
+	transition: linear 0.5s all;
+} 
+.menu .navicon--active:before {
+	-moz-box-shadow: transparent 0 0 0 0;
+	-ms-box-shadow: transparent 0 0 0 0;
+	-o-box-shadow: transparent 0 0 0 0;
+	-webkit-box-shadow: transparent 0 0 0 0;
+	box-shadow: transparent 0 0 0 0;
+	top: 15px;
+	-webkit-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	-moz-transform: rotate(225deg);
+	-o-transform: rotate(225deg);
+	transform: rotate(225deg);
+}
+.menu .navicon--active:after {
+	top: 15px;
+	-webkit-transform: rotate(315deg);
+	-ms-transform: rotate(315deg);
+	-moz-transform: rotate(315deg);
+	-o-transform: rotate(315deg);
+	transform: rotate(315deg);
+} 
+.menu .toggle {
+    display: block;
+    position: absolute;
+	right: 0;
+    width: 250px;
+    background-color: #FFF;
+    padding: 2em 3em;
+    opacity: 0;
+    -webkit-transition: ease 0.5s all;
+    -moz-transition: ease 0.5s all;
+    transition: ease 0.5s all;
+    -webkit-transform: translateY(-200%);
+    -moz-transform: translateY(-200%);
+    -o-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    transform: translateY(-200%);
+    z-index: 99999;
+    -webkit-box-shadow: 0px 0px 7px #696868;
+    -moz-box-shadow: 0px 0px 7px #696868;
+    box-shadow: 0px 0px 7px #696868;
+}
+.menu .toggle--active { 
+	opacity: 1;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all; 
+	transition: 0.5s all;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	-moz-transform: translateY(0);
+	transform: translateY(0); 
+} 
+.menu .toggle-menu li {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+.menu .toggle-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase; 
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    transition:0.5s all;
+    font-weight: 400;
+    padding: 5px 0;
+    margin: 0 auto;
+}  
+.menu .toggle-menu li a:hover,.menu .toggle-menu li a.active{
+	color:#A0D431;
+	/*border-bottom-color:#20B2AA;*/
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all; 
+	transition: 0.5s all;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+	/*font-weight: 700;*/
+}
+/*-- //menu-navigation --*/
+.logo {
+    float: left;
+    text-align: center; 
+}
+.logo h1 {
+    font-size: 4em;
+    color: #fff;
+    font-style: italic;
+    font-weight: 800;
+}
+.logo h1 a,.logo h1 a:hover{
+    color: #FFFFFF;
+	text-decoration: none;
+	outline:none;
+} 
+/*-- social-icons --*/
+.social-w3licon {
+    float: right;
+	margin-right: 7em;
+	margin-top: 3%;
+} 
+.social-w3licon a {
+    font-size: 1.5em;
+    color: #fff;
+    margin: 0 0.1em;
+    margin-top: -0.5em;
+    display: inline-block;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    width: 50px;
+    height: 50px;
+    line-height: 2.1em;
+    /*border: 2px dashed transparent;*/
+    text-align: center;
+}
+.social-w3licon a:hover {
+	background-color: #fff;
+	color: #A0D431;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%; 
     border-radius: 50%;
-	-webkit-border-radius:50%;
-	-moz-border-radius:50%;
-	-o-border-radius:50%;
-	-ms-border-radius:50%;
-	/*-- W3layouts --*/
-    font-size: 17px;
-	color:#fff;
-	text-align: center;
-    vertical-align: middle;	
-	 transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
 }
-section.top-bar ul.social-icons1 li a i.fa.fa-bars {
-	background-color:black;
-	    width: 36px;
-    height: 36px;
-    line-height: 37px;
-	border-radius:50%;
-	-webkit-border-radius:50%;
-	-moz-border-radius:50%;
-	-o-border-radius:50%;
-	-ms-border-radius:50%;
-	font-size:17px;
-	color:#fff;
-	text-align: center;
-    vertical-align: middle;
-	 transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
+/* encostar ligeiramente o icon do facebook aos outros */
+
+#faFacebook{
+	margin-right: -2%;
 }
-section.top-bar ul.social-icons1 li a i.fa.fa-shopping-bag {
-	background-color:black;
-	   width: 36px;
-    height: 36px;
-    line-height: 32px;
-	border-radius:50%;
-	-webkit-border-radius:50%;
-	-moz-border-radius:50%;
-	-o-border-radius:50%;
-	-ms-border-radius:50%;
-	font-size:17px;
-	color:#fff;
-	text-align: center;
-    vertical-align: middle;
-	 transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-section.top-bar ul.social-icons1 li a i.fa.fa-envelope {
-	background-color:black;
-	  width: 36px;
-    height: 36px;
-    line-height: 35px;
-	border-radius:50%;
-	-webkit-border-radius:50%;
-	-moz-border-radius:50%;
-	-o-border-radius:50%;
-	-ms-border-radius:50%;
-	font-size:15px;
-	color:#fff;
-	text-align: center;
-    vertical-align: middle;
-	 transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-section.top-bar ul.social-icons1 li a i.fa.fa-facebook:hover {
-	background-color:#A0D431;
-}
-section.top-bar ul.social-icons1 li a i.fa.fa-bars:hover {
-	background-color:#A0D431;
-}
-section.top-bar ul.social-icons1 li a i.fa.fa-shopping-bag:hover { 
-	background-color:#A0D431;
-}
-section.top-bar ul.social-icons1 li a i.fa.fa-envelope:hover { 
-	background-color:#A0D431;
-}
-/*-- /Top-Bar --*/
+
+/*-- //social-icons --*/ 
+
+/* =====================  / MENU  ===================== */
+
+
 /*-- Navigation --*/
 .nav>li>a {
 	font-size:20px;

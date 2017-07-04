@@ -82,7 +82,7 @@
 .hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active {
   color: #FFFFFF;
 }
-.experience-grid:hover div.hvr-radial-out:before{
+.experience-grid-icon:hover:before{
   -webkit-transform: scale(2);
   transform: scale(2);	
   color:#FFFFFF;
@@ -92,7 +92,8 @@
   -moz-transition: 0.5s all;
   -ms-transition: 0.5s all;
 }
-.experience-grid:hover div i.fa.fa-folder-open,.experience-grid:hover div i.fa.fa-bell,.experience-grid:hover div i.fa.fa-comments,.experience-grid:hover div i.fa.fa-asterisk{
+
+.experience-grid-icon:hover div i.fa.fa-folder-open,.experience-grid-icon:hover div i.fa.fa-bell,.experience-grid-icon:hover div i.fa.fa-comments,.experience-grid-icon:hover div i.fa.fa-asterisk{
 	color: #FFFFFF;
 }
 /*-- //experience --*/
