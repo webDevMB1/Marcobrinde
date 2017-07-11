@@ -46,7 +46,7 @@
 <?php
 	require_once("topBar.html");
 ?>
-<!-- Top Section -->
+<!-- Top Section 
 <section class="our-info" id="top" style="margin-top: 10%">
 	<div class="container">
 		<div class="row info-part">
@@ -58,7 +58,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 <!-- Top Section -->
 <!-- Texteis Section -->
 <section class="curriculum" id="texteis">
@@ -185,6 +185,10 @@
 <script>
 
 	$(document).ready(function(){
+
+		//Adicionar titulo no banner da pagina
+		$("#tituloPagina").text("Imagem e Design");
+		$("#textoTitulo").text("A nossa equipa está preparada para responder às necessidades do seu negócio.");
 
 		/* Mudar menu */
 

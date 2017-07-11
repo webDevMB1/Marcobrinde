@@ -46,7 +46,7 @@
 <?php
 	require_once("topBar.html");
 ?>
-<!-- Top Section -->
+<!-- Top Section 
 <section class="our-info" id="top" style="margin-top: 10%">
 	<div class="container">
 		<div class="row info-part">
@@ -58,12 +58,12 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 <!-- Top Section -->
 <!-- Texteis Section -->
 <section class="curriculum" id="texteis">
-	<h3 class="text-center slideanim">Texteis</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<h3 class="text-center">Texteis</h3>
+	<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 	<div class="container">
 		<div class="row info-part">
 			<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
@@ -112,8 +112,8 @@
 <!-- /Texteis Section -->	
 <!-- Gifts Section -->
 <section class="our-services" id="gifts">
-	<h3 class="text-center slideanim">Gifts</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<h3 class="text-center">Gifts</h3>
+	<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 	<div class="container">
 		<div class="row info-part">
 			<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
@@ -187,6 +187,10 @@
 	$("#nav-collapse1").css("width", "62%");
 
 	$(document).ready(function(){
+
+		//Adicionar titulo no banner da pagina
+		$("#tituloPagina").text("Gifts / Texteis Publicitários");
+		$("#textoTitulo").text("Temos para lhe oferecer uma ampla gama de gifts.");
 
 		/* Mudar menu */
 

@@ -35,6 +35,31 @@
 </script>
 
 </head>
+
+<style>
+	.pagesButtons{
+		text-decoration: none;
+	}
+
+	.pagesButtons span{
+		padding: 5px 15px; 
+		color: black; 
+		border: 1px solid black; 
+		background-color: #F9F9F9;
+	}
+
+	.pagesButtons span:hover{
+		color: white; 
+		border: 1px solid black; 
+		background-color: #0A0A0A;
+	}
+
+	.buttonActive span{
+		color: white; 
+		border: 1px solid black; 
+		background-color: #464646;	
+	}
+</style>
 <body>
 
 <?php
@@ -72,6 +97,7 @@
 
 				 	$counterTransfers = 0;
 				 	$counterPages = 1;
+				 	$initCounter = 1;
 
 				 	while($row = mysqli_fetch_array($result)){
 
@@ -103,8 +129,7 @@
 
 			 			//Adicionar pagina nova
 
-			 			//echo '<div id="page '. $counterPages .'" class="pagesTransfers">';
-
+			 			echo '<div id="page '. $counterPages .'" class="pagesTransfers">';
 					 		if($linha4 == 1){
 					 			echo '<div class="bottom-product">';
 							 		echo '<div class="col-md-3 bottom-cd simpleCart_shelfItem">';
@@ -154,9 +179,23 @@
 					 			$counterTransfers++;
 					 		}
 
+					 		echo '</div>';
 
-					 	//echo '</div>';
+					 		if(is_int($counterTransfers/60)){
+					 			$counterPages++;
+					 		}
+
 				 	}
+
+					echo '</div>';
+
+				 	echo "<center><div id=\"pageSelector\">";
+						while($initCounter < $counterPages - 1){
+							echo "<a id=\"button". $initCounter ."\" style=\"padding-left: 10px; padding-left: 10px;\"class=\"pagesButtons\" href=\"#\" onclick=\"mudaPaginaTransfers(". $initCounter .");\"><span> ". $initCounter ." </span></a>";
+							$initCounter++;
+						}
+					echo "</div></center>"; // //pageSelector
+
 				?>
 			</div>
 
@@ -225,29 +264,74 @@
 	       		window.location.replace("single");
 	       }
 
-	       /*  ----------------------------------------------------------- PESQUISA
+
+	       /*  ----------------------------------------------------------- PESQUISA */
 	       $(window).load(function(){
 				var booleanPesquisa = $.cookie("pesquisa");
 				var querySQL = "";
 
 				if(booleanPesquisa === "false"){
-					querySQL = "SELECT * FROM transfers_" + $.cookie("seccao");
+					//querySQL = "SELECT * FROM transfers_" + $.cookie("seccao");
+					console.log("Não há pesquisa");
 				}else if(booleanPesquisa === "true"){
-					querySQL = "SELECT * FROM transfers_criancas, transfers_diversos, transfers_surf WHERE ( nome LIKE '%"+ $.cookie("campoPesquisa") +"%' OR referencia LIKE '%"+ $.cookie("campoPesquisa") +"%')";
+					console.log("Existe Pesquisa");
+
+					$.ajax({
+						type: "POST",
+						url: 'pesquisaTabelasTransfers.php', //Query para saber o nome das tabelas que começam por "transfers_"
+						data: { 'SQL' : querySQL },
+						success: function(response){
+					
+							var stringTabelasLimpa = response.replace('[', '').replace(']', '').replace(/\"/g, '').split(",");
+							var querySQL = "";
+
+							$.each(stringTabelasLimpa, function(index, value){
+								if(index == 0){
+									querySQL = "SELECT * FROM "+ stringTabelasLimpa[index] +" WHERE referencia LIKE '%"+ $.cookie("campoPesquisa") +"%' OR nome LIKE '%"+ $.cookie("campoPesquisa") +"%'";
+								}else{
+									querySQL = querySQL + " UNION SELECT * FROM "+ stringTabelasLimpa[index] +" WHERE referencia LIKE '%"+ $.cookie("campoPesquisa") +"%' OR nome LIKE '%"+ $.cookie("campoPesquisa") +"%' ";
+								}
+							});
+
+							/* POST para preencher area dos transfers com os resultados da pesquisa */
+							$.ajax({
+								type: "POST",
+								url: 'preencheTransfer.php',
+								data: { 'SQL' : querySQL },
+								success: function(response){
+									if (response == "</div><center><div id=\"pageSelector\"></div></center>"){ 
+										console.log("não encontrou resposta");  
+									    $("#areaTransfers").html("<h3>A sua pesquisa '" + $.cookie("campoPesquisa") + "' não encontrou nenhum transfer.</h3><br><p><strong>Sugestão: </strong> Tente utilizar outras palavras-chave.</p>");
+									}else{
+										console.log("encontrou resposta");
+									    //Mostrar resultados
+									    $("#areaTransfers").html(response);
+										$("#tituloSeccao").html("Resultados da Pesquisa");
+										
+										//Dividir resultados em páginas
+										$("div[class^='page']").addClass("hidden");
+	       								$(".page1").removeClass("hidden");
+	       								$("#button1").addClass("buttonActive");
+									}
+								}
+							});
+						}
+					});
+
+				
 				}
-				//document.cookie = "sql="+ querySQL;
 
-				/* POST para preencher area dos transfers
+				/*  ----------------------------------------------------------- PESQUISA */
 
-				$.ajax({
-					type: "POST",
-					url: 'preencheTransfer.php',
-					data: { 'SQL' : querySQL },
-					success: function(response){
-						$("#areaTransfers").html(response);
-					}
-				});
+			}); // Load
 
-			});*/
+
+	       var mudaPaginaTransfers = function(numPagina){
+	       		$("[id^='button']").removeClass("buttonActive");
+	       		$("#button"+ numPagina).addClass("buttonActive");
+	       		$("div[class^='page']").addClass("hidden");
+	       		$(".page"+ numPagina).removeClass("hidden");
+	       }
+
 
 </script>

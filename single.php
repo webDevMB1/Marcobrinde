@@ -521,7 +521,7 @@
 
              	if(numDos4 == 1){
 
-             		versaoLight = "images/transfers/"+ $.cookie("seccao") + "/light/" + localStorage.getItem("versaoDark").split("-")[1];
+             		versaoLight = "images/transfers/"+ $.cookie("seccao") + "/light/" + localStorage.getItem("linkCurto");
 
              		$("#alertSecondVersion").html("<strong>Atenção!</strong> O transfer seleccionado tem uma versão para fundos escuros. Para alterar <a id=\"changeVersion\" href=\"#\" onclick=\"\">CLIQUE AQUI</a>");
 

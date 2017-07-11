@@ -47,7 +47,7 @@
 	require_once("topBar.html");
 ?>
 
-<!-- Top Section -->
+<!-- Top Section 
 <section class="our-info" id="top" style="margin-top: 10%">
 	<div class="container">
 		<div class="row info-part">
@@ -59,7 +59,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 <!-- Top Section -->
 
 
@@ -72,7 +72,7 @@
 
 
 <div class="container projects" id="sectionEstores">
-		<h4 class="text-center slideanim" style="color: black; font-size: 40px; margin-bottom: 50px;">Estores</h4>
+		<h4 class="text-center" style="color: black; font-size: 40px; margin-bottom: 50px;">Estores</h4>
 		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					<ul id="myTab" class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active"><a href="#runny-tab-info" id="runny-tab" role="tab" data-toggle="tab" aria-controls="runny" aria-expanded="true">Runny / Rolo</a></li>
@@ -164,8 +164,8 @@
 
 <!-- decoracao -->
 <section class="our-services experience" id="sectionDecoracao">
-	<h3 class="text-center slideanim" style="color: white">Decoracao</h3>
-	<div class="w3-agile-experience-grids slideanim">
+	<h3 class="text-center" style="color: white">Decoracao</h3>
+	<div class="w3-agile-experience-grids">
 		<!--<div class="experience-top-grids">
 			<div class="row">
 				<div class="col-md-3 experience-grid hover">
@@ -235,8 +235,8 @@
 <!-- /decoracao -->
 <!-- Sinaletica -->
 <section class="our-services experience" id="sectionSinaletica" style="background:none">
-	<h3 class="text-center slideanim" style="color: black">Sinalética</h3>
-	<div class="w3-agile-experience-grids slideanim">
+	<h3 class="text-center" style="color: black">Sinalética</h3>
+	<div class="w3-agile-experience-grids">
 		<!--<div class="experience-top-grids">
 			<div class="row">
 				<div class="col-md-3 experience-grid hover">
@@ -332,6 +332,10 @@
 <script>
 
 	$(document).ready(function(){
+
+		//Adicionar titulo no banner da pagina
+		$("#tituloPagina").text("Soluções de Interior");
+		$("#textoTitulo").text("Temos para lhe oferecer uma ampla gama de soluções de interior.");
 
 		/* hover no desktop e click no mobile */
 

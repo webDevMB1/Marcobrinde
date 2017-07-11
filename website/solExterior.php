@@ -674,6 +674,10 @@
 
 	$(document).ready(function(){
 
+		//Adicionar titulo no banner da pagina
+		$("#tituloPagina").text("Soluções de Exterior");
+		$("#textoTitulo").text("Temos para lhe oferecer uma ampla gama de soluções de exterior que o ajudarão na divulgação da sua empresa.");
+
 		//Correr função para colocar a branco as palavras que estão sobre fundo escuro
 		checkFundoEscuro();
 

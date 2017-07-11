@@ -99,6 +99,7 @@ body {
     transition: linear 0.5s all;
 	outline: none;
 }
+
 .menu .navicon:before, .menu .navicon:after {
 	background: #fff;
 	-webkit-backface-visibility: hidden;

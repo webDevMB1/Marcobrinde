@@ -1,13 +1,48 @@
+<!-- font awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
 <script type="text/javascript">
 
 	$(document).ready(function(){
 		$("#cart").css("width", "24.9%");
 		$(".grow").css("position", "inherit");
 		$(".grow").css("z-index", "90");
+
+
+		$("#products").on('click', function(){
+			$(this).toggleClass("colorBlack");
+		});
+
+
+		/* ------------------------------------------------------- PESQUISA */
+
+		$("#buttonPesquisa").on('click', function(e){
+			if($("#search").val() != ""){
+	    		document.cookie = "pesquisa=true";
+	    		document.cookie = "campoPesquisa=" + $("#search").val();
+	    		window.location.replace("productos");
+	    	}
+		});
+
+		$("#search").on('keyup', function (e) {
+		    if (e.keyCode == 13) {
+		    	if($("#search").val() != ""){
+		    		document.cookie = "pesquisa=true";
+		    		document.cookie = "campoPesquisa=" + $("#search").val();
+		    		window.location.replace("productos");
+		    	}
+		    }   
+		});
+
+		// -------------------------------------------------------  //Pesquisa
+
 	});
+
+	// =============================================================
 
 	function changeGaleria(seccao){
 		document.cookie = "seccao=" + seccao;
+		document.cookie = "pesquisa=false";
 		window.location.replace("productos");
 	}
 
@@ -47,10 +82,30 @@
 			              <span class="icon-bar"></span>
 			              <span class="icon-bar"></span>
 			            </button>
-			            <h2 id="tituloSeccao" style="margin-top: 10px"></h2> <!-- TITULO -->
 			          </div>
 			          <div id="navbar" class="navbar-collapse collapse" style="float: right">
 			              <ul class="nav navbar-nav">
+
+			              <!-- ===== Pesquisa ===== -->
+
+							<div class="col-md-6"> <!-- Espaçamento lado esquerdo para fazer "float" right -->
+								<h2 id="tituloSeccao" style="margin-top: 10px"></h2> <!-- TITULO -->
+							</div> 
+					        <div id="divPesquisa" class="col-md-4">
+					            <div id="custom-search-input">
+					                <div class="input-group">
+					                    <input id="search" type="text" class="form-control" placeholder="Pesquisar..." />
+					                    <span class="input-group-btn">
+					                        <button id="buttonPesquisa" class="btn btn-info btn-lg" type="button">
+					                            <i class="fa fa-search" aria-hidden="true"></i>
+					                        </button>
+					                    </span>
+					                </div>
+					            </div>
+							</div>
+
+							<!-- ===== Pesquisa ===== -->
+
 			                <li id="dropdownProdutos" class="dropdown" style="margin-right: 25px">
 			                  <a href="#" id="products" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white">Produtos <span class="caret"></span></a>
 			                  <ul class="dropdown-menu">
@@ -78,64 +133,6 @@
 			                </li>
 			              </ul>
 			            </div>
-
-
-
-
-
-			          <!--<div id="navbar" class="navbar-collapse collapse" style="padding-top: 5px">
-			            <ul class="nav navbar-nav navbar-right">
-			              <li id="liGal" style="margin-right: 10px; margin-top: -5px">
-			              	<a id ="galeria" href="#" class="color1 dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color: black; color: white; font-size: 16px">Produtos <span class="caret"></span></a>
-								<ul id="ulSeccao" class="dropdown-menu" style="float: right;">
-									<li id="liDiversos"><a href="#" onclick="changeGaleria('diversos')">Diversos</a></li>
-									<li id="liCacaPesca"><a href="#" onclick="changeGaleria('caca_pesca')">Caça / Pesca</a></li>
-									<li id="liAnimais"><a href="#" onclick="changeGaleria('animais')">Animais</a></li>
-									<li id="liAniversarios"><a href="#" onclick="changeGaleria('aniversarios')">Aniversário</a></li>
-									<li id="liCrianças"><a href="#" onclick="changeGaleria('criancas')">Crianças</a></li>
-									<li id="liDesporto"><a href="#" onclick="changeGaleria('desporto')">Desporto</a></li>
-									<li id="liEtnicos"><a href="#" onclick="changeGaleria('etnicos')">Etnicos</a></li>
-									<li id="liFamosos"><a href="#" onclick="changeGaleria('famosos')">Famosos</a></li>
-									<li id="liFrasesDivertidos"><a href="#" onclick="changeGaleria('frases_divertidos')">Frases / Divertidos</a></li>
-									<li id="lihipsterRetro"><a href="#" onclick="changeGaleria('hipster_retro')">Hipster / Retro</a></li>
-									<li id="liMotores"><a href="#" onclick="changeGaleria('motores')">Motores</a></li>
-									<li id="liMusica"><a href="#" onclick="changeGaleria('musica')">Música</a></li>
-								</ul>
-			              </li>
-			               CARRINHO -->
-			              <!--<li id="liCart">
-			              	<div class="total">
-								<div id="rowCarrinho" class="row">
-									<a href="checkout.php" class="padding-right0">
-											<span id="valor" class="simpleCart_total"></span>
-										<img id="cart" src="images/cart/cart.png" alt=""/>
-									</a>
-								</div>
-								<div id="rowEsvaziar" class="row">
-									<a id="esvaziar" href="javascript:;" class="simpleCart_empty padding-right0">Esvaziar</a>
-								</div>
-							</div>
-			              </li>
-			              <li id="liSearch">
-			              	<div id="sb-search" class="sb-search">
-								<form action="#" method="post">
-									<input id="search" class="sb-search-input black" placeholder="Pesquisar..." type="search">
-									<input id="pesquisaInput" class="sb-search-submit" type="submit" value="">
-									<span class="sb-icon-search"> </span>
-								</form>
-							</div>
-
-							 search-scripts
-							<script src="js/classie.js"></script>
-							<script src="js/uisearch.js"></script>
-								<script>
-									new UISearch( document.getElementById( 'sb-search' ) );
-								</script>
-							 search-scripts
-			              </li>
-			            </ul>
-			          </div>--><!--/.nav-collapse -->
-
 
 			        </div><!--/.container-fluid -->
 			      </nav>
@@ -188,25 +185,6 @@
 	    	$(".inlineBlock").css('padding-right', '10%');
 	    }
 	});
-
-	$(document).ready(function(){
-		$("#products").on('click', function(){
-			$(this).toggleClass("colorBlack");
-		});
-	});
-
-	/* ------------------------------------------------------- PESQUISA
-	$(window).load(function(){
-		$("#search").on('keyup', function (e) {
-		    if (e.keyCode == 13) {
-		    	if($("#search").val() != ""){
-		    		document.cookie = "pesquisa=true";
-		    		document.cookie = "campoPesquisa=" + $("#search").val();
-		    		window.location.replace("products.php");
-		    	}
-		    }
-		});
-	});*/
 
 </script>
 
