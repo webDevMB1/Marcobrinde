@@ -149,7 +149,7 @@ var changeCor = function(){
 		var selColor = $('#selectCor option').filter(':selected').text();
 		$(".item_color").text(selColor);
 
-		if(selectedCor === "tshirtUniPreto"){     		/* === Tshirt UNI ===================== */
+		if(selectedCor === "tshirtUniPreto"){    /* === Tshirt UNI ===================== */
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtUni/tshirtBlack.jpg) no-repeat center center;');
 		}else if(selectedCor === "tshirtUniVermelho"){
 			$('#divFlexslider').removeAttr('style').attr('style', 'background: url(images/roupa/tshirtUni/tshirtRed.jpg) no-repeat center center;');

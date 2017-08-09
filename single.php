@@ -8,9 +8,6 @@
 
 	var getRefArtigoActivo = localStorage.getItem("artigoRef");
 	document.cookie = "refActivo=" + getRefArtigoActivo;
-
-
-
 </script>
 <style type="text/css">
 
@@ -179,7 +176,7 @@
 									<div class="row">
 										<ul>
 											<li id="liTipo" style="width: 100%; margin-left: 0">Tipo <br>
-												<select id="selectTipo" style="width: 100%; margin-left: 0" onclick="changeTipo(); changeCor();">
+												<select id="selectTipo" style="width: 100%; margin-left: 0" onchange="changeTipo(); changeCor();">
 													<option value = "T-Shirt Unisexo">T-Shirt Unisexo</option>
 													<option value = "T-Shirt Senhora">T-Shirt Senhora</option>
 													<option value = "T-Shirt Criança">T-Shirt Criança</option>
@@ -200,7 +197,7 @@
 									<div class="row">
 										<ul>
 											<li id="liCor" style="width: 100%">Cor <br>
-												<select id="selectCor"  style="width: 100%; margin-left: 0" onclick="changeCor();">
+												<select id="selectCor"  style="width: 100%; margin-left: 0" onchange="changeCor();">
 													<option cor="defaultCor" value = "defaultCor">----------</option>
 													<option cor="Verde" value = "tshirtUniVerde">Verde</option>
 													<option cor="Preto" value = "tshirtUniPreto">Preto</option>
@@ -221,7 +218,7 @@
 									<div class="row">
 										<ul>
 											<li id="liTamanho" style="width: 100%; margin-left: 0">Tamanho <br>
-												<select id="selectSize" style="width: 100%; margin-left: 0" onclick="changeTamanho();">
+												<select id="selectSize" style="width: 100%; margin-left: 0" onchange="changeTamanho();">
 													<option value = "defaultSize">----------</option>
 													<option value = "XXL">XXL</option>
 													<option value = "XL">XL</option>
@@ -321,6 +318,19 @@
 
 
 	$(window).load(function() {
+
+		// No mobile, retirar outros 3 transfers debaixo da imagem
+		$(window).resize(function() {
+			if($(window).width() < 800){
+				for(var i = 2; i<5; i++){
+					$(".flex-control-thumbs li:nth-child("+ i +")").addClass("hidden");
+				}
+			}else{
+				for(var i = 2; i<5; i++){
+					$(".flex-control-thumbs li:nth-child("+ i +")").removeClass("hidden");
+				}
+			}
+		});
 
 		/* se o transfer for do alvarinho; apenas existem t-shirts verde maça */
 
@@ -615,7 +625,19 @@
 											"-o-background-size": "cover",
 											"background-size": "cover"});
 						}else{ //Se não poe tudo disponível
-							$("#liTipo").html("<option value = \"T-Shirt Unisexo\">T-Shirt Unisexo</option>");
+							$("#liTipo").html("Tipo <br>\
+												<select id=\"selectTipo\" style=\"width: 100%; margin-left: 0\" onclick=\"changeTipo(); changeCor();\">\
+													<option value = \"T-Shirt Unisexo\">T-Shirt Unisexo</option>\
+													<option value = \"T-Shirt Senhora\">T-Shirt Senhora</option>\
+													<option value = \"T-Shirt Criança\">T-Shirt Criança</option>\
+													<option value = \"Sweat Capuz Unisexo\">Sweat Capuz Unisexo</option>\
+													<option value = \"Sweat Capuz Unisexo (2 Cores)\">Sweat Capuz Unisexo (2 Cores)</option>\
+													<option value = \"Sweat Capuz Senhora\">Sweat Capuz Senhora</option>\
+													<option value = \"Sweat Capuz Criança\">Sweat Capuz Criança</option>\
+													<option value = \"Sweat Simples Unisexo\">Sweat Simples Unisexo</option>\
+													<option value = \"Sweat Simples Criança\">Sweat Simples Criança</option>\
+													<option value = \"Casaco\">Casaco</option>\
+												</select>");
 							$("#selectCor").html("<option cor=\"defaultCor\" value = \"defaultCor\">----------</option>\
 													<option cor=\"Verde\" value = \"tshirtUniVerde\">Verde</option>\
 													<option cor=\"Preto\" value = \"tshirtUniPreto\">Preto</option>\

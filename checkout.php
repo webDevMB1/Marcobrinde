@@ -150,6 +150,23 @@
 		display: inline;
 	}
 
+	/* Cortar a table para caber no responsivo */
+	table {
+	   table-layout:fixed;
+	   width: 100%;
+	}
+
+	.headerRow th{
+		width: 100%;
+	}
+
+	.itemRow th{
+		width: 100%;
+	}
+
+	.itemRow .item-color{
+		word-wrap: break-word;
+	}
 </style>
 
 <script type="text/javascript">
@@ -157,6 +174,125 @@
 	changeTituloSeccao("Carrinho");
 
 	$(window).load(function(){
+
+		/* controlo de cor - substituir nome por quadrado */
+	  	  $.each($(".itemRow").find(".item-color"), function(num, result){
+	  	  	switch($(result).html()) {
+			    case "Vermelho":
+			    	colocarCorTshirtCheckout(result, "red");
+			        break;
+			    case "Preto":
+			        colocarCorTshirtCheckout(result, "black");
+			        break;
+			    case "Verde":
+			    	colocarCorTshirtCheckout(result, "green");
+			    	break;
+			   	case "Azul Royal":
+			   		colocarCorTshirtCheckout(result, "#3A4D91");
+			   		break;
+			   	case "Azul Marinho":
+			   		colocarCorTshirtCheckout(result, "#313852");
+			   		break;
+		   		case "Azul Ciano":
+			   		colocarCorTshirtCheckout(result, "#2B86B3");
+			   		break;
+			   	case "Areia":
+			   		colocarCorTshirtCheckout(result, "#DDC59F");
+			   		break;
+			   	case "Laranja":
+			   		colocarCorTshirtCheckout(result, "orange");
+			   		break;
+			   	case "Verde Tropa":
+			   		colocarCorTshirtCheckout(result, "#585B46");
+			   		break;
+			   	case "Branco":
+			   		colocarCorTshirtCheckout(result, "#F1F1F1");
+			   		break;
+			   	case "Cinza Escura":
+			   		colocarCorTshirtCheckout(result, "darkgrey");
+			   		break;
+			   	case "Verde Maçã":
+			   		colocarCorTshirtCheckout(result, "#CCD554");
+			   		break;
+			   	case "Orquidea":
+			   		colocarCorTshirtCheckout(result, "#CC76A7");
+			   		break;
+			   	case "Rosa":
+			   		colocarCorTshirtCheckout(result, "#A20C63");
+			   		break;
+			   	case "Amarelo":
+			   		colocarCorTshirtCheckout(result, "yellow");
+			   		break;
+			   	case "Azul":
+			   		colocarCorTshirtCheckout(result, "blue");
+			   		break;
+			   	case "Camel":
+			   		colocarCorTshirtCheckout(result, "#9C8768");
+			   		break;
+			   	case "Rosetón":
+			   		colocarCorTshirtCheckout(result, "#EC3B72");
+			   		break;
+			   	case "Chocolate":
+			   		colocarCorTshirtCheckout(result, "#3E3027");
+			   		break;
+			   	case "Gris Vigoré":
+			   		colocarCorTshirtCheckout(result, "#BEBEBE");
+			   		break;
+			   	case "Caqui":
+			   		colocarCorTshirtCheckout(result, "#52563F");
+			   		break;
+			   	case "Azul Porto":
+			   		colocarCorTshirtCheckout(result, "#033653");
+			   		break;
+			   	case "Magenta":
+			   		colocarCorTshirtCheckout(result, "#C44280");
+			   		break;
+			   	case "Cinza Marengo":
+			   		colocarCorTshirtCheckout(result, "#A7A6AE");
+			   		break;
+			   	case "Antracite":
+			   		colocarCorTshirtCheckout(result, "#424242");
+			   		break;
+		   		case "Azul Marengo":
+			   		colocarCorTshirtCheckout(result, "#7E85A1");
+			   		break;
+			   	case "Cinza":
+			   		colocarCorTshirtCheckout(result, "grey");
+			   		break;
+			}
+	  	  }); 
+
+
+		/* Responsive checkout */
+
+		$(window).resize(function() {
+
+		  if($(window).width() < 650){
+
+		  	  if ($(window).width() < 385) {
+	          	$(".item-thumb").addClass("hidden");
+	          	$(".item-price").addClass("hidden");
+	          	$(".item-total").addClass("hidden");
+	          	$(".item-remove").addClass("hidden");
+	          	$(".headerRow").find(".item-quantity").text("Qnt.");
+	          }else{
+	          	$(".item-thumb").removeClass("hidden");
+	          	$(".item-price").removeClass("hidden");
+	          	$(".item-total").removeClass("hidden");
+	          	$(".item-remove").removeClass("hidden");
+	          }
+
+	          $(".item-thumb").addClass("hidden");
+		  	  $(".item-price").addClass("hidden");
+
+		  }else{
+		  	$(".item-thumb").removeClass("hidden");
+		  	$(".item-price").removeClass("hidden");
+		  }
+
+          
+        });
+
 		estiloCheckout();
 
 		$(".simpleCart_remove").click(function(){
@@ -180,9 +316,7 @@
 
 		var carrinhoEmail = $(".simpleCart_items").html();
 		var strLink = "formulario.php&artigos=" + "\"" + carrinhoEmail + "\"";
-		//console.log(strLink);
-
-		//$("#finalCompra").attr("href",strLink);
+		
 		$(".item-ref").remove();
 
 		//adicionar portes ao campo quando a pagina é aberta
@@ -200,7 +334,7 @@
 
 		checkZeroArtigos();
 
-	});
+	}); // load
 
 	var calculaPortes = function(casa){
 		if(casa == true){
@@ -230,6 +364,10 @@
 		}else{
 			window.location.replace("formulario");
 		}
+	}
+
+	var colocarCorTshirtCheckout = function(result, cor){
+		return $(result).html("<span id=\"spanCor\" style=\"border-left: solid 10px white; border-right: solid 20px "+ cor +"\"></span>");;
 	}
 
 </script>

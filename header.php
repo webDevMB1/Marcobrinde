@@ -107,7 +107,7 @@
 							<!-- ===== Pesquisa ===== -->
 
 			                <li id="dropdownProdutos" class="dropdown" style="margin-right: 25px">
-			                  <a href="#" id="products" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white">Produtos <span class="caret"></span></a>
+			                  <a href="#" id="products" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white; text-align: center">Produtos <span class="caret"></span></a>
 			                  <ul class="dropdown-menu">
 
 				                  <?php

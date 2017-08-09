@@ -115,9 +115,10 @@
  	} // /while
 
  	echo '</div>';
+ 	echo '<div class="row"></div>';
 
  	echo "<center><div id=\"pageSelector\">";
-		while($initCounter < $counterPages){
+		while($initCounter < $counterPages + 1){
 			echo "<a id=\"button". $initCounter ."\" style=\"padding-left: 10px; padding-left: 10px;\"class=\"pagesButtons\" href=\"#\" onclick=\"mudaPaginaTransfers(". $initCounter .");\"><span> ". $initCounter ." </span></a>";
 			$initCounter++;
 		}

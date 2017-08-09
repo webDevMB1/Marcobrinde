@@ -272,9 +272,9 @@
 
 				if(booleanPesquisa === "false"){
 					//querySQL = "SELECT * FROM transfers_" + $.cookie("seccao");
-					console.log("Não há pesquisa");
+					//console.log("Não há pesquisa");
 				}else if(booleanPesquisa === "true"){
-					console.log("Existe Pesquisa");
+					//console.log("Existe Pesquisa");
 
 					$.ajax({
 						type: "POST",
@@ -300,10 +300,10 @@
 								data: { 'SQL' : querySQL },
 								success: function(response){
 									if (response == "</div><center><div id=\"pageSelector\"></div></center>"){ 
-										console.log("não encontrou resposta");  
+										//console.log("não encontrou resposta");  
 									    $("#areaTransfers").html("<h3>A sua pesquisa '" + $.cookie("campoPesquisa") + "' não encontrou nenhum transfer.</h3><br><p><strong>Sugestão: </strong> Tente utilizar outras palavras-chave.</p>");
 									}else{
-										console.log("encontrou resposta");
+										//console.log("encontrou resposta");
 									    //Mostrar resultados
 									    $("#areaTransfers").html(response);
 										$("#tituloSeccao").html("Resultados da Pesquisa");
